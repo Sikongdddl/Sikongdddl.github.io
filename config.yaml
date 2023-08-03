@@ -1,4 +1,4 @@
-baseurl: Sikongdddl.github.io
+baseurl: https://Sikongdddl.github.io
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
