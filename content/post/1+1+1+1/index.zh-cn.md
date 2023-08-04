@@ -1,9 +1,8 @@
 ---
 title: 1+1+1+1游戏
-description: 这是一个副标题
+description: 交大程序员无聊了会做什么
 date: 2023-08-04
 
-image: Lucas.jpg
 categories:
     - program
 ---

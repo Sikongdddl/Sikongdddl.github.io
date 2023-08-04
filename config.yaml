@@ -50,7 +50,6 @@ params:
         lastUpdated: Jan 02, 2006 15:04 MST
 
     sidebar:
-        emoji: 🍥
         subtitle: 欲买桂花同载酒，终不似，少年游
         avatar:
             enabled: true
