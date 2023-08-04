@@ -192,7 +192,7 @@ categories:
 >[1 2]表示当前我的手比了个1，你的手比了个2，轮到你先动。
 
 变换后我们得到：
->2 1->3 1->3 4->7 4->7 1->8 1->8 9->7 9->7 6->3 6->3 9->2 9->2 1
+>2 1->1 3->3 4->4 7->7 1->1 8->8 9->9 7->7 6->6 3->3 9->9 2->2 1
 
 ### 流局中的数学
 前面我们已经讨论过，流局只发生在双方都只剩一只手的情况下。
@@ -311,3 +311,279 @@ let E =
 还有好多相关工作没有完成！
 
 其实有点玩物丧志，如果这两天工作顺利，有空闲时间的话，我会回来继续更新的
+
+## 开个源
+```
+#include <iostream>
+#include <time.h>
+#include <vector>
+using namespace std;
+
+class log{
+public:
+    int ls1;
+    int rs1;
+    int ls2;
+    int rs2;
+    int from_to_flag;
+
+    log(int a,int b,int c,int d,int e)
+    {
+        ls1 = a;
+        rs1 = b;
+        ls2 = c;
+        rs2 = d;
+        from_to_flag = e;
+    }
+    void traverse()
+    {
+        cout<<ls1<<" "<<rs1<<endl;
+        cout<<ls2<<" "<<rs2<<endl;
+        if(!from_to_flag)
+        {
+            cout<<"p1先手"<<endl;
+        }
+        else
+        {
+            cout<<"p2先手"<<endl;
+        }
+    };
+};
+class player{
+public:
+    int lscore;
+    int rscore;
+    int lexist;
+    int rexist;
+    player()
+    {
+        lscore = 1;
+        rscore = 1;
+        lexist = 1;
+        rexist = 1;
+    }
+    bool end()
+    {
+        if(lexist == 0 && rexist == 0)
+        {
+            return 1;
+        }
+        return 0;
+    }
+    void reset()
+    {
+        lscore = 1;
+        rscore = 1;
+        lexist = 1;
+        rexist = 1;
+    }
+};
+
+void score_tidy(player &p)
+{
+    if(p.lscore == 10)
+    {
+        p.lexist = 0;
+    }
+    if(p.rscore == 10)
+    {
+        p.rexist = 0;
+    }
+    p.lscore %= 10;
+    p.rscore %= 10;
+}
+void move(player &p, player &q)
+{
+    int fromFlag = rand()%2;
+    int toFlag = rand()%2;
+    //行动者只剩左手
+    if(p.lexist == 1 && p.rexist == 0)
+    {
+        cout<<"行动者只有左手"<<endl;
+        if(q.lexist == 1 && q.rexist == 0)
+        {
+            cout<<"对方只有左手"<<endl;
+            p.lscore += q.lscore;
+        }
+        else if (q.lexist == 0 && q.rexist == 1)
+        {
+            cout<<"对方只有右手"<<endl;
+            p.lscore += q.rscore;
+        }
+        else
+        {
+            if(toFlag == 0)
+            {
+                cout<<"触碰对方左手"<<endl;
+                p.lscore += q.lscore;
+            }
+            else
+            {
+                cout<<"触碰对方右手"<<endl;
+                p.lscore += q.rscore;
+            }
+        }
+    }
+    //行动者只剩右手
+    else if(p.lexist == 0 && p.rexist == 1)
+    {
+        cout<<"行动者只有右手"<<endl;
+        if(q.lexist == 1 && q.rexist == 0)
+        {
+            cout<<"对方只有左手"<<endl;
+            p.rscore += q.lscore;
+        }
+        else if (q.lexist == 0 && q.rexist == 1)
+        {
+            cout<<"对方只有右手"<<endl;
+            p.rscore += q.rscore;
+        }
+        else
+        {
+            if(toFlag == 0)
+            {
+                cout<<"触碰对方左手"<<endl;
+                p.rscore += q.lscore;
+            }
+            else
+            {
+                cout<<"触碰对方左手"<<endl;
+                p.rscore += q.rscore;
+            }
+        }
+    }
+    //行动者由fromFlag决定
+    else
+    {
+        if(fromFlag == 0)
+        {
+            cout<<"行动者使用左手"<<endl;
+            if(q.lexist == 1 && q.rexist == 0)
+            {
+                cout<<"对方只有左手"<<endl;
+                p.lscore += q.lscore;
+            }
+            else if (q.lexist == 0 && q.rexist == 1)
+            {
+                cout<<"对方只有右手"<<endl;
+                p.lscore += q.rscore;
+            }
+            else
+            {
+                if(toFlag == 0)
+                {
+                    cout<<"触碰对方左手"<<endl;
+                    p.lscore += q.lscore;
+                }
+                else
+                {
+                    cout<<"触碰对方右手"<<endl;
+                    p.lscore += q.rscore;
+                }
+            }
+        }
+        else
+        {
+            cout<<"行动者使用右手"<<endl;
+            if(q.lexist == 1 && q.rexist == 0)
+            {
+                cout<<"对方只有左手"<<endl;
+                p.rscore += q.lscore;
+            }
+            else if (q.lexist == 0 && q.rexist == 1)
+            {
+                cout<<"对方只有右手"<<endl;
+                p.rscore += q.rscore;
+            }
+            else
+            {
+                if(toFlag == 0)
+                {
+                    cout<<"触碰对方左手"<<endl;
+                    p.rscore += q.lscore;
+                }
+                else
+                {
+                    cout<<"触碰对方右手"<<endl;
+                    p.rscore += q.rscore;
+                }
+            }
+        }
+    }
+    score_tidy(p);
+}
+
+int main()
+{
+    unsigned int seed = time(0);
+    srand(seed);
+
+    vector<log> fail_log;
+    player *p1 = new player();
+    player *p2 = new player();
+    int episode = 0;
+    int step = 0;
+    int p1_scoreboard = 0;
+    int p2_scoreboard = 0;
+    int fail_scoreboard = 0;
+    int total_episode = 0;
+    while(1)
+    {
+        cout<<"轮数: "<<episode<<endl;
+        cout<<"局数："<<step<<endl;
+        cout<<p1->lscore<<" "<<p1->rscore<<endl;
+        cout<<p2->lscore<<" "<<p2->rscore<<endl;
+        if(episode %2 == 0)
+        {
+            cout<<"p1行动"<<endl;
+            move(*p1,*p2);
+        }
+        else
+        {
+            cout<<"p2行动"<<endl;
+            move(*p2,*p1);
+        }
+        if(p1->end() || p2->end() || episode > 200)
+        {
+            ++step;
+            if(p1->end())
+            {
+                ++p1_scoreboard;
+                total_episode += episode;
+                cout<<"p1 won!"<<endl;
+            }
+            else if(p2->end())
+            {
+                ++p2_scoreboard;
+                total_episode += episode;
+                cout<<"p2 won!"<<endl;
+            }
+            else if(episode > 200)
+            {   
+                log* l = new log(p1->lscore, p1->rscore, p2->lscore, p2->rscore, episode%2==0);
+                fail_log.push_back(*l);
+                ++fail_scoreboard;
+                cout<<"endless routine"<<endl;
+            }
+            p1->reset();
+            p2->reset();
+            episode = 0;
+        }
+        ++episode;
+        if(step == 100)
+        {
+            cout<<"总轮数为："<<endl;
+            cout<<total_episode<<endl;
+            break;
+        }
+    }
+    cout<<p1_scoreboard<<" "<<p2_scoreboard<<" "<<fail_scoreboard<<endl;
+    for(int i = 0; i < fail_log.size(); ++i)
+    {
+        cout<<"第"<<i<<"次流局情况如下："<<endl;
+        fail_log[i].traverse();
+    }
+    return 0;
+}
+
+```
