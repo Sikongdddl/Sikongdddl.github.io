@@ -7,6 +7,8 @@ links:
   - title: 大筒木橙汁先生的博客
     website: https://otsuts.github.io/
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+  - title: 编程随想的博客
+    website: https://program-think.blogspot.com/  
 menu:
     main: 
         weight: -50
