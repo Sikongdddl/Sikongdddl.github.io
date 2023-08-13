@@ -1,4 +1,137 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>paper on Sikongdddl的博客</title><link>https://Sikongdddl.github.io/categories/paper/</link><description>Recent content in paper on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 04 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/categories/paper/index.xml" rel="self" type="application/rss+xml"/><item><title>HIQL：Offline Goal-Conditioned RL with Latent States as Actions</title><link>https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/</link><pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/</guid><description>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/bookface.png" alt="Featured image of post HIQL：Offline Goal-Conditioned RL with Latent States as Actions" />&lt;h2 id="just-deliver-something">Just deliver something&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>paper on Sikongdddl的博客</title><link>https://Sikongdddl.github.io/categories/paper/</link><description>Recent content in paper on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 13 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/categories/paper/index.xml" rel="self" type="application/rss+xml"/><item><title>Reinforcement Learning from Passive Data via Latent Intentions</title><link>https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/</link><pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/</guid><description>&lt;img src="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/bookface.jpg" alt="Featured image of post Reinforcement Learning from Passive Data via Latent Intentions " />&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>大多数真实视频对RL来说都比较难办 因为不知道怎么定义value function和action label&lt;/p>
+&lt;p>这些被称为passive data 被动可能被动在无法落入现成的评价体系里&lt;/p>
+&lt;p>这里提出model intentions：猜下一步action后变化情况的概率分布。&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;How likely am I to see __ if I act to do __ from this state&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>和dreamer有点像属于是&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/dibyaghosh/icvf_release" target="_blank" rel="noopener"
+>https://github.com/dibyaghosh/icvf_release&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>非常耐心地讲了一下RL为什么难以处理真实数据 因为缺乏好用的评价指标&lt;/p>
+&lt;p>这篇工作引入了intension space Z,以此作为value function的主要参考。&lt;/p>
+&lt;p>agent在环境中怎么互动和怎么探索有轮子，工作主要集中在：&lt;/p>
+&lt;ul>
+&lt;li>预测&lt;/li>
+&lt;li>完成latent space训练后，这些intension数据在action中的使用情况&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image.png"
+width="826"
+height="194"
+srcset="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image_huf7711bb3d9c9ff5d963d5367501979de_56835_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image_huf7711bb3d9c9ff5d963d5367501979de_56835_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="示意图"
+class="gallery-image"
+data-flex-grow="425"
+data-flex-basis="1021px"
+>&lt;/p>
+&lt;p>这个老师比较诙谐&lt;/p>
+&lt;p>图比较好理解，latent space的内容是“对未来假设进行一些动作会发生的情况的预测”，拿这个和st st+1凑一个value function。&lt;/p>
+&lt;h2 id="formulation">Formulation&lt;/h2>
+&lt;p>马尔可夫链 没啥新鲜东西&lt;/p>
+&lt;h2 id="methodrl-using-passive-data">Method：RL using passive Data&lt;/h2>
+&lt;h3 id="icvf-intension-conditioned-value-function">ICVF intension-conditioned value function&lt;/h3>
+&lt;p>传统的RL学一个Q function state-action对
+我们学一个Z function，用intension代替state,用outcome代替action&lt;/p>
+&lt;p>以前是状态随着action改变 现在是猜一个intension，拿一个outcome检验，再猜下一个&lt;/p>
+&lt;p>那这个和dreamer相差非常大了（笑）&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-1.png"
+width="549"
+height="89"
+srcset="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-1_hu5ed3512e07df6b3d0762e38f46fe0599_10414_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-1_hu5ed3512e07df6b3d0762e38f46fe0599_10414_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="616"
+data-flex-basis="1480px"
+>&lt;/p>
+&lt;p>他这里可以把各种任务的reward做个期望分布&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-2.png"
+width="384"
+height="104"
+srcset="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-2_hu435412616cc2990eb0ebee8fe96bf834_6743_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-2_hu435412616cc2990eb0ebee8fe96bf834_6743_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="369"
+data-flex-basis="886px"
+>&lt;/p>
+&lt;p>这样可以让基于intension的value function和具体的任务解耦 所以他说这个预训练方法适用于所有任务&lt;/p>
+&lt;h3 id="learning-representations-from-icvf">learning representations from ICVF&lt;/h3>
+&lt;p>这个Value function黑盒的 怎么说明它对接下来的RL任务起到了多少作用呢？&lt;/p>
+&lt;ul>
+&lt;li>转化成的state representation必须能比较容易的从model里得到&lt;/li>
+&lt;li>面对一个具体的task，这个state representation必须对具体的reward有用&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-3.png"
+width="529"
+height="81"
+srcset="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-3_hufd570929add6bbc4b049e31c6eb41832_9762_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-3_hufd570929add6bbc4b049e31c6eb41832_9762_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="653"
+data-flex-basis="1567px"
+>&lt;/p>
+&lt;p>先做个数学处理 把value function改成向量形式&lt;/p>
+&lt;p>这是个线性无关的 三个向量分别代表着state（es） ，过了一层intension后的state（中间那一坨 这是1993年一个工作的表示方式）以及实际的最后的state（es+）&lt;/p>
+&lt;p>所以我们学三个网络来表征value function&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-4.png"
+width="554"
+height="79"
+srcset="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-4_huc0d5a3a8930d061f237481519940e5e1_10971_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-4_huc0d5a3a8930d061f237481519940e5e1_10971_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="701"
+data-flex-basis="1683px"
+>&lt;/p>
+&lt;p>现在就满足了我们的这两个需求：&lt;/p>
+&lt;ul>
+&lt;li>好表示 这都解耦了当然好表示&lt;/li>
+&lt;li>有用 他说他们证明了当任务确定下来的时候，他们的representation线性接近任何一个具体的task&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-5.png"
+width="829"
+height="436"
+srcset="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-5_hufec91a91552167d139544270f7bba908_101431_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-5_hufec91a91552167d139544270f7bba908_101431_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="一个奇怪的放缩"
+class="gallery-image"
+data-flex-grow="190"
+data-flex-basis="456px"
+>&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-6.png"
+width="698"
+height="545"
+srcset="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-6_hu4fc4c893bb4841fdac60f2b5c23ec4a7_119392_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-6_hu4fc4c893bb4841fdac60f2b5c23ec4a7_119392_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="128"
+data-flex-basis="307px"
+>&lt;/p>
+&lt;p>没看懂（笑）&lt;/p>
+&lt;h3 id="learning-icvf-from-passive-data">learning ICVF from passive data&lt;/h3>
+&lt;p>最后一块拼图&lt;/p>
+&lt;p>证明了ICVF有用和怎么用之后 问题就是ICVF怎么来了&lt;/p>
+&lt;p>这里只是提出了一种task情境下的passive data-ICVF 是一个multi-linear 多重线性&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-7.png"
+width="630"
+height="168"
+srcset="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-7_hu89daab1d4013db7d31aa2d9cf41600d2_27479_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-7_hu89daab1d4013db7d31aa2d9cf41600d2_27479_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="375"
+data-flex-basis="900px"
+>&lt;/p>
+&lt;p>很无聊 就是从（st,at,st+1）的buffer里拿一堆数据丢进这个所谓的ICVF&lt;/p>
+&lt;h3 id="实验">实验&lt;/h3>
+&lt;p>明天补上（笑） 他们自己搭了环境 不是传统的offline环境 还挺有趣的&lt;/p></description></item><item><title>HIQL：Offline Goal-Conditioned RL with Latent States as Actions</title><link>https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/</link><pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/</guid><description>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/bookface.png" alt="Featured image of post HIQL：Offline Goal-Conditioned RL with Latent States as Actions" />&lt;h2 id="just-deliver-something">Just deliver something&lt;/h2>
 &lt;p>在2023年3月到5月这段时间我进行过一些subgoal-based RL的研究和尝试，比较遗憾没有什么结果。&lt;/p>
 &lt;p>老板推荐，偶然发现了这位来自UC伯克利的小日子老师做了很多subgoal的工作。&lt;/p>
 &lt;p>这我不得抱起来狠狠拜读！&lt;/p>
