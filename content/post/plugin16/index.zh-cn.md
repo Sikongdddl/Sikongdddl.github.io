@@ -14,12 +14,55 @@ categories:
 
 ### go
 
-### 项目相关
+## 项目相关
 github repo地址：
 
 https://github.com/Sikongdddl/SparkPlugin16
 
-“项目管理风格”加分点：
+### 架构
+
+> 前端：
+
+输入：用户纯文本输入 原始问题input
+
+输出：经过整个系统后最终的输出 response+prompt
+
+工作内容:把input送给一级后端
+
+> 一级后端：
+
+输入：来自前端的用户原始问题input
+
+输出：经过代码润色过的input+prompt
+
+工作内容：
+
+任务一：
+
+简易版：
+
+二级后端只有一个插件API，把润色过的input+prompt直接发给二级后端；
+
+复杂版：把input+prompt发送给星火大模型，做分词提取+选择插件API工作 并把input+prompt发送给二级后端中对应的插件API
+
+任务二：
+
+从二级后端收到response后 润色生成response+prompt 输入给星火大模型生成文本格式回答 把文本格式回答送给前端呈现出来
+
+> 二级后端：
+
+输入：来自一级后端的input+prompt
+
+输出：根据输入信息进行对应内容输出 生成response（json格式）
+
+工作内容：
+
+把生成的json丢给一级后端
+
+![架构](image-1.png)
+
+
+### “项目管理风格”加分点：
 
 > 晨会
 
@@ -49,9 +92,13 @@ https://github.com/Sikongdddl/SparkPlugin16
 我们这个文档本身就是个很大的加分点
 后面最好还是大家都来参与一些编写工作 记录一下自己的开发日志之类的
 ### 分工
+
 陆朋朋 雷逸 前端网站开发
+
 宫俊儒 后端开发+推荐系统工作准备
+
 宋奕辰 刘非凡 董雨康 调prompt
+
 ### 推荐技术
 
 #### 这个博客是怎么来的

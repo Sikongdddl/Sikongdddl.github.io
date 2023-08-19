@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>paper on Sikongdddl的博客</title>
+        <link>https://Sikongdddl.github.io/categories/paper/</link>
+        <description>Recent content in paper on Sikongdddl的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 13 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/categories/paper/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Reinforcement Learning from Passive Data via Latent Intentions </title>
+        <link>https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/</link>
+        <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/</guid>
+        <description>&lt;img src="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/bookface.jpg" alt="Featured image of post Reinforcement Learning from Passive Data via Latent Intentions " /&gt;&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;大多数真实视频对RL来说都比较难办 因为不知道怎么定义value function和action label&lt;/p&gt;
+&lt;p&gt;这些被称为passive data 被动可能被动在无法落入现成的评价体系里&lt;/p&gt;
+&lt;p&gt;这里提出model intentions：猜下一步action后变化情况的概率分布。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;How likely am I to see __ if I act to do __ from this state&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;和dreamer有点像属于是&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dibyaghosh/icvf_release&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/dibyaghosh/icvf_release&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;非常耐心地讲了一下RL为什么难以处理真实数据 因为缺乏好用的评价指标&lt;/p&gt;
+&lt;p&gt;这篇工作引入了intension space Z,以此作为value function的主要参考。&lt;/p&gt;
+&lt;p&gt;agent在环境中怎么互动和怎么探索有轮子，工作主要集中在：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;预测&lt;/li&gt;
+&lt;li&gt;完成latent space训练后，这些intension数据在action中的使用情况&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image.png&#34;
+	width=&#34;826&#34;
+	height=&#34;194&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image_huf7711bb3d9c9ff5d963d5367501979de_56835_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image_huf7711bb3d9c9ff5d963d5367501979de_56835_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;示意图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;425&#34;
+		data-flex-basis=&#34;1021px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这个老师比较诙谐&lt;/p&gt;
+&lt;p&gt;图比较好理解，latent space的内容是“对未来假设进行一些动作会发生的情况的预测”，拿这个和st st+1凑一个value function。&lt;/p&gt;
+&lt;h2 id=&#34;formulation&#34;&gt;Formulation&lt;/h2&gt;
+&lt;p&gt;马尔可夫链 没啥新鲜东西&lt;/p&gt;
+&lt;h2 id=&#34;methodrl-using-passive-data&#34;&gt;Method：RL using passive Data&lt;/h2&gt;
+&lt;h3 id=&#34;icvf-intension-conditioned-value-function&#34;&gt;ICVF intension-conditioned value function&lt;/h3&gt;
+&lt;p&gt;传统的RL学一个Q function state-action对
+我们学一个Z function，用intension代替state,用outcome代替action&lt;/p&gt;
+&lt;p&gt;以前是状态随着action改变 现在是猜一个intension，拿一个outcome检验，再猜下一个&lt;/p&gt;
+&lt;p&gt;那这个和dreamer相差非常大了（笑）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-1.png&#34;
+	width=&#34;549&#34;
+	height=&#34;89&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-1_hu5ed3512e07df6b3d0762e38f46fe0599_10414_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-1_hu5ed3512e07df6b3d0762e38f46fe0599_10414_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;616&#34;
+		data-flex-basis=&#34;1480px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;他这里可以把各种任务的reward做个期望分布&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-2.png&#34;
+	width=&#34;384&#34;
+	height=&#34;104&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-2_hu435412616cc2990eb0ebee8fe96bf834_6743_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-2_hu435412616cc2990eb0ebee8fe96bf834_6743_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;369&#34;
+		data-flex-basis=&#34;886px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这样可以让基于intension的value function和具体的任务解耦 所以他说这个预训练方法适用于所有任务&lt;/p&gt;
+&lt;h3 id=&#34;learning-representations-from-icvf&#34;&gt;learning representations from ICVF&lt;/h3&gt;
+&lt;p&gt;这个Value function黑盒的 怎么说明它对接下来的RL任务起到了多少作用呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;转化成的state representation必须能比较容易的从model里得到&lt;/li&gt;
+&lt;li&gt;面对一个具体的task，这个state representation必须对具体的reward有用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-3.png&#34;
+	width=&#34;529&#34;
+	height=&#34;81&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-3_hufd570929add6bbc4b049e31c6eb41832_9762_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-3_hufd570929add6bbc4b049e31c6eb41832_9762_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;653&#34;
+		data-flex-basis=&#34;1567px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;先做个数学处理 把value function改成向量形式&lt;/p&gt;
+&lt;p&gt;这是个线性无关的 三个向量分别代表着state（es） ，过了一层intension后的state（中间那一坨 这是1993年一个工作的表示方式）以及实际的最后的state（es+）&lt;/p&gt;
+&lt;p&gt;所以我们学三个网络来表征value function&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-4.png&#34;
+	width=&#34;554&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-4_huc0d5a3a8930d061f237481519940e5e1_10971_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-4_huc0d5a3a8930d061f237481519940e5e1_10971_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;701&#34;
+		data-flex-basis=&#34;1683px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;现在就满足了我们的这两个需求：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;好表示 这都解耦了当然好表示&lt;/li&gt;
+&lt;li&gt;有用 他说他们证明了当任务确定下来的时候，他们的representation线性接近任何一个具体的task&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-5.png&#34;
+	width=&#34;829&#34;
+	height=&#34;436&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-5_hufec91a91552167d139544270f7bba908_101431_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-5_hufec91a91552167d139544270f7bba908_101431_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;一个奇怪的放缩&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;190&#34;
+		data-flex-basis=&#34;456px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-6.png&#34;
+	width=&#34;698&#34;
+	height=&#34;545&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-6_hu4fc4c893bb4841fdac60f2b5c23ec4a7_119392_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-6_hu4fc4c893bb4841fdac60f2b5c23ec4a7_119392_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;128&#34;
+		data-flex-basis=&#34;307px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;没看懂（笑）&lt;/p&gt;
+&lt;h3 id=&#34;learning-icvf-from-passive-data&#34;&gt;learning ICVF from passive data&lt;/h3&gt;
+&lt;p&gt;最后一块拼图&lt;/p&gt;
+&lt;p&gt;证明了ICVF有用和怎么用之后 问题就是ICVF怎么来了&lt;/p&gt;
+&lt;p&gt;这里只是提出了一种task情境下的passive data-ICVF 是一个multi-linear 多重线性&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-7.png&#34;
+	width=&#34;630&#34;
+	height=&#34;168&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-7_hu89daab1d4013db7d31aa2d9cf41600d2_27479_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-7_hu89daab1d4013db7d31aa2d9cf41600d2_27479_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;375&#34;
+		data-flex-basis=&#34;900px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;很无聊 就是从（st,at,st+1）的buffer里拿一堆数据丢进这个所谓的ICVF&lt;/p&gt;
+&lt;h3 id=&#34;实验&#34;&gt;实验&lt;/h3&gt;
+&lt;p&gt;明天补上（笑） 他们自己搭了环境 不是传统的offline环境 还挺有趣的&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>HIQL：Offline Goal-Conditioned RL with Latent States as Actions</title>
+        <link>https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/</link>
+        <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/</guid>
+        <description>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/bookface.png" alt="Featured image of post HIQL：Offline Goal-Conditioned RL with Latent States as Actions" /&gt;&lt;h2 id=&#34;just-deliver-something&#34;&gt;Just deliver something&lt;/h2&gt;
+&lt;p&gt;在2023年3月到5月这段时间我进行过一些subgoal-based RL的研究和尝试，比较遗憾没有什么结果。&lt;/p&gt;
+&lt;p&gt;老板推荐，偶然发现了这位来自UC伯克利的小日子老师做了很多subgoal的工作。&lt;/p&gt;
+&lt;p&gt;这我不得抱起来狠狠拜读！&lt;/p&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;如果能给subgoal组织成良好的结构，先找近的，一步一步往远走就容易一些&lt;/p&gt;
+&lt;p&gt;组织方式和director很像 一层manager一层worker。&lt;/p&gt;
+&lt;p&gt;manager从state得到latent representation作为subgoal，worker实现subgoal&lt;/p&gt;
+&lt;p&gt;特殊的地方在于这个产生了manager和worker的value function不含action&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://seohong.me/projects/hiql/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://seohong.me/projects/hiql/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;offline go-conditioned RL问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（state, goal）-&amp;gt; value function学不出来&lt;/li&gt;
+&lt;li&gt;offline数据源太多，合并进入传统RL方法有困难&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;说了一个可能导致sparse reward难学的原因
+当goal很远时，好的策略和不好的策略几乎看不出区别，因为任何错误都可以在之后的过程中得到修正（理论上），这就导致非常难学到一个从头到尾都正确的action series&lt;/p&gt;
+&lt;p&gt;解决办法跟director类似&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IQL从offline buffer里学一个policy&lt;/li&gt;
+&lt;li&gt;一个policy变俩，manager+worker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-1.png&#34;
+	width=&#34;915&#34;
+	height=&#34;699&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-1_huac66c22315e73f8e7a9b1beefc0be840_53015_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-1_huac66c22315e73f8e7a9b1beefc0be840_53015_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;IQL&amp;#43;manager&amp;#43;worker&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;130&#34;
+		data-flex-basis=&#34;314px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;g:final reward&lt;/p&gt;
+&lt;p&gt;s:state&lt;/p&gt;
+&lt;p&gt;z:subgoal&lt;/p&gt;
+&lt;p&gt;a:action&lt;/p&gt;
+&lt;p&gt;k:每k步一个subgoal&lt;/p&gt;
+&lt;p&gt;IQL:V(s,g)&lt;/p&gt;
+&lt;p&gt;manager:s,g-&amp;gt;z&lt;/p&gt;
+&lt;p&gt;worker:s,z-&amp;gt;a&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-2.png&#34;
+	width=&#34;1130&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-2_hu664c9c6599ef80888ac8723ad7bce81b_75361_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-2_hu664c9c6599ef80888ac8723ad7bce81b_75361_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;value function&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;156&#34;
+		data-flex-basis=&#34;376px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;虽然不是同一个policy，但是同一个value function，可能会不好学&lt;/p&gt;
+&lt;p&gt;所以虽然同一个value function，但是不是同一个policy，fine-tune了一下&lt;/p&gt;
+&lt;p&gt;manager需要学的是怎么每K步做一个subgoal&lt;/p&gt;
+&lt;p&gt;worker需要学的是怎么到达眼前这个subgoal&lt;/p&gt;
+&lt;p&gt;亮点是IQL和manager不关心action，所以能应对offline的大量数据
+而且不需要experts trajectories&lt;/p&gt;
+&lt;h2 id=&#34;preliminaries&#34;&gt;Preliminaries&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-3.png&#34;
+	width=&#34;1984&#34;
+	height=&#34;568&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-3_hu03286cdc64fc80f728a1567ab4e99c61_361797_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-3_hu03286cdc64fc80f728a1567ab4e99c61_361797_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;setting&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;349&#34;
+		data-flex-basis=&#34;838px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-9.png&#34;
+	width=&#34;2326&#34;
+	height=&#34;603&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-9_hu11981efdefe22fed6aef176799dfa3e9_344940_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-9_hu11981efdefe22fed6aef176799dfa3e9_344940_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;IQL&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;385&#34;
+		data-flex-basis=&#34;925px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;IQL是他们组2022年一篇ICLR poster的工作：论文里讲的挺细，最后的结论是IQL和一般的Q-learning比，不需要那么关注action，但是我确实看不懂他这个Loss哪来的。&lt;/p&gt;
+&lt;p&gt;于是决定去知乎，文化先跟初中生同步一下&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;OfflineRL本来的Loss：&lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-5.png&#34;
+	width=&#34;1461&#34;
+	height=&#34;248&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-5_hu8ff4755e1a9f03410a897dc47031e0bb_50414_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-5_hu8ff4755e1a9f03410a897dc47031e0bb_50414_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;589&#34;
+		data-flex-basis=&#34;1413px&#34;
+	
+&gt; 取让s最接近s&amp;rsquo;的action的Q过来。问题是定义域外的action也能算出一个Q，把这个Loss搞废了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;改进的Loss：&lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-6.png&#34;
+	width=&#34;1279&#34;
+	height=&#34;180&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-6_hu0f23ced887d1be543340ff2448c13fe0_40593_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-6_hu0f23ced887d1be543340ff2448c13fe0_40593_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;710&#34;
+		data-flex-basis=&#34;1705px&#34;
+	
+&gt;不取最大，不做query，因此定义域外的action不会参与loss计算&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;引入调参手段：&lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-7.png&#34;
+	width=&#34;1304&#34;
+	height=&#34;128&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-7_hub25abda7d6f735984ce26c495aa3b5b0_40468_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-7_hub25abda7d6f735984ce26c495aa3b5b0_40468_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1018&#34;
+		data-flex-basis=&#34;2445px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把s&amp;rsquo;的Q分成两个值函数构造：&lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-8.png&#34;
+	width=&#34;1290&#34;
+	height=&#34;333&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-8_hucebee2786eeced2e2691aa4d8885c275_68392_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-8_hucebee2786eeced2e2691aa4d8885c275_68392_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;387&#34;
+		data-flex-basis=&#34;929px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最后把Qlearning拿走，放弃学习action与state之间的关系，就得到了HIQL这篇里的东西啦&lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-10.png&#34;
+	width=&#34;1694&#34;
+	height=&#34;129&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-10_hu25010af4d67a4f4bf95caefcbcff3be9_39922_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-10_hu25010af4d67a4f4bf95caefcbcff3be9_39922_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1313&#34;
+		data-flex-basis=&#34;3151px&#34;
+	
+&gt; &lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-11.png&#34;
+	width=&#34;1619&#34;
+	height=&#34;124&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-11_hub8de80c9fcf2aaaf180eca5ea905fb7c_38566_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-11_hub8de80c9fcf2aaaf180eca5ea905fb7c_38566_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1305&#34;
+		data-flex-basis=&#34;3133px&#34;
+	
+&gt; &lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-12.png&#34;
+	width=&#34;1124&#34;
+	height=&#34;84&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-12_hua17f4b41bee10d5b39bb12832dac7cb4_23962_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-12_hua17f4b41bee10d5b39bb12832dac7cb4_23962_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1338&#34;
+		data-flex-basis=&#34;3211px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;hierarchical-policy-structure&#34;&gt;Hierarchical policy structure&lt;/h2&gt;
+&lt;h3 id=&#34;作者眼中sparse-reward困难的原因信噪比&#34;&gt;作者眼中sparse reward困难的原因：信噪比&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;final reward很远的时候，不同的state之间输出的value差别会很小 这导致一些错误的action是可以得到纠正的 所以很难分辨action的质量&lt;/li&gt;
+&lt;li&gt;更糟糕的是，在难以分辨的有效值以外充满大量的噪声
+&lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-13.png&#34;
+	width=&#34;1045&#34;
+	height=&#34;556&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-13_hua376f372805d7f5a2411fcf695023e48_37969_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-13_hua376f372805d7f5a2411fcf695023e48_37969_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;187&#34;
+		data-flex-basis=&#34;451px&#34;
+	
+&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;hierarchical-policy-structure-1&#34;&gt;hierarchical policy structure&lt;/h3&gt;
+&lt;p&gt;重复描述Introduction中对应的这一部分&lt;/p&gt;
+&lt;h3 id=&#34;toy环境上的理论证明&#34;&gt;toy环境上的理论证明&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-14.png&#34;
+	width=&#34;748&#34;
+	height=&#34;303&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-14_hu8cbe2bb527215fd7267b8f7408fa1c5a_23394_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-14_hu8cbe2bb527215fd7267b8f7408fa1c5a_23394_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;toy环境&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;246&#34;
+		data-flex-basis=&#34;592px&#34;
+	
+&gt;
+这个环境下Value function就是单纯的-|s-g|&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;因为状态转移概率是1所以没有期望 因为只有一维所以不需要累加/累乘
+这个环境下，subgoal被人为控制的越来越远
+那么如果我们不做subgoal，考虑的范围就只有左右两格。每K步做一次subgoal 考虑的范围就是左右K格（笑）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里作者附录里给出了理论证明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;找到了在有subgoal情况下，这个toy环境中决策错误概率的理论上界&lt;/li&gt;
+&lt;li&gt;证明了他们方法的manager和worker犯错概率都要比flat策略更低&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果我刚学完概统我肯定能把这段看懂，可惜已经过去快两年了（笑）&lt;/p&gt;
+&lt;h2 id=&#34;methodhierarchical-implicit-q-learning&#34;&gt;Method：Hierarchical Implicit Q-learning&lt;/h2&gt;
+&lt;p&gt;非常简短。。。&lt;/p&gt;
+&lt;h3 id=&#34;策略一分为二&#34;&gt;策略一分为二&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-15.png&#34;
+	width=&#34;1768&#34;
+	height=&#34;253&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-15_hu9366d0c90a4dcbbccf5a82bd42190bbb_84339_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-15_hu9366d0c90a4dcbbccf5a82bd42190bbb_84339_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;698&#34;
+		data-flex-basis=&#34;1677px&#34;
+	
+&gt;
+上面那个是manager学怎么产生subgoal&lt;/p&gt;
+&lt;p&gt;下面那个是worker学怎么接近下一个subgoal&lt;/p&gt;
+&lt;p&gt;A其实就是前后两个Value function的差 具体怎么减在Introduction的这一部分里介绍过了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-16.png&#34;
+	width=&#34;2375&#34;
+	height=&#34;859&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-16_hufca7410b384905af88a7b4e6ae95b1fc_369074_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-16_hufca7410b384905af88a7b4e6ae95b1fc_369074_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;276&#34;
+		data-flex-basis=&#34;663px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;训练完value function之后分出manager和worker两个policy&lt;/p&gt;
+&lt;h3 id=&#34;subgoal的表征方式&#34;&gt;subgoal的表征方式&lt;/h3&gt;
+&lt;p&gt;直接用state的一部分当subgoal&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

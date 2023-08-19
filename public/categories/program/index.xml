@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>program on Sikongdddl的博客</title>
+        <link>https://Sikongdddl.github.io/categories/program/</link>
+        <description>Recent content in program on Sikongdddl的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 19 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/categories/program/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>16组星火营项目文档</title>
+        <link>https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/</link>
+        <pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/</guid>
+        <description>&lt;h1 id=&#34;sikongdddl的文档&#34;&gt;Sikongdddl的文档&lt;/h1&gt;
+&lt;h2 id=&#34;环境相关&#34;&gt;环境相关&lt;/h2&gt;
+&lt;h3 id=&#34;python&#34;&gt;python&lt;/h3&gt;
+&lt;h3 id=&#34;go&#34;&gt;go&lt;/h3&gt;
+&lt;h2 id=&#34;项目相关&#34;&gt;项目相关&lt;/h2&gt;
+&lt;p&gt;github repo地址：&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Sikongdddl/SparkPlugin16&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Sikongdddl/SparkPlugin16&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;架构&#34;&gt;架构&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前端：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;输入：用户纯文本输入 原始问题input&lt;/p&gt;
+&lt;p&gt;输出：经过整个系统后最终的输出 response+prompt&lt;/p&gt;
+&lt;p&gt;工作内容:把input送给一级后端&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一级后端：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;输入：来自前端的用户原始问题input&lt;/p&gt;
+&lt;p&gt;输出：经过代码润色过的input+prompt&lt;/p&gt;
+&lt;p&gt;工作内容：&lt;/p&gt;
+&lt;p&gt;任务一：&lt;/p&gt;
+&lt;p&gt;简易版：&lt;/p&gt;
+&lt;p&gt;二级后端只有一个插件API，把润色过的input+prompt直接发给二级后端；&lt;/p&gt;
+&lt;p&gt;复杂版：把input+prompt发送给星火大模型，做分词提取+选择插件API工作 并把input+prompt发送给二级后端中对应的插件API&lt;/p&gt;
+&lt;p&gt;任务二：&lt;/p&gt;
+&lt;p&gt;从二级后端收到response后 润色生成response+prompt 输入给星火大模型生成文本格式回答 把文本格式回答送给前端呈现出来&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;二级后端：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;输入：来自一级后端的input+prompt&lt;/p&gt;
+&lt;p&gt;输出：根据输入信息进行对应内容输出 生成response（json格式）&lt;/p&gt;
+&lt;p&gt;工作内容：&lt;/p&gt;
+&lt;p&gt;把生成的json丢给一级后端&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image-1.png&#34;
+	width=&#34;1186&#34;
+	height=&#34;738&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image-1_hu00214a9b61bccbe491181ebf408c93f4_34586_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image-1_hu00214a9b61bccbe491181ebf408c93f4_34586_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;架构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;385px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;项目管理风格加分点&#34;&gt;“项目管理风格”加分点：&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;晨会&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;每天开个15min小会 每个人介绍一下以下内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;昨天做了什么&lt;/li&gt;
+&lt;li&gt;今天要做什么&lt;/li&gt;
+&lt;li&gt;昨天遇到了什么问题自己有点难解决&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;做好会议记录 其实一共也就五天的时间 五场会 而且因为大家白天都在一起 这就是纯纯的形式主义&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;github repo&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;每个feature开一个branch&lt;/p&gt;
+&lt;p&gt;具体来说：前端单独一个branch；后端单独一个branch；调prompt的json和yaml单独一个branch
+自己负责的任务基本完成可以提交后，向我们的主分支发送一个pull request 审批后并入主分支
+这样我们的开发过程就会有一个类似这样的图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image.png&#34;
+	width=&#34;840&#34;
+	height=&#34;791&#34;
+	srcset=&#34;https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image_hu2037bff5b09b360f24d605b94fbeb0e7_60901_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image_hu2037bff5b09b360f24d605b94fbeb0e7_60901_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;仓库网络图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;106&#34;
+		data-flex-basis=&#34;254px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;十分滴好看，当然这一切要建立在他们允许我们建立仓库的情况下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文档&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们这个文档本身就是个很大的加分点
+后面最好还是大家都来参与一些编写工作 记录一下自己的开发日志之类的&lt;/p&gt;
+&lt;h3 id=&#34;分工&#34;&gt;分工&lt;/h3&gt;
+&lt;p&gt;陆朋朋 雷逸 前端网站开发&lt;/p&gt;
+&lt;p&gt;宫俊儒 后端开发+推荐系统工作准备&lt;/p&gt;
+&lt;p&gt;宋奕辰 刘非凡 董雨康 调prompt&lt;/p&gt;
+&lt;h3 id=&#34;推荐技术&#34;&gt;推荐技术&lt;/h3&gt;
+&lt;h4 id=&#34;这个博客是怎么来的&#34;&gt;这个博客是怎么来的&lt;/h4&gt;
+&lt;p&gt;参考帖子：https://blog.electronicwaste.cn/
+技术栈为hugo+githubpage 挺流畅的 我当时折腾了两天就搭起来了 大约花了六七个小时的时间
+程序员的职业生涯是从拥有自己的博客开始的（笑）&lt;/p&gt;
+&lt;h3 id=&#34;其他一些有的没的&#34;&gt;其他一些有的没的&lt;/h3&gt;
+&lt;h3 id=&#34;airport-list&#34;&gt;airport list&lt;/h3&gt;
+&lt;p&gt;这个事儿要冒着被墙或者喝茶的风险&lt;/p&gt;
+&lt;p&gt;因为自己翻墙是违法行为，但是不违反刑法。但传播扩散机场的性质和自己翻墙不一样，可以判煽动颠覆，3-7年。&lt;/p&gt;
+&lt;p&gt;大家觉得自己机场不太稳定/有点贵可以来问我要一个两年90块的机场地址（笑）&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>2023科大讯飞星火营日志</title>
+        <link>https://Sikongdddl.github.io/p/2023%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%90%A5%E6%97%A5%E5%BF%97/</link>
+        <pubDate>Mon, 14 Aug 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://Sikongdddl.github.io/p/2023%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%90%A5%E6%97%A5%E5%BF%97/</guid>
+        <description>&lt;h2 id=&#34;写在前面&#34;&gt;写在前面：&lt;/h2&gt;
+&lt;p&gt;签了保密协议 代码 讲座内容和相关联系方式不能说&lt;/p&gt;
+&lt;p&gt;这边博客更新的内容应该都只是些流水帐吧&lt;/p&gt;
+&lt;h2 id=&#34;8月14日&#34;&gt;8月14日&lt;/h2&gt;
+&lt;p&gt;和组里朋友@ycsong一起过来的&lt;/p&gt;
+&lt;p&gt;三点半抵达800一晚的酒店
+晚饭去附近的商场解决 六点回到酒店没绷住 睡了一个小时&lt;/p&gt;
+&lt;p&gt;晚上syc配了两个小时的交大VPN（笑）&lt;/p&gt;
+&lt;p&gt;明天上午没有安排活动 有点期待这边的早餐午餐了&lt;/p&gt;
+&lt;p&gt;有继续在失眠 算上傍晚补的一觉一共睡了五个半小时吧&lt;/p&gt;
+&lt;h2 id=&#34;8月15日&#34;&gt;8月15日&lt;/h2&gt;
+&lt;p&gt;早餐出乎意料的丰盛&lt;/p&gt;
+&lt;p&gt;下午拉去看发布会，总的来说没什么新鲜技术，但是至少算是一份及格的答卷了&lt;/p&gt;
+&lt;p&gt;这也让我开始思考 中国的审查环境有没有可能允许真正的llm出现 虽然这和我自己的研究方向可谓是风马牛不相及（笑）&lt;/p&gt;
+&lt;p&gt;看完发布会被拉去吃晚餐 依旧是丰盛的自助 然后尬尬的玩了俩小时莫名其妙的游戏 还上去输掉了一局先手必胜的游戏，我是先手（笑） 这个游戏有空了可以写一篇儿&lt;/p&gt;
+&lt;p&gt;明天好像要从早通勤到晚，上午一段参观 一节课 下午两节课 晚上团建&lt;/p&gt;
+&lt;p&gt;我不知道自己还有没有这么多精力可以挥霍了&lt;/p&gt;
+&lt;p&gt;十点多了，读会儿书，洗洗睡了。&lt;/p&gt;
+&lt;h2 id=&#34;8月16日&#34;&gt;8月16日&lt;/h2&gt;
+&lt;p&gt;昨天睡了个好觉&lt;/p&gt;
+&lt;p&gt;上午开营仪式 然后一天上了三节课&lt;/p&gt;
+&lt;p&gt;总的来说比较水 讲课的风格属于那种会的不用听，不会的听了也不懂的类型（笑&lt;/p&gt;
+&lt;p&gt;讯飞的食堂特别挤，倒是没有很难吃。电梯特别挤，而且高峰区不停低层，爬了好多楼。&lt;/p&gt;
+&lt;p&gt;希望明天讲点干货吧 有点浪费时间&lt;/p&gt;
+&lt;p&gt;晚上玩的还挺开心 没想到（笑&lt;/p&gt;
+&lt;p&gt;但是没有交到朋友（笑 不知道明天分组怎么办 看起来一组要七八个人的样子（笑&lt;/p&gt;
+&lt;p&gt;随便吧 忙的时候是不会焦虑的&lt;/p&gt;
+&lt;h2 id=&#34;8月17日-8月18日&#34;&gt;8月17日 8月18日&lt;/h2&gt;
+&lt;p&gt;日程被排的满而不科学&lt;/p&gt;
+&lt;p&gt;十七号正经996了一天，浪费一整天的时间听大课+BOSS直聘；十八号一天做了两天的工作，忙到十二点四十回酒店&lt;/p&gt;
+&lt;p&gt;这两天小宋的手要准备拆线了 加上有些感冒 应该准备要回家了 不看在老板的面子上我也不会在这里继续工作啦&lt;/p&gt;
+&lt;p&gt;熟悉我的朋友应该知道我这人最讨厌拿工作时间体现工作量，所以很反感这种单纯压榨大家时间的企业文化&lt;/p&gt;
+&lt;p&gt;不过也有好消息，至少认识了几个新朋友吧 尤其跟吕亮大哥挺聊得来的 工作了两三年后再回来读博真的是挺有勇气的事吧 他也提醒我也许真的可以慢一点 或者快到底 申个港校/新加坡的全奖PHD试试&lt;/p&gt;
+&lt;p&gt;讽刺的是时至今日我才走到一个我觉得自己也许配，也知道自己确实配的十字路口当中，但从前的那些执念和失落都已经变成灰色烟消云散了。&lt;/p&gt;
+&lt;p&gt;不出来是永远不会看到人生有多少种可能的&lt;/p&gt;
+&lt;p&gt;看到浙大的同学因为和组里的朋友工作意见不统一，分歧比较大，大吵特吵一架，我好像才意识到也许自己离一个只懂技术不懂管理的人还有些距离&lt;/p&gt;
+&lt;p&gt;长久以来我的眼里没有任何一个失意的人，或者说我选择性的不去把他们放在眼里&lt;/p&gt;
+&lt;p&gt;我这人没什么平民意识，经常喜欢说的话是“我不会看不起别人，我只是看不到他们”，现在发现看得到他们是更难做到的，更有好处的，更利于自身长远发展的，也更自然的。&lt;/p&gt;
+&lt;p&gt;但我会改变自己吗？&lt;/p&gt;
+&lt;p&gt;我好像也不会。&lt;/p&gt;
+&lt;p&gt;如果不是今天过劳，我都不会写下这些文字。&lt;/p&gt;
+&lt;p&gt;从自己下定决心只依赖自己后，转眼已经快要四年。我终究已经回不到那个对痛苦没有想象力的状态了。&lt;/p&gt;
+&lt;p&gt;今天按理应该是比较开心的，但我好像只是表面上被调动了起来，或者去为了调动别人做做样子罢了。&lt;/p&gt;
+&lt;p&gt;我只是真的有些厌倦了 不那么想继续了&lt;/p&gt;
+&lt;p&gt;欲买桂花同载酒，终不似少年游&lt;/p&gt;
+&lt;p&gt;2023/8/19 司空 凌晨于合肥乐富强酒店18楼&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>1&#43;1&#43;1&#43;1游戏</title>
+        <link>https://Sikongdddl.github.io/p/1-1-1-1%E6%B8%B8%E6%88%8F/</link>
+        <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://Sikongdddl.github.io/p/1-1-1-1%E6%B8%B8%E6%88%8F/</guid>
+        <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;我小的时候玩过这样的一个游戏：&lt;/p&gt;
+&lt;p&gt;两个人面对面，伸出双手做“1”的手势，然后依次行动&lt;/p&gt;
+&lt;p&gt;每次行动时，用自己的一只手碰对方的一只手，并把自己这只手上的数字变成二者的和&lt;/p&gt;
+&lt;p&gt;如果和为10 就把这一只手放下&lt;/p&gt;
+&lt;p&gt;率先放下两只手的人获胜&lt;/p&gt;
+&lt;p&gt;我小的时候在想，这个游戏的背后是否有某种最优策略？其中的“标准解法”和对应的数学模型又该如何得到呢？&lt;/p&gt;
+&lt;p&gt;如今我拥有了扎实的代码水平和不扎实的数学基础，决定来对这个儿时的问题进行一些深入研究。&lt;/p&gt;
+&lt;h2 id=&#34;工欲善其事必先利其器&#34;&gt;工欲善其事，必先利其器&lt;/h2&gt;
+&lt;p&gt;由于数学太烂，我的代码水平显著强于数学水平，想不明白就先用代码多玩几次，规律可能自己就出来了。&lt;/p&gt;
+&lt;p&gt;所以我首先完成了这个游戏的一个简单的模拟器和日志输出&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;强烈建议没玩过这个游戏的来和我玩一次 不然下面的东西可能会把人看晕&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;下面为随机一次游戏的日志：其中，开始的四个数字代表两个人四只手的当前状态。&lt;/p&gt;
+&lt;p&gt;顺序为：p1左手，p1右手，p2左手，p2右手&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;轮数: 0&lt;/p&gt;
+&lt;p&gt;1 1
+1 1
+p1行动
+行动者使用右手
+触碰对方左手&lt;/p&gt;
+&lt;p&gt;轮数: 1&lt;/p&gt;
+&lt;p&gt;1 2
+1 1
+p2行动
+行动者使用左手
+触碰对方左手&lt;/p&gt;
+&lt;p&gt;轮数: 2&lt;/p&gt;
+&lt;p&gt;1 2
+2 1
+p1行动
+行动者使用左手
+触碰对方右手&lt;/p&gt;
+&lt;p&gt;轮数: 3&lt;/p&gt;
+&lt;p&gt;2 2
+2 1
+p2行动
+行动者使用左手
+触碰对方右手&lt;/p&gt;
+&lt;p&gt;轮数: 4&lt;/p&gt;
+&lt;p&gt;2 2
+4 1
+p1行动
+行动者使用左手
+触碰对方右手&lt;/p&gt;
+&lt;p&gt;轮数: 5&lt;/p&gt;
+&lt;p&gt;3 2
+4 1
+p2行动
+行动者使用右手
+触碰对方左手&lt;/p&gt;
+&lt;p&gt;轮数: 6&lt;/p&gt;
+&lt;p&gt;3 2
+4 4
+p1行动
+行动者使用右手
+触碰对方左手&lt;/p&gt;
+&lt;p&gt;轮数: 7&lt;/p&gt;
+&lt;p&gt;3 6
+4 4
+p2行动
+行动者使用右手
+触碰对方右手&lt;/p&gt;
+&lt;p&gt;轮数: 8&lt;/p&gt;
+&lt;p&gt;3 6
+4 0
+p1行动
+行动者使用右手
+对方只有左手&lt;/p&gt;
+&lt;p&gt;轮数: 9&lt;/p&gt;
+&lt;p&gt;3 0
+4 0
+p2行动
+行动者只有左手
+对方只有左手&lt;/p&gt;
+&lt;p&gt;轮数: 10&lt;/p&gt;
+&lt;p&gt;3 0
+7 0
+p1行动
+行动者只有左手
+对方只有左手&lt;/p&gt;
+&lt;p&gt;game over!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;实验&#34;&gt;实验&lt;/h2&gt;
+&lt;p&gt;既然有了这样一个模拟器，让它帮我跑一些实验也就十分自然了。&lt;/p&gt;
+&lt;h3 id=&#34;统计模拟&#34;&gt;统计模拟&lt;/h3&gt;
+&lt;p&gt;我们高强度使用模拟器，让双方以完全随机的策略玩这个游戏几万次（CPU震怒），并在此过程中收集一些统计信息。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;显而易见的是，我们在进行大批量的实验前应该担心这个游戏是否存在”死局“，即两位游戏者陷入无论使用什么策略都无法结束的局面。&lt;/p&gt;
+&lt;p&gt;直接说结论，在其中一人剩余两只手时，游戏最终一定会进入每人只剩一只手的局面，或者直接结束。&lt;/p&gt;
+&lt;p&gt;在每人只剩一只手时，根据我过往的经验，这个游戏在某些时候会陷入无尽的循环。例如2遇到1，2先手时。有兴趣的朋友可以自己试一下。&lt;/p&gt;
+&lt;p&gt;由于后续测得平均一局游戏的步数是27步左右，因此在这里我粗暴地认为，当一局游戏进行了200步还没有结束时，就视作已经陷入无尽循环流局，直接开始下一局。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以下是实验结果：当我们认为超过200个episode为流局时数据如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;实验序号&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;先手获胜&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;后手获胜&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;流局&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;451&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;445&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;104&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;424&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;470&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;106&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;415&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;474&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;111&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4（十倍样本）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4224&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4685&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1091&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5（2000episode判定流局）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;485&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;395&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;120&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;在前三次实验中，我们进行一千次游戏。
+第四次实验为压力测试，进行了一万次游戏。
+第五次实验为对照试验，将认为流局的标准从200步放宽到了2000步。&lt;/p&gt;
+&lt;p&gt;这个结果非常的amazing啊！（毕导脸）&lt;/p&gt;
+&lt;p&gt;平均来看，不流局的比赛中，平均每一局进行了27.5轮，这个游戏的节奏还是很快的，哪怕策略是随机的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因此跑这些实验消耗的时间还不及debug的一半（划掉&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;除此之外，我们发现了两件奇怪的事：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在完全随机决策的情况下，先手胜率明显低于后手。而当对随机的容忍足够高时，先手胜率又略高于后手。但流局概率基本稳定。&lt;/li&gt;
+&lt;li&gt;这个游戏居然有高达百分之十的流局概率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中，关于先手优胜问题，由于表现并不十分稳定，并没有吸引我足够多的注意力。&lt;/p&gt;
+&lt;p&gt;但后者，关于流局这件事，深深的吸引了我。&lt;/p&gt;
+&lt;p&gt;因此这篇博客从此正式跑偏，从研究最优策略转为研究流局问题。&lt;/p&gt;
+&lt;h3 id=&#34;流局&#34;&gt;流局&lt;/h3&gt;
+&lt;p&gt;只需要略微改动下代码，把流局的情况最后一幕拿出来观赏一下即可发现：&lt;/p&gt;
+&lt;p&gt;所有流局情况同胚 属于这样一个循环之中：&lt;/p&gt;
+&lt;p&gt;(2 1)-&amp;gt;[3 1]-&amp;gt;(3 4)-&amp;gt;[7 4]-&amp;gt;(7 1)-&amp;gt;[8 1]-&amp;gt;(8 9)-&amp;gt;[7 9]-&amp;gt;(7 6)-&amp;gt;[3 6]-&amp;gt;(3 9)-&amp;gt;[2 9]-&amp;gt;(2 1)&lt;/p&gt;
+&lt;p&gt;其中，用小括号括起来表示左边先手，用中括号则反之&lt;/p&gt;
+&lt;p&gt;乍一看好像没有什么规律，但我们可以对它进行一个简单的处理。
+至于为什么要这么处理，我们后面再说~&lt;/p&gt;
+&lt;p&gt;将所有右边先手的情况进行两个坐标的交换，并认为这是一次左边先手的情况，那么这是一种等价变换。
+这是显然的，例如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(2 1)表示当前我的手比了个2，你的手比了个1，轮到我先动。&lt;/p&gt;
+&lt;p&gt;[1 2]表示当前我的手比了个1，你的手比了个2，轮到你先动。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;变换后我们得到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2 1-&amp;gt;1 3-&amp;gt;3 4-&amp;gt;4 7-&amp;gt;7 1-&amp;gt;1 8-&amp;gt;8 9-&amp;gt;9 7-&amp;gt;7 6-&amp;gt;6 3-&amp;gt;3 9-&amp;gt;9 2-&amp;gt;2 1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;流局中的数学&#34;&gt;流局中的数学&lt;/h3&gt;
+&lt;p&gt;前面我们已经讨论过，流局只发生在双方都只剩一只手的情况下。&lt;/p&gt;
+&lt;p&gt;这是一个相对平凡的情况，比较适合进行一个数学建模。
+当两个人都只有一只手时，下面这个矩阵可以代表全部的起始情况：&lt;/p&gt;
+&lt;p&gt;let E =&lt;/p&gt;
+&lt;p&gt;[2 3 4 5 6 7 8 9 0]&lt;/p&gt;
+&lt;p&gt;[3 4 5 6 7 8 9 0 1]&lt;/p&gt;
+&lt;p&gt;[4 5 6 7 8 9 0 1 2]&lt;/p&gt;
+&lt;p&gt;[5 6 7 8 9 0 1 2 3]&lt;/p&gt;
+&lt;p&gt;[6 7 8 9 0 1 2 3 4]&lt;/p&gt;
+&lt;p&gt;[7 8 9 0 1 2 3 4 5]&lt;/p&gt;
+&lt;p&gt;[8 9 0 1 2 3 4 5 6]&lt;/p&gt;
+&lt;p&gt;[9 0 1 2 3 4 5 6 7]&lt;/p&gt;
+&lt;p&gt;[0 1 2 3 4 5 6 7 8]&lt;/p&gt;
+&lt;p&gt;其中：Eij表示p1为i p2为j时 p1先手相加后p1的结果&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;比如说，E11=2，意思就是，当我手上是1，你手上也是1的时候，我一碰你我就变成2了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是一个满秩的矩阵（雾）&lt;/p&gt;
+&lt;p&gt;每一次加法的本质是一次行变换/列变换，具体来说，比如i从1变成了2，本质上就是第一行与第二行交换 而这是不改变矩阵的秩的&lt;/p&gt;
+&lt;p&gt;游戏的结束条件是当E（1，1）变成0时，自己是后手&lt;/p&gt;
+&lt;p&gt;也许从这里出发可以得到这个游戏的“最优策略”，但是一心泡在那个流局上的我今天不想研究他了（雾），欢迎有兴趣的朋友issue我，我们一起继续玩&lt;/p&gt;
+&lt;p&gt;我们把导致流局的起始条件在矩阵中标黑，我们就会得到一个很有趣的矩阵：
+(这里如果开了暗色模式很可能看不清楚，建议切换一下，让你们看看这个淡粉色的主题)&lt;/p&gt;
+&lt;p&gt;[2 3 &lt;strong&gt;4&lt;/strong&gt; 5 6 7 8 &lt;strong&gt;9&lt;/strong&gt; 0]&lt;/p&gt;
+&lt;p&gt;[&lt;strong&gt;3&lt;/strong&gt; 4 5 6 7 8 9 0 1]&lt;/p&gt;
+&lt;p&gt;[4 5 6 &lt;strong&gt;7&lt;/strong&gt; 8 9 0 1 &lt;strong&gt;2&lt;/strong&gt;]&lt;/p&gt;
+&lt;p&gt;[5 6 7 8 9 0 &lt;strong&gt;1&lt;/strong&gt; 2 3]&lt;/p&gt;
+&lt;p&gt;[6 7 8 9 0 1 2 3 4]&lt;/p&gt;
+&lt;p&gt;[7 8 &lt;strong&gt;9&lt;/strong&gt; 0 1 2 3 4 5]&lt;/p&gt;
+&lt;p&gt;[&lt;strong&gt;8&lt;/strong&gt; 9 0 1 2 &lt;strong&gt;3&lt;/strong&gt; 4 5 6]&lt;/p&gt;
+&lt;p&gt;[9 0 1 2 3 4 5 6 &lt;strong&gt;7&lt;/strong&gt;]&lt;/p&gt;
+&lt;p&gt;[0 &lt;strong&gt;1&lt;/strong&gt; 2 3 4 5 &lt;strong&gt;6&lt;/strong&gt; 7 8]&lt;/p&gt;
+&lt;p&gt;至此我们部分解决了之前的一个问题：为什么流局的概率高达百分之十几&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;展开解释一下：&lt;/p&gt;
+&lt;p&gt;这个矩阵中，每一个值都代表着一种“游戏状态”。比如E13，就代表着当一只手是1，另一只手是3的时候，1的那只手先手，接下来会得到的值是E13。
+那么在全部的9*9=81这么大的概率空间内，有足足12个点会导致进入流局循环。这也就意味着，我们假设在游戏变成一只手对一只手的时候，出现这81种局面的概率相同，那么游戏就有12/81的概率进入流局循环，最终流局。
+这个概率约等于14.8%，比我们测出来的还要高。
+不匹配的原因显然是出现这81种局面的概率并不相同。&lt;/p&gt;
+&lt;p&gt;具体从我们的1，1，1，1开局发展到这八十一种情况的概率怎么计算，我目前还没有想通。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后自然而然的会提出以下几个问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为什么中心对称：坐标和互补的两个坐标，如果一个坐标会流局，那么另一个坐标也会。如果一个不会，那么另一个也不会。这个问题我也没有解决。&lt;/li&gt;
+&lt;li&gt;还有没有别的循环：这个问题比较朴素，由于一只手+一只手不存在“选择”的余地，暴力求解可知，不再有别的循环&lt;/li&gt;
+&lt;li&gt;为什么这一组循环会导致流局：这涉及到流局的本质，这个问题被我解决了，诸位看官请看。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;流局的本质&#34;&gt;流局的本质&lt;/h3&gt;
+&lt;p&gt;让我们观察这个序列，不难发现它是一个有点意思的，性质类似于斐波那契数列的数对列&lt;/p&gt;
+&lt;p&gt;2 1-&amp;gt;3 1-&amp;gt;3 4-&amp;gt;7 4-&amp;gt;7 1-&amp;gt;8 1-&amp;gt;8 9-&amp;gt;7 9-&amp;gt;7 6-&amp;gt;3 6-&amp;gt;3 9-&amp;gt;2 9-&amp;gt;2 1&lt;/p&gt;
+&lt;p&gt;其中&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A11=2 A12=1&lt;/p&gt;
+&lt;p&gt;A21=A12&lt;/p&gt;
+&lt;p&gt;A22=A11+A12&lt;/p&gt;
+&lt;p&gt;An1 = A(n-1)2&lt;/p&gt;
+&lt;p&gt;An2=A(n-1)1+A(n-1)2&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;把这些可恶的重复去掉之后，我们得到了这样的一个数列：&lt;/p&gt;
+&lt;p&gt;2，1，3，4，7，1，8，9，7，6，3，9，2，1&lt;/p&gt;
+&lt;p&gt;前面的数对形式来自于我们以步长为1，去拿相邻的两个数。&lt;/p&gt;
+&lt;p&gt;这个数列：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对10取模&lt;/li&gt;
+&lt;li&gt;前两项与斐波那契数列不同&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其他性质与斐波那契数列基本相同&lt;/p&gt;
+&lt;p&gt;经过检验后发现，只有前两项是这两个小倒霉时，这个数列才会在无尽的相加之中永远不出现尾数0，也就意味着永远无法达成凑出10让游戏结束的真实。&lt;/p&gt;
+&lt;p&gt;这就是这个游戏流局背后的数学啦。&lt;/p&gt;
+&lt;p&gt;奇妙的是，我当然不是第一个发现以这两个数字开头的斐波那契数列性质比较特殊的人。&lt;/p&gt;
+&lt;p&gt;第一个发现的人叫卢卡斯(Lucas)，大家感兴趣可以去搜一下Lucas sequence，它在解决斐波那契的相关问题中表现极为突出。
+我们面对的这个数列就是它，只是被mod10了。&lt;/p&gt;
+&lt;h2 id=&#34;写在最后&#34;&gt;写在最后&lt;/h2&gt;
+&lt;p&gt;我很爱这种探索的过程，即使儿时的游戏也能带给我无尽的快乐和挑战。
+还有好多相关工作没有完成！&lt;/p&gt;
+&lt;p&gt;其实有点玩物丧志，如果这两天工作顺利，有空闲时间的话，我会回来继续更新的&lt;/p&gt;
+&lt;h2 id=&#34;开个源&#34;&gt;开个源&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 66
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 67
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 68
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 69
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 70
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 71
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 72
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 73
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 74
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 75
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 76
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 77
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 78
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 79
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 80
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 81
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 82
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 83
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 84
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 85
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 86
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 87
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 88
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 89
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 90
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 91
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 92
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 93
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 94
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 95
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 96
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 97
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 98
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 99
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;100
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;101
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;102
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;103
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;104
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;105
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;106
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;107
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;108
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;109
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;110
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;111
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;112
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;113
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;114
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;115
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;116
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;117
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;118
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;119
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;120
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;121
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;122
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;123
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;124
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;125
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;126
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;127
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;128
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;129
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;130
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;131
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;132
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;133
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;134
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;135
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;136
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;137
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;138
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;139
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;140
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;141
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;142
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;143
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;144
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;145
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;146
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;147
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;148
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;149
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;150
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;151
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;152
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;153
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;154
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;155
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;156
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;157
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;158
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;159
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;160
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;161
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;162
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;163
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;164
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;165
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;166
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;167
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;168
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;169
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;170
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;171
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;172
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;173
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;174
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;175
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;176
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;177
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;178
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;179
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;180
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;181
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;182
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;183
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;184
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;185
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;186
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;187
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;188
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;189
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;190
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;191
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;192
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;193
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;194
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;195
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;196
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;197
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;198
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;199
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;200
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;201
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;202
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;203
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;204
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;205
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;206
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;207
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;208
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;209
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;210
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;211
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;212
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;213
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;214
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;215
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;216
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;217
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;218
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;219
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;220
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;221
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;222
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;223
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;224
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;225
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;226
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;227
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;228
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;229
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;230
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;231
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;232
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;233
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;234
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;235
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;236
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;237
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;238
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;239
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;240
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;241
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;242
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;243
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;244
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;245
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;246
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;247
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;248
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;249
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;250
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;251
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;252
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;253
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;254
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;255
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;256
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;257
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;258
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;259
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;260
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;261
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;262
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;263
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;264
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;265
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;266
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;267
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;268
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;269
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;270
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;271
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#include &amp;lt;time.h&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#include &amp;lt;vector&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;using namespace std;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;class log{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;public:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int ls1;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int rs1;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int ls2;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int rs2;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int from_to_flag;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    log(int a,int b,int c,int d,int e)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ls1 = a;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        rs1 = b;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ls2 = c;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        rs2 = d;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        from_to_flag = e;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    void traverse()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cout&amp;lt;&amp;lt;ls1&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;rs1&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cout&amp;lt;&amp;lt;ls2&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;rs2&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if(!from_to_flag)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            cout&amp;lt;&amp;lt;&amp;#34;p1先手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            cout&amp;lt;&amp;lt;&amp;#34;p2先手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    };
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;class player{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;public:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int lscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int rscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int lexist;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int rexist;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    player()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        lscore = 1;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        rscore = 1;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        lexist = 1;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        rexist = 1;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    bool end()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if(lexist == 0 &amp;amp;&amp;amp; rexist == 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            return 1;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        return 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    void reset()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        lscore = 1;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        rscore = 1;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        lexist = 1;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        rexist = 1;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;void score_tidy(player &amp;amp;p)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if(p.lscore == 10)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        p.lexist = 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if(p.rscore == 10)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        p.rexist = 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    p.lscore %= 10;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    p.rscore %= 10;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;void move(player &amp;amp;p, player &amp;amp;q)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int fromFlag = rand()%2;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int toFlag = rand()%2;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    //行动者只剩左手
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if(p.lexist == 1 &amp;amp;&amp;amp; p.rexist == 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cout&amp;lt;&amp;lt;&amp;#34;行动者只有左手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if(q.lexist == 1 &amp;amp;&amp;amp; q.rexist == 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            cout&amp;lt;&amp;lt;&amp;#34;对方只有左手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            p.lscore += q.lscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        else if (q.lexist == 0 &amp;amp;&amp;amp; q.rexist == 1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            cout&amp;lt;&amp;lt;&amp;#34;对方只有右手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            p.lscore += q.rscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            if(toFlag == 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                cout&amp;lt;&amp;lt;&amp;#34;触碰对方左手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                p.lscore += q.lscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                cout&amp;lt;&amp;lt;&amp;#34;触碰对方右手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                p.lscore += q.rscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    //行动者只剩右手
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else if(p.lexist == 0 &amp;amp;&amp;amp; p.rexist == 1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cout&amp;lt;&amp;lt;&amp;#34;行动者只有右手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if(q.lexist == 1 &amp;amp;&amp;amp; q.rexist == 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            cout&amp;lt;&amp;lt;&amp;#34;对方只有左手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            p.rscore += q.lscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        else if (q.lexist == 0 &amp;amp;&amp;amp; q.rexist == 1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            cout&amp;lt;&amp;lt;&amp;#34;对方只有右手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            p.rscore += q.rscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            if(toFlag == 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                cout&amp;lt;&amp;lt;&amp;#34;触碰对方左手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                p.rscore += q.lscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                cout&amp;lt;&amp;lt;&amp;#34;触碰对方左手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                p.rscore += q.rscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    //行动者由fromFlag决定
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if(fromFlag == 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            cout&amp;lt;&amp;lt;&amp;#34;行动者使用左手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            if(q.lexist == 1 &amp;amp;&amp;amp; q.rexist == 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                cout&amp;lt;&amp;lt;&amp;#34;对方只有左手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                p.lscore += q.lscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            else if (q.lexist == 0 &amp;amp;&amp;amp; q.rexist == 1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                cout&amp;lt;&amp;lt;&amp;#34;对方只有右手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                p.lscore += q.rscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                if(toFlag == 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    cout&amp;lt;&amp;lt;&amp;#34;触碰对方左手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    p.lscore += q.lscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    cout&amp;lt;&amp;lt;&amp;#34;触碰对方右手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    p.lscore += q.rscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            cout&amp;lt;&amp;lt;&amp;#34;行动者使用右手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            if(q.lexist == 1 &amp;amp;&amp;amp; q.rexist == 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                cout&amp;lt;&amp;lt;&amp;#34;对方只有左手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                p.rscore += q.lscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            else if (q.lexist == 0 &amp;amp;&amp;amp; q.rexist == 1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                cout&amp;lt;&amp;lt;&amp;#34;对方只有右手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                p.rscore += q.rscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                if(toFlag == 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    cout&amp;lt;&amp;lt;&amp;#34;触碰对方左手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    p.rscore += q.lscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    cout&amp;lt;&amp;lt;&amp;#34;触碰对方右手&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    p.rscore += q.rscore;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    score_tidy(p);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;int main()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    unsigned int seed = time(0);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    srand(seed);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    vector&amp;lt;log&amp;gt; fail_log;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    player *p1 = new player();
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    player *p2 = new player();
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int episode = 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int step = 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int p1_scoreboard = 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int p2_scoreboard = 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int fail_scoreboard = 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    int total_episode = 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    while(1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cout&amp;lt;&amp;lt;&amp;#34;轮数: &amp;#34;&amp;lt;&amp;lt;episode&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cout&amp;lt;&amp;lt;&amp;#34;局数：&amp;#34;&amp;lt;&amp;lt;step&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cout&amp;lt;&amp;lt;p1-&amp;gt;lscore&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;p1-&amp;gt;rscore&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cout&amp;lt;&amp;lt;p2-&amp;gt;lscore&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;p2-&amp;gt;rscore&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if(episode %2 == 0)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            cout&amp;lt;&amp;lt;&amp;#34;p1行动&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            move(*p1,*p2);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            cout&amp;lt;&amp;lt;&amp;#34;p2行动&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            move(*p2,*p1);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if(p1-&amp;gt;end() || p2-&amp;gt;end() || episode &amp;gt; 200)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            ++step;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            if(p1-&amp;gt;end())
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                ++p1_scoreboard;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                total_episode += episode;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                cout&amp;lt;&amp;lt;&amp;#34;p1 won!&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            else if(p2-&amp;gt;end())
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                ++p2_scoreboard;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                total_episode += episode;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                cout&amp;lt;&amp;lt;&amp;#34;p2 won!&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            else if(episode &amp;gt; 200)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                log* l = new log(p1-&amp;gt;lscore, p1-&amp;gt;rscore, p2-&amp;gt;lscore, p2-&amp;gt;rscore, episode%2==0);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                fail_log.push_back(*l);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                ++fail_scoreboard;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                cout&amp;lt;&amp;lt;&amp;#34;endless routine&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            p1-&amp;gt;reset();
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            p2-&amp;gt;reset();
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            episode = 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ++episode;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if(step == 100)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            cout&amp;lt;&amp;lt;&amp;#34;总轮数为：&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            cout&amp;lt;&amp;lt;total_episode&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            break;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    cout&amp;lt;&amp;lt;p1_scoreboard&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;p2_scoreboard&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;fail_scoreboard&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    for(int i = 0; i &amp;lt; fail_log.size(); ++i)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        cout&amp;lt;&amp;lt;&amp;#34;第&amp;#34;&amp;lt;&amp;lt;i&amp;lt;&amp;lt;&amp;#34;次流局情况如下：&amp;#34;&amp;lt;&amp;lt;endl;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        fail_log[i].traverse();
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

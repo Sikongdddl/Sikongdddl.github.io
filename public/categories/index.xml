@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on Sikongdddl的博客</title>
+        <link>https://Sikongdddl.github.io/categories/</link>
+        <description>Recent content in Categories on Sikongdddl的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 19 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>program</title>
+        <link>https://Sikongdddl.github.io/categories/program/</link>
+        <pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://Sikongdddl.github.io/categories/program/</guid>
+        <description>&lt;img src="https://Sikongdddl.github.io/categories/program/program.jpg" alt="Featured image of post program" /&gt;</description>
+        </item>
+        <item>
+        <title>paper</title>
+        <link>https://Sikongdddl.github.io/categories/paper/</link>
+        <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://Sikongdddl.github.io/categories/paper/</guid>
+        <description>&lt;img src="https://Sikongdddl.github.io/categories/paper/arxiv.png" alt="Featured image of post paper" /&gt;</description>
+        </item>
+        <item>
+        <title>think</title>
+        <link>https://Sikongdddl.github.io/categories/think/</link>
+        <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://Sikongdddl.github.io/categories/think/</guid>
+        <description>&lt;img src="https://Sikongdddl.github.io/categories/think/think.jpg" alt="Featured image of post think" /&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
