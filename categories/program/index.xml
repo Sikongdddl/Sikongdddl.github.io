@@ -2,11 +2,47 @@
 &lt;h2 id="环境相关">环境相关&lt;/h2>
 &lt;h3 id="python">python&lt;/h3>
 &lt;h3 id="go">go&lt;/h3>
-&lt;h3 id="项目相关">项目相关&lt;/h3>
+&lt;h2 id="项目相关">项目相关&lt;/h2>
 &lt;p>github repo地址：&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/Sikongdddl/SparkPlugin16" target="_blank" rel="noopener"
 >https://github.com/Sikongdddl/SparkPlugin16&lt;/a>&lt;/p>
-&lt;p>“项目管理风格”加分点：&lt;/p>
+&lt;h3 id="架构">架构&lt;/h3>
+&lt;blockquote>
+&lt;p>前端：&lt;/p>
+&lt;/blockquote>
+&lt;p>输入：用户纯文本输入 原始问题input&lt;/p>
+&lt;p>输出：经过整个系统后最终的输出 response+prompt&lt;/p>
+&lt;p>工作内容:把input送给一级后端&lt;/p>
+&lt;blockquote>
+&lt;p>一级后端：&lt;/p>
+&lt;/blockquote>
+&lt;p>输入：来自前端的用户原始问题input&lt;/p>
+&lt;p>输出：经过代码润色过的input+prompt&lt;/p>
+&lt;p>工作内容：&lt;/p>
+&lt;p>任务一：&lt;/p>
+&lt;p>简易版：&lt;/p>
+&lt;p>二级后端只有一个插件API，把润色过的input+prompt直接发给二级后端；&lt;/p>
+&lt;p>复杂版：把input+prompt发送给星火大模型，做分词提取+选择插件API工作 并把input+prompt发送给二级后端中对应的插件API&lt;/p>
+&lt;p>任务二：&lt;/p>
+&lt;p>从二级后端收到response后 润色生成response+prompt 输入给星火大模型生成文本格式回答 把文本格式回答送给前端呈现出来&lt;/p>
+&lt;blockquote>
+&lt;p>二级后端：&lt;/p>
+&lt;/blockquote>
+&lt;p>输入：来自一级后端的input+prompt&lt;/p>
+&lt;p>输出：根据输入信息进行对应内容输出 生成response（json格式）&lt;/p>
+&lt;p>工作内容：&lt;/p>
+&lt;p>把生成的json丢给一级后端&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image-1.png"
+width="1186"
+height="738"
+srcset="https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image-1_hu00214a9b61bccbe491181ebf408c93f4_34586_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image-1_hu00214a9b61bccbe491181ebf408c93f4_34586_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="架构"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="385px"
+>&lt;/p>
+&lt;h3 id="项目管理风格加分点">“项目管理风格”加分点：&lt;/h3>
 &lt;blockquote>
 &lt;p>晨会&lt;/p>
 &lt;/blockquote>
@@ -41,9 +77,9 @@ data-flex-basis="254px"
 &lt;p>我们这个文档本身就是个很大的加分点
 后面最好还是大家都来参与一些编写工作 记录一下自己的开发日志之类的&lt;/p>
 &lt;h3 id="分工">分工&lt;/h3>
-&lt;p>陆朋朋 雷逸 前端网站开发
-宫俊儒 后端开发+推荐系统工作准备
-宋奕辰 刘非凡 董雨康 调prompt&lt;/p>
+&lt;p>陆朋朋 雷逸 前端网站开发&lt;/p>
+&lt;p>宫俊儒 后端开发+推荐系统工作准备&lt;/p>
+&lt;p>宋奕辰 刘非凡 董雨康 调prompt&lt;/p>
 &lt;h3 id="推荐技术">推荐技术&lt;/h3>
 &lt;h4 id="这个博客是怎么来的">这个博客是怎么来的&lt;/h4>
 &lt;p>参考帖子：https://blog.electronicwaste.cn/
