@@ -1,6 +1,6 @@
 ---
 title: 16组星火营项目文档
-description: 冲冲冲！
+description: 我们是最默契的陌生人
 date: 2023-08-19
 
 categories:
@@ -43,11 +43,11 @@ https://github.com/Sikongdddl/SparkPlugin16
 
 二级后端只有一个插件API，把润色过的input+prompt直接发给二级后端；
 
-复杂版：把input+prompt发送给星火大模型，做分词提取+选择插件API工作 并把input+prompt发送给二级后端中对应的插件API
+复杂版：做分词提取+选择插件API工作 并把input+prompt发送给二级后端中对应的插件API
 
 任务二：
 
-从二级后端收到response后 润色生成response+prompt 输入给星火大模型生成文本格式回答 把文本格式回答送给前端呈现出来
+从二级后端收到response后 润色生成response+prompt 输入给星火大模型生成回答
 
 > 二级后端：
 
@@ -61,7 +61,6 @@ https://github.com/Sikongdddl/SparkPlugin16
 
 ![架构](image-1.png)
 
-
 ### “项目管理风格”加分点：
 
 > 晨会
@@ -72,8 +71,22 @@ https://github.com/Sikongdddl/SparkPlugin16
 * 今天要做什么
 * 昨天遇到了什么问题自己有点难解决
 
+做好会议记录 其实一共也就五天的时间 五场会
 
-做好会议记录 其实一共也就五天的时间 五场会 而且因为大家白天都在一起 这就是纯纯的形式主义
+#### 20230820开发记录
+雷逸 陆朋朋：前端Vue页面搭建完成
+
+董雨康 宋奕辰 刘非凡：第一后端打通天气API中 从命令行输入问题，根据关键词选择API 生成可以提问的json问星火大模型 已经调通
+
+宋：从高德API获得json
+
+刘非凡：把json润色后返回星火大模型 让大模型返回文本语言
+
+董：整合代码 插件落槽部分
+
+宫俊儒：第二后端完成天气API和星火大模型API需要的json格式化工作和相关接口准备
+
+#### 20230821开发记录
 
 > github repo
 
@@ -85,7 +98,7 @@ https://github.com/Sikongdddl/SparkPlugin16
 
 ![仓库网络图](image.png)
 
-十分滴好看，当然这一切要建立在他们允许我们建立仓库的情况下
+十分滴好看
 
 > 文档
 
@@ -95,16 +108,16 @@ https://github.com/Sikongdddl/SparkPlugin16
 
 陆朋朋 雷逸 前端网站开发
 
-宫俊儒 后端开发+推荐系统工作准备
+宫俊儒 二级后端开发 架构 
 
-宋奕辰 刘非凡 董雨康 调prompt
+宋奕辰 刘非凡 董雨康 一级后端开发（天气插件开发）
+
+宋奕辰 宫俊儒 Rebuttal插件开发
+
+刘非凡 董雨康 食谱插件开发
 
 ### 推荐技术
 
-#### 这个博客是怎么来的
-参考帖子：https://blog.electronicwaste.cn/
-技术栈为hugo+githubpage 挺流畅的 我当时折腾了两天就搭起来了 大约花了六七个小时的时间
-程序员的职业生涯是从拥有自己的博客开始的（笑）
 ### 其他一些有的没的
 
 ### airport list
