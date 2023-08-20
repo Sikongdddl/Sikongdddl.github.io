@@ -22,9 +22,9 @@
 &lt;p>任务一：&lt;/p>
 &lt;p>简易版：&lt;/p>
 &lt;p>二级后端只有一个插件API，把润色过的input+prompt直接发给二级后端；&lt;/p>
-&lt;p>复杂版：把input+prompt发送给星火大模型，做分词提取+选择插件API工作 并把input+prompt发送给二级后端中对应的插件API&lt;/p>
+&lt;p>复杂版：做分词提取+选择插件API工作 并把input+prompt发送给二级后端中对应的插件API&lt;/p>
 &lt;p>任务二：&lt;/p>
-&lt;p>从二级后端收到response后 润色生成response+prompt 输入给星火大模型生成文本格式回答 把文本格式回答送给前端呈现出来&lt;/p>
+&lt;p>从二级后端收到response后 润色生成response+prompt 输入给星火大模型生成回答&lt;/p>
 &lt;blockquote>
 &lt;p>二级后端：&lt;/p>
 &lt;/blockquote>
@@ -52,7 +52,15 @@ data-flex-basis="385px"
 &lt;li>今天要做什么&lt;/li>
 &lt;li>昨天遇到了什么问题自己有点难解决&lt;/li>
 &lt;/ul>
-&lt;p>做好会议记录 其实一共也就五天的时间 五场会 而且因为大家白天都在一起 这就是纯纯的形式主义&lt;/p>
+&lt;p>做好会议记录 其实一共也就五天的时间 五场会&lt;/p>
+&lt;h4 id="20230820开发记录">20230820开发记录&lt;/h4>
+&lt;p>雷逸 陆朋朋：前端Vue页面搭建完成&lt;/p>
+&lt;p>董雨康 宋奕辰 刘非凡：第一后端打通天气API中 从命令行输入问题，根据关键词选择API 生成可以提问的json问星火大模型 已经调通&lt;/p>
+&lt;p>宋：从高德API获得json&lt;/p>
+&lt;p>刘非凡：把json润色后返回星火大模型 让大模型返回文本语言&lt;/p>
+&lt;p>董：整合代码 插件落槽部分&lt;/p>
+&lt;p>宫俊儒：第二后端完成天气API和星火大模型API需要的json格式化工作和相关接口准备&lt;/p>
+&lt;h4 id="20230821开发记录">20230821开发记录&lt;/h4>
 &lt;blockquote>
 &lt;p>github repo&lt;/p>
 &lt;/blockquote>
@@ -70,7 +78,7 @@ class="gallery-image"
 data-flex-grow="106"
 data-flex-basis="254px"
 >&lt;/p>
-&lt;p>十分滴好看，当然这一切要建立在他们允许我们建立仓库的情况下&lt;/p>
+&lt;p>十分滴好看&lt;/p>
 &lt;blockquote>
 &lt;p>文档&lt;/p>
 &lt;/blockquote>
@@ -78,13 +86,11 @@ data-flex-basis="254px"
 后面最好还是大家都来参与一些编写工作 记录一下自己的开发日志之类的&lt;/p>
 &lt;h3 id="分工">分工&lt;/h3>
 &lt;p>陆朋朋 雷逸 前端网站开发&lt;/p>
-&lt;p>宫俊儒 后端开发+推荐系统工作准备&lt;/p>
-&lt;p>宋奕辰 刘非凡 董雨康 调prompt&lt;/p>
+&lt;p>宫俊儒 二级后端开发 架构&lt;/p>
+&lt;p>宋奕辰 刘非凡 董雨康 一级后端开发（天气插件开发）&lt;/p>
+&lt;p>宋奕辰 宫俊儒 Rebuttal插件开发&lt;/p>
+&lt;p>刘非凡 董雨康 食谱插件开发&lt;/p>
 &lt;h3 id="推荐技术">推荐技术&lt;/h3>
-&lt;h4 id="这个博客是怎么来的">这个博客是怎么来的&lt;/h4>
-&lt;p>参考帖子：https://blog.electronicwaste.cn/
-技术栈为hugo+githubpage 挺流畅的 我当时折腾了两天就搭起来了 大约花了六七个小时的时间
-程序员的职业生涯是从拥有自己的博客开始的（笑）&lt;/p>
 &lt;h3 id="其他一些有的没的">其他一些有的没的&lt;/h3>
 &lt;h3 id="airport-list">airport list&lt;/h3>
 &lt;p>这个事儿要冒着被墙或者喝茶的风险&lt;/p>
@@ -134,7 +140,7 @@ data-flex-basis="254px"
 &lt;p>今天按理应该是比较开心的，但我好像只是表面上被调动了起来，或者去为了调动别人做做样子罢了。&lt;/p>
 &lt;p>我只是真的有些厌倦了 不那么想继续了&lt;/p>
 &lt;p>欲买桂花同载酒，终不似少年游&lt;/p>
-&lt;p>2023/8/19 司空 凌晨于合肥乐富强酒店18楼&lt;/p></description></item><item><title>1+1+1+1游戏</title><link>https://Sikongdddl.github.io/p/1-1-1-1%E6%B8%B8%E6%88%8F/</link><pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/1-1-1-1%E6%B8%B8%E6%88%8F/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>2023/8/19 司空 凌晨于合肥乐富强酒店18楼&lt;/p></description></item><item><title>1+1+1+1游戏</title><link>https://Sikongdddl.github.io/p/1-1-1-1%E6%B8%B8%E6%88%8F/</link><pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/1-1-1-1%E6%B8%B8%E6%88%8F/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>我小的时候玩过这样的一个游戏：&lt;/p>
 &lt;p>两个人面对面，伸出双手做“1”的手势，然后依次行动&lt;/p>
 &lt;p>每次行动时，用自己的一只手碰对方的一只手，并把自己这只手上的数字变成二者的和&lt;/p>

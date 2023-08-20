@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sikongdddl的博客</title><link>https://Sikongdddl.github.io/post/</link><description>Recent content in Posts on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 19 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>16组星火营项目文档</title><link>https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/</guid><description>&lt;h1 id="sikongdddl的文档">Sikongdddl的文档&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sikongdddl的博客</title><link>https://Sikongdddl.github.io/post/</link><description>Recent content in Posts on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 20 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>星火营干货及近日进展</title><link>https://Sikongdddl.github.io/p/%E6%98%9F%E7%81%AB%E8%90%A5%E5%B9%B2%E8%B4%A7%E5%8F%8A%E8%BF%91%E6%97%A5%E8%BF%9B%E5%B1%95/</link><pubDate>Sun, 20 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E6%98%9F%E7%81%AB%E8%90%A5%E5%B9%B2%E8%B4%A7%E5%8F%8A%E8%BF%91%E6%97%A5%E8%BF%9B%E5%B1%95/</guid><description>&lt;h2 id="为什么这篇不是论文笔记">为什么这篇不是论文笔记&lt;/h2>
+&lt;p>科大讯飞这边日程排的又满又不科学 很浪费时间
+加上最近接到了电话
+这俩事都值得汇报一下 都挺大的 就没去读论文（笑）&lt;/p>
+&lt;h2 id="讯飞星火大模型相关">讯飞星火大模型相关&lt;/h2>
+&lt;p>去年12月项目开始，5月6日发布13B参数量模型，8月15日发布65B参数量模型&lt;/p>
+&lt;p>效果低于GPT3.5 但是低的不多 比国内其他大模型还是好一些的&lt;/p>
+&lt;p>借了华为一部分算力资源支持 加上讯飞常年做输入法和语音识别，训练数据质量很高，清洗数据方法也很成熟 所以虽然仓促但是能做出来&lt;/p>
+&lt;h2 id="星火营相关">星火营相关&lt;/h2>
+&lt;p>成员基本是全国985211的硕士博士生 本科生偏少
+很多人都是带着活过来这边 一边被老板push一边做这边的事（笑）&lt;/p>
+&lt;blockquote>
+&lt;p>8.15-8.17上大课&lt;/p>
+&lt;/blockquote>
+&lt;p>除了第一天讲过一些大模型相关的算法和知识之外 都是讲座性质的介绍课程 比较无聊（笑）&lt;/p>
+&lt;p>讲了大模型的发展沿革（BERT系和GPT系）&lt;/p>
+&lt;p>transformer诞生后&lt;/p>
+&lt;p>BERT系做一些参数量相对没有那么夸张的大模型 做encoder only，识别任务更多一些 必须fine-tune 预训练方式是mask后完形填空 或根据上一句话写出下一句话 标注成本高&lt;/p>
+&lt;p>GPT系做参数量很夸张的大模型（GPT3就有175B） decoder only，做生成任务更多一些&lt;/p>
+&lt;p>GPT系能做出来原因主要是：&lt;/p>
+&lt;ul>
+&lt;li>transformer的Encoder本身叠不深 不全是钱的问题 到100B这种参数量的encoder-only训练不起来&lt;/li>
+&lt;li>GPT系泛化能力比BERT系好（不用finetune）而且预训练任务更简单&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>8.18“测评”&lt;/p>
+&lt;/blockquote>
+&lt;p>分成7人小组 想prompt 想评价体系横向比较讯飞大模型和GPT3.5的情况 代码比较简单 一些基本的API调用 但是工作量安排不合理 对prompt量要求较大 全员加班 下班时间11：00-2：00不定 我们十二点搞好的&lt;/p>
+&lt;blockquote>
+&lt;p>8.19-8.24做项目&lt;/p>
+&lt;/blockquote>
+&lt;p>我和宋的选题是给大模型做插件 技术上也不复杂 总体上要做的是截获用户的prompt，润色后丢给第三方处理（如询问天气）或交给大模型，获得更丰富有效的回答 主要考察想象力（笑）&lt;/p>
+&lt;blockquote>
+&lt;p>奖金：（全组奖金 税前）&lt;/p>
+&lt;/blockquote>
+&lt;p>16组进8&lt;/p>
+&lt;p>4-8名20000&lt;/p>
+&lt;p>2-3名50000&lt;/p>
+&lt;p>1名100000&lt;/p>
+&lt;p>组队运气不好 本来最厉害的大哥（交大18级硕士毕业，去北京工作了几年回来读博）被老板叫回去了 除了宋能帮到比较大的忙以外 其它几位朋友基础都比较差&lt;/p>
+&lt;p>现在项目是我在架构和管理 进度比较乐观 工作强度也不大 估计明天就能做完 但应该不考虑奖金的事情了 真能拿到奖金的话回来就充公（笑）&lt;/p>
+&lt;p>也算是有收获的 感觉自己和别人（尤其是比较菜的朋友）交流的能力显著增强 也慢慢明白要怎么和更厉害的人相处才让双方都舒服&lt;/p>
+&lt;h2 id="关于戴院士组里来交大就职的老师">关于戴院士组里来交大就职的老师&lt;/h2>
+&lt;p>写到这才发现我不知道她叫什么名字（笑）&lt;/p>
+&lt;p>8月19日晚收到了面试电话 简单交流了下&lt;/p>
+&lt;p>交流内容大概包括：&lt;/p>
+&lt;ul>
+&lt;li>关于推免资格（我一接到电话就全交代了 她看简历并不知道第六学期的事 但她还是坚持把电话打完了（笑））&lt;/li>
+&lt;li>代码能力（她说我挺能写码的 是她想找的类型）&lt;/li>
+&lt;li>为什么挺能写码但是GPA不高（致远+最后一学期专业课组队失利 她听我说组队就明白了）&lt;/li>
+&lt;li>之前的研究方向和科研经历&lt;/li>
+&lt;li>交大的保研流程常识（主要是我在介绍 好像她并不清楚）&lt;/li>
+&lt;li>为什么这么晚了还没确定接收（于是我又说了一遍我最近这几个月的叠加态）&lt;/li>
+&lt;li>问王老师有几个名额（实话实说了我）&lt;/li>
+&lt;li>她和我一开始一样 也没想明白我怎么能报到她这种24年入职的老师 我说报戴院士 挂大老板 她有点没反应过来愣了一下 可能之前没考虑过这种展开（笑）&lt;/li>
+&lt;li>研究方向偏硬件会不会不喜欢（介绍了硬件层面加速算法的一些知识 以及说那边做纯算法的太卷了 博士得发十篇 做做硬件还没那么卷 我说挺感兴趣 如果这玩意能让大模型更好训练就好了）&lt;/li>
+&lt;li>会不会顾虑年轻老师资源少（我说喜欢被push 年轻老师在学生身上花的时间多）&lt;/li>
+&lt;/ul>
+&lt;p>第一次电话结束后约十分钟又来了一通电话 问我为什么不去杨老师这边的其它小老板那里（马老师 晏老师和沈老师） 看起来还是没有完全理解交大的流程 我解释说被CS挂简历了 去不了计算机系&lt;/p>
+&lt;p>最后的结论：&lt;/p>
+&lt;ul>
+&lt;li>她说这波有好多学生 所以现在不能确定下来（这句话翻来覆去说了好几次 婉拒了属于是） 让我确认拿到推免资格后再联系她一次&lt;/li>
+&lt;/ul></description></item><item><title>16组星火营项目文档</title><link>https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/</guid><description>&lt;h1 id="sikongdddl的文档">Sikongdddl的文档&lt;/h1>
 &lt;h2 id="环境相关">环境相关&lt;/h2>
 &lt;h3 id="python">python&lt;/h3>
 &lt;h3 id="go">go&lt;/h3>
@@ -22,9 +84,9 @@
 &lt;p>任务一：&lt;/p>
 &lt;p>简易版：&lt;/p>
 &lt;p>二级后端只有一个插件API，把润色过的input+prompt直接发给二级后端；&lt;/p>
-&lt;p>复杂版：把input+prompt发送给星火大模型，做分词提取+选择插件API工作 并把input+prompt发送给二级后端中对应的插件API&lt;/p>
+&lt;p>复杂版：做分词提取+选择插件API工作 并把input+prompt发送给二级后端中对应的插件API&lt;/p>
 &lt;p>任务二：&lt;/p>
-&lt;p>从二级后端收到response后 润色生成response+prompt 输入给星火大模型生成文本格式回答 把文本格式回答送给前端呈现出来&lt;/p>
+&lt;p>从二级后端收到response后 润色生成response+prompt 输入给星火大模型生成回答&lt;/p>
 &lt;blockquote>
 &lt;p>二级后端：&lt;/p>
 &lt;/blockquote>
@@ -52,7 +114,15 @@ data-flex-basis="385px"
 &lt;li>今天要做什么&lt;/li>
 &lt;li>昨天遇到了什么问题自己有点难解决&lt;/li>
 &lt;/ul>
-&lt;p>做好会议记录 其实一共也就五天的时间 五场会 而且因为大家白天都在一起 这就是纯纯的形式主义&lt;/p>
+&lt;p>做好会议记录 其实一共也就五天的时间 五场会&lt;/p>
+&lt;h4 id="20230820开发记录">20230820开发记录&lt;/h4>
+&lt;p>雷逸 陆朋朋：前端Vue页面搭建完成&lt;/p>
+&lt;p>董雨康 宋奕辰 刘非凡：第一后端打通天气API中 从命令行输入问题，根据关键词选择API 生成可以提问的json问星火大模型 已经调通&lt;/p>
+&lt;p>宋：从高德API获得json&lt;/p>
+&lt;p>刘非凡：把json润色后返回星火大模型 让大模型返回文本语言&lt;/p>
+&lt;p>董：整合代码 插件落槽部分&lt;/p>
+&lt;p>宫俊儒：第二后端完成天气API和星火大模型API需要的json格式化工作和相关接口准备&lt;/p>
+&lt;h4 id="20230821开发记录">20230821开发记录&lt;/h4>
 &lt;blockquote>
 &lt;p>github repo&lt;/p>
 &lt;/blockquote>
@@ -70,7 +140,7 @@ class="gallery-image"
 data-flex-grow="106"
 data-flex-basis="254px"
 >&lt;/p>
-&lt;p>十分滴好看，当然这一切要建立在他们允许我们建立仓库的情况下&lt;/p>
+&lt;p>十分滴好看&lt;/p>
 &lt;blockquote>
 &lt;p>文档&lt;/p>
 &lt;/blockquote>
@@ -78,13 +148,11 @@ data-flex-basis="254px"
 后面最好还是大家都来参与一些编写工作 记录一下自己的开发日志之类的&lt;/p>
 &lt;h3 id="分工">分工&lt;/h3>
 &lt;p>陆朋朋 雷逸 前端网站开发&lt;/p>
-&lt;p>宫俊儒 后端开发+推荐系统工作准备&lt;/p>
-&lt;p>宋奕辰 刘非凡 董雨康 调prompt&lt;/p>
+&lt;p>宫俊儒 二级后端开发 架构&lt;/p>
+&lt;p>宋奕辰 刘非凡 董雨康 一级后端开发（天气插件开发）&lt;/p>
+&lt;p>宋奕辰 宫俊儒 Rebuttal插件开发&lt;/p>
+&lt;p>刘非凡 董雨康 食谱插件开发&lt;/p>
 &lt;h3 id="推荐技术">推荐技术&lt;/h3>
-&lt;h4 id="这个博客是怎么来的">这个博客是怎么来的&lt;/h4>
-&lt;p>参考帖子：https://blog.electronicwaste.cn/
-技术栈为hugo+githubpage 挺流畅的 我当时折腾了两天就搭起来了 大约花了六七个小时的时间
-程序员的职业生涯是从拥有自己的博客开始的（笑）&lt;/p>
 &lt;h3 id="其他一些有的没的">其他一些有的没的&lt;/h3>
 &lt;h3 id="airport-list">airport list&lt;/h3>
 &lt;p>这个事儿要冒着被墙或者喝茶的风险&lt;/p>
@@ -1593,7 +1661,238 @@ data-flex-basis="163px"
 &lt;p>　　我希望更多的人看到这篇文章，并引起共鸣。每个人都应该知道什么是对，什么是错？&lt;/p>
 &lt;p>　　我希望自己努力发出的这点声音，能够得到更多的支持。星星之火，可以燎原。&lt;/p>
 &lt;p>　　我希望我们国家的医疗成为世界最好的医疗典范。&lt;/p>
-&lt;p>　　张煜 2021年4月18日&lt;/p></description></item><item><title>1+1+1+1游戏</title><link>https://Sikongdddl.github.io/p/1-1-1-1%E6%B8%B8%E6%88%8F/</link><pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/1-1-1-1%E6%B8%B8%E6%88%8F/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>　　张煜 2021年4月18日&lt;/p></description></item><item><title>HIQL：Offline Goal-Conditioned RL with Latent States as Actions</title><link>https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/</link><pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/</guid><description>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/bookface.png" alt="Featured image of post HIQL：Offline Goal-Conditioned RL with Latent States as Actions" />&lt;h2 id="just-deliver-something">Just deliver something&lt;/h2>
+&lt;p>在2023年3月到5月这段时间我进行过一些subgoal-based RL的研究和尝试，比较遗憾没有什么结果。&lt;/p>
+&lt;p>老板推荐，偶然发现了这位来自UC伯克利的小日子老师做了很多subgoal的工作。&lt;/p>
+&lt;p>这我不得抱起来狠狠拜读！&lt;/p>
+&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>如果能给subgoal组织成良好的结构，先找近的，一步一步往远走就容易一些&lt;/p>
+&lt;p>组织方式和director很像 一层manager一层worker。&lt;/p>
+&lt;p>manager从state得到latent representation作为subgoal，worker实现subgoal&lt;/p>
+&lt;p>特殊的地方在于这个产生了manager和worker的value function不含action&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://seohong.me/projects/hiql/" target="_blank" rel="noopener"
+>https://seohong.me/projects/hiql/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>offline go-conditioned RL问题：&lt;/p>
+&lt;ul>
+&lt;li>（state, goal）-&amp;gt; value function学不出来&lt;/li>
+&lt;li>offline数据源太多，合并进入传统RL方法有困难&lt;/li>
+&lt;/ul>
+&lt;p>说了一个可能导致sparse reward难学的原因
+当goal很远时，好的策略和不好的策略几乎看不出区别，因为任何错误都可以在之后的过程中得到修正（理论上），这就导致非常难学到一个从头到尾都正确的action series&lt;/p>
+&lt;p>解决办法跟director类似&lt;/p>
+&lt;ul>
+&lt;li>IQL从offline buffer里学一个policy&lt;/li>
+&lt;li>一个policy变俩，manager+worker&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-1.png"
+width="915"
+height="699"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-1_huac66c22315e73f8e7a9b1beefc0be840_53015_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-1_huac66c22315e73f8e7a9b1beefc0be840_53015_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="IQL&amp;#43;manager&amp;#43;worker"
+class="gallery-image"
+data-flex-grow="130"
+data-flex-basis="314px"
+>&lt;/p>
+&lt;p>g:final reward&lt;/p>
+&lt;p>s:state&lt;/p>
+&lt;p>z:subgoal&lt;/p>
+&lt;p>a:action&lt;/p>
+&lt;p>k:每k步一个subgoal&lt;/p>
+&lt;p>IQL:V(s,g)&lt;/p>
+&lt;p>manager:s,g-&amp;gt;z&lt;/p>
+&lt;p>worker:s,z-&amp;gt;a&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-2.png"
+width="1130"
+height="720"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-2_hu664c9c6599ef80888ac8723ad7bce81b_75361_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-2_hu664c9c6599ef80888ac8723ad7bce81b_75361_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="value function"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>虽然不是同一个policy，但是同一个value function，可能会不好学&lt;/p>
+&lt;p>所以虽然同一个value function，但是不是同一个policy，fine-tune了一下&lt;/p>
+&lt;p>manager需要学的是怎么每K步做一个subgoal&lt;/p>
+&lt;p>worker需要学的是怎么到达眼前这个subgoal&lt;/p>
+&lt;p>亮点是IQL和manager不关心action，所以能应对offline的大量数据
+而且不需要experts trajectories&lt;/p>
+&lt;h2 id="preliminaries">Preliminaries&lt;/h2>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-3.png"
+width="1984"
+height="568"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-3_hu03286cdc64fc80f728a1567ab4e99c61_361797_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-3_hu03286cdc64fc80f728a1567ab4e99c61_361797_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="setting"
+class="gallery-image"
+data-flex-grow="349"
+data-flex-basis="838px"
+>&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-9.png"
+width="2326"
+height="603"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-9_hu11981efdefe22fed6aef176799dfa3e9_344940_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-9_hu11981efdefe22fed6aef176799dfa3e9_344940_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="IQL"
+class="gallery-image"
+data-flex-grow="385"
+data-flex-basis="925px"
+>&lt;/p>
+&lt;p>IQL是他们组2022年一篇ICLR poster的工作：论文里讲的挺细，最后的结论是IQL和一般的Q-learning比，不需要那么关注action，但是我确实看不懂他这个Loss哪来的。&lt;/p>
+&lt;p>于是决定去知乎，文化先跟初中生同步一下&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>OfflineRL本来的Loss：&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-5.png"
+width="1461"
+height="248"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-5_hu8ff4755e1a9f03410a897dc47031e0bb_50414_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-5_hu8ff4755e1a9f03410a897dc47031e0bb_50414_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="589"
+data-flex-basis="1413px"
+> 取让s最接近s&amp;rsquo;的action的Q过来。问题是定义域外的action也能算出一个Q，把这个Loss搞废了&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>改进的Loss：&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-6.png"
+width="1279"
+height="180"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-6_hu0f23ced887d1be543340ff2448c13fe0_40593_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-6_hu0f23ced887d1be543340ff2448c13fe0_40593_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="710"
+data-flex-basis="1705px"
+>不取最大，不做query，因此定义域外的action不会参与loss计算&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>引入调参手段：&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-7.png"
+width="1304"
+height="128"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-7_hub25abda7d6f735984ce26c495aa3b5b0_40468_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-7_hub25abda7d6f735984ce26c495aa3b5b0_40468_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="1018"
+data-flex-basis="2445px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>把s&amp;rsquo;的Q分成两个值函数构造：&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-8.png"
+width="1290"
+height="333"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-8_hucebee2786eeced2e2691aa4d8885c275_68392_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-8_hucebee2786eeced2e2691aa4d8885c275_68392_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="387"
+data-flex-basis="929px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>最后把Qlearning拿走，放弃学习action与state之间的关系，就得到了HIQL这篇里的东西啦&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-10.png"
+width="1694"
+height="129"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-10_hu25010af4d67a4f4bf95caefcbcff3be9_39922_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-10_hu25010af4d67a4f4bf95caefcbcff3be9_39922_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="1313"
+data-flex-basis="3151px"
+> &lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-11.png"
+width="1619"
+height="124"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-11_hub8de80c9fcf2aaaf180eca5ea905fb7c_38566_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-11_hub8de80c9fcf2aaaf180eca5ea905fb7c_38566_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="1305"
+data-flex-basis="3133px"
+> &lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-12.png"
+width="1124"
+height="84"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-12_hua17f4b41bee10d5b39bb12832dac7cb4_23962_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-12_hua17f4b41bee10d5b39bb12832dac7cb4_23962_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="1338"
+data-flex-basis="3211px"
+>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="hierarchical-policy-structure">Hierarchical policy structure&lt;/h2>
+&lt;h3 id="作者眼中sparse-reward困难的原因信噪比">作者眼中sparse reward困难的原因：信噪比&lt;/h3>
+&lt;ul>
+&lt;li>final reward很远的时候，不同的state之间输出的value差别会很小 这导致一些错误的action是可以得到纠正的 所以很难分辨action的质量&lt;/li>
+&lt;li>更糟糕的是，在难以分辨的有效值以外充满大量的噪声
+&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-13.png"
+width="1045"
+height="556"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-13_hua376f372805d7f5a2411fcf695023e48_37969_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-13_hua376f372805d7f5a2411fcf695023e48_37969_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="187"
+data-flex-basis="451px"
+>&lt;/li>
+&lt;/ul>
+&lt;h3 id="hierarchical-policy-structure-1">hierarchical policy structure&lt;/h3>
+&lt;p>重复描述Introduction中对应的这一部分&lt;/p>
+&lt;h3 id="toy环境上的理论证明">toy环境上的理论证明&lt;/h3>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-14.png"
+width="748"
+height="303"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-14_hu8cbe2bb527215fd7267b8f7408fa1c5a_23394_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-14_hu8cbe2bb527215fd7267b8f7408fa1c5a_23394_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="toy环境"
+class="gallery-image"
+data-flex-grow="246"
+data-flex-basis="592px"
+>
+这个环境下Value function就是单纯的-|s-g|&lt;/p>
+&lt;ul>
+&lt;li>因为状态转移概率是1所以没有期望 因为只有一维所以不需要累加/累乘
+这个环境下，subgoal被人为控制的越来越远
+那么如果我们不做subgoal，考虑的范围就只有左右两格。每K步做一次subgoal 考虑的范围就是左右K格（笑）&lt;/li>
+&lt;/ul>
+&lt;p>这里作者附录里给出了理论证明：&lt;/p>
+&lt;ul>
+&lt;li>找到了在有subgoal情况下，这个toy环境中决策错误概率的理论上界&lt;/li>
+&lt;li>证明了他们方法的manager和worker犯错概率都要比flat策略更低&lt;/li>
+&lt;/ul>
+&lt;p>如果我刚学完概统我肯定能把这段看懂，可惜已经过去快两年了（笑）&lt;/p>
+&lt;h2 id="methodhierarchical-implicit-q-learning">Method：Hierarchical Implicit Q-learning&lt;/h2>
+&lt;p>非常简短。。。&lt;/p>
+&lt;h3 id="策略一分为二">策略一分为二&lt;/h3>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-15.png"
+width="1768"
+height="253"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-15_hu9366d0c90a4dcbbccf5a82bd42190bbb_84339_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-15_hu9366d0c90a4dcbbccf5a82bd42190bbb_84339_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="698"
+data-flex-basis="1677px"
+>
+上面那个是manager学怎么产生subgoal&lt;/p>
+&lt;p>下面那个是worker学怎么接近下一个subgoal&lt;/p>
+&lt;p>A其实就是前后两个Value function的差 具体怎么减在Introduction的这一部分里介绍过了&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-16.png"
+width="2375"
+height="859"
+srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-16_hufca7410b384905af88a7b4e6ae95b1fc_369074_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-16_hufca7410b384905af88a7b4e6ae95b1fc_369074_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="276"
+data-flex-basis="663px"
+>&lt;/p>
+&lt;p>训练完value function之后分出manager和worker两个policy&lt;/p>
+&lt;h3 id="subgoal的表征方式">subgoal的表征方式&lt;/h3>
+&lt;p>直接用state的一部分当subgoal&lt;/p></description></item><item><title>1+1+1+1游戏</title><link>https://Sikongdddl.github.io/p/1-1-1-1%E6%B8%B8%E6%88%8F/</link><pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/1-1-1-1%E6%B8%B8%E6%88%8F/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>我小的时候玩过这样的一个游戏：&lt;/p>
 &lt;p>两个人面对面，伸出双手做“1”的手势，然后依次行动&lt;/p>
 &lt;p>每次行动时，用自己的一只手碰对方的一只手，并把自己这只手上的数字变成二者的和&lt;/p>
@@ -2390,238 +2689,7 @@ p1行动
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>HIQL：Offline Goal-Conditioned RL with Latent States as Actions</title><link>https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/</link><pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/</guid><description>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/bookface.png" alt="Featured image of post HIQL：Offline Goal-Conditioned RL with Latent States as Actions" />&lt;h2 id="just-deliver-something">Just deliver something&lt;/h2>
-&lt;p>在2023年3月到5月这段时间我进行过一些subgoal-based RL的研究和尝试，比较遗憾没有什么结果。&lt;/p>
-&lt;p>老板推荐，偶然发现了这位来自UC伯克利的小日子老师做了很多subgoal的工作。&lt;/p>
-&lt;p>这我不得抱起来狠狠拜读！&lt;/p>
-&lt;h2 id="abstract">Abstract&lt;/h2>
-&lt;p>如果能给subgoal组织成良好的结构，先找近的，一步一步往远走就容易一些&lt;/p>
-&lt;p>组织方式和director很像 一层manager一层worker。&lt;/p>
-&lt;p>manager从state得到latent representation作为subgoal，worker实现subgoal&lt;/p>
-&lt;p>特殊的地方在于这个产生了manager和worker的value function不含action&lt;/p>
-&lt;ul>
-&lt;li>&lt;a class="link" href="https://seohong.me/projects/hiql/" target="_blank" rel="noopener"
->https://seohong.me/projects/hiql/&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>offline go-conditioned RL问题：&lt;/p>
-&lt;ul>
-&lt;li>（state, goal）-&amp;gt; value function学不出来&lt;/li>
-&lt;li>offline数据源太多，合并进入传统RL方法有困难&lt;/li>
-&lt;/ul>
-&lt;p>说了一个可能导致sparse reward难学的原因
-当goal很远时，好的策略和不好的策略几乎看不出区别，因为任何错误都可以在之后的过程中得到修正（理论上），这就导致非常难学到一个从头到尾都正确的action series&lt;/p>
-&lt;p>解决办法跟director类似&lt;/p>
-&lt;ul>
-&lt;li>IQL从offline buffer里学一个policy&lt;/li>
-&lt;li>一个policy变俩，manager+worker&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-1.png"
-width="915"
-height="699"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-1_huac66c22315e73f8e7a9b1beefc0be840_53015_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-1_huac66c22315e73f8e7a9b1beefc0be840_53015_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="IQL&amp;#43;manager&amp;#43;worker"
-class="gallery-image"
-data-flex-grow="130"
-data-flex-basis="314px"
->&lt;/p>
-&lt;p>g:final reward&lt;/p>
-&lt;p>s:state&lt;/p>
-&lt;p>z:subgoal&lt;/p>
-&lt;p>a:action&lt;/p>
-&lt;p>k:每k步一个subgoal&lt;/p>
-&lt;p>IQL:V(s,g)&lt;/p>
-&lt;p>manager:s,g-&amp;gt;z&lt;/p>
-&lt;p>worker:s,z-&amp;gt;a&lt;/p>
-&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-2.png"
-width="1130"
-height="720"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-2_hu664c9c6599ef80888ac8723ad7bce81b_75361_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-2_hu664c9c6599ef80888ac8723ad7bce81b_75361_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="value function"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;p>虽然不是同一个policy，但是同一个value function，可能会不好学&lt;/p>
-&lt;p>所以虽然同一个value function，但是不是同一个policy，fine-tune了一下&lt;/p>
-&lt;p>manager需要学的是怎么每K步做一个subgoal&lt;/p>
-&lt;p>worker需要学的是怎么到达眼前这个subgoal&lt;/p>
-&lt;p>亮点是IQL和manager不关心action，所以能应对offline的大量数据
-而且不需要experts trajectories&lt;/p>
-&lt;h2 id="preliminaries">Preliminaries&lt;/h2>
-&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-3.png"
-width="1984"
-height="568"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-3_hu03286cdc64fc80f728a1567ab4e99c61_361797_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-3_hu03286cdc64fc80f728a1567ab4e99c61_361797_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="setting"
-class="gallery-image"
-data-flex-grow="349"
-data-flex-basis="838px"
->&lt;/p>
-&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-9.png"
-width="2326"
-height="603"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-9_hu11981efdefe22fed6aef176799dfa3e9_344940_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-9_hu11981efdefe22fed6aef176799dfa3e9_344940_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="IQL"
-class="gallery-image"
-data-flex-grow="385"
-data-flex-basis="925px"
->&lt;/p>
-&lt;p>IQL是他们组2022年一篇ICLR poster的工作：论文里讲的挺细，最后的结论是IQL和一般的Q-learning比，不需要那么关注action，但是我确实看不懂他这个Loss哪来的。&lt;/p>
-&lt;p>于是决定去知乎，文化先跟初中生同步一下&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>OfflineRL本来的Loss：&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-5.png"
-width="1461"
-height="248"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-5_hu8ff4755e1a9f03410a897dc47031e0bb_50414_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-5_hu8ff4755e1a9f03410a897dc47031e0bb_50414_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="Alt text"
-class="gallery-image"
-data-flex-grow="589"
-data-flex-basis="1413px"
-> 取让s最接近s&amp;rsquo;的action的Q过来。问题是定义域外的action也能算出一个Q，把这个Loss搞废了&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>改进的Loss：&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-6.png"
-width="1279"
-height="180"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-6_hu0f23ced887d1be543340ff2448c13fe0_40593_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-6_hu0f23ced887d1be543340ff2448c13fe0_40593_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="Alt text"
-class="gallery-image"
-data-flex-grow="710"
-data-flex-basis="1705px"
->不取最大，不做query，因此定义域外的action不会参与loss计算&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>引入调参手段：&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-7.png"
-width="1304"
-height="128"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-7_hub25abda7d6f735984ce26c495aa3b5b0_40468_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-7_hub25abda7d6f735984ce26c495aa3b5b0_40468_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="Alt text"
-class="gallery-image"
-data-flex-grow="1018"
-data-flex-basis="2445px"
->&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>把s&amp;rsquo;的Q分成两个值函数构造：&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-8.png"
-width="1290"
-height="333"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-8_hucebee2786eeced2e2691aa4d8885c275_68392_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-8_hucebee2786eeced2e2691aa4d8885c275_68392_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="Alt text"
-class="gallery-image"
-data-flex-grow="387"
-data-flex-basis="929px"
->&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>最后把Qlearning拿走，放弃学习action与state之间的关系，就得到了HIQL这篇里的东西啦&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-10.png"
-width="1694"
-height="129"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-10_hu25010af4d67a4f4bf95caefcbcff3be9_39922_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-10_hu25010af4d67a4f4bf95caefcbcff3be9_39922_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="Alt text"
-class="gallery-image"
-data-flex-grow="1313"
-data-flex-basis="3151px"
-> &lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-11.png"
-width="1619"
-height="124"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-11_hub8de80c9fcf2aaaf180eca5ea905fb7c_38566_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-11_hub8de80c9fcf2aaaf180eca5ea905fb7c_38566_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="Alt text"
-class="gallery-image"
-data-flex-grow="1305"
-data-flex-basis="3133px"
-> &lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-12.png"
-width="1124"
-height="84"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-12_hua17f4b41bee10d5b39bb12832dac7cb4_23962_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-12_hua17f4b41bee10d5b39bb12832dac7cb4_23962_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="Alt text"
-class="gallery-image"
-data-flex-grow="1338"
-data-flex-basis="3211px"
->&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="hierarchical-policy-structure">Hierarchical policy structure&lt;/h2>
-&lt;h3 id="作者眼中sparse-reward困难的原因信噪比">作者眼中sparse reward困难的原因：信噪比&lt;/h3>
-&lt;ul>
-&lt;li>final reward很远的时候，不同的state之间输出的value差别会很小 这导致一些错误的action是可以得到纠正的 所以很难分辨action的质量&lt;/li>
-&lt;li>更糟糕的是，在难以分辨的有效值以外充满大量的噪声
-&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-13.png"
-width="1045"
-height="556"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-13_hua376f372805d7f5a2411fcf695023e48_37969_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-13_hua376f372805d7f5a2411fcf695023e48_37969_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="187"
-data-flex-basis="451px"
->&lt;/li>
-&lt;/ul>
-&lt;h3 id="hierarchical-policy-structure-1">hierarchical policy structure&lt;/h3>
-&lt;p>重复描述Introduction中对应的这一部分&lt;/p>
-&lt;h3 id="toy环境上的理论证明">toy环境上的理论证明&lt;/h3>
-&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-14.png"
-width="748"
-height="303"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-14_hu8cbe2bb527215fd7267b8f7408fa1c5a_23394_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-14_hu8cbe2bb527215fd7267b8f7408fa1c5a_23394_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="toy环境"
-class="gallery-image"
-data-flex-grow="246"
-data-flex-basis="592px"
->
-这个环境下Value function就是单纯的-|s-g|&lt;/p>
-&lt;ul>
-&lt;li>因为状态转移概率是1所以没有期望 因为只有一维所以不需要累加/累乘
-这个环境下，subgoal被人为控制的越来越远
-那么如果我们不做subgoal，考虑的范围就只有左右两格。每K步做一次subgoal 考虑的范围就是左右K格（笑）&lt;/li>
-&lt;/ul>
-&lt;p>这里作者附录里给出了理论证明：&lt;/p>
-&lt;ul>
-&lt;li>找到了在有subgoal情况下，这个toy环境中决策错误概率的理论上界&lt;/li>
-&lt;li>证明了他们方法的manager和worker犯错概率都要比flat策略更低&lt;/li>
-&lt;/ul>
-&lt;p>如果我刚学完概统我肯定能把这段看懂，可惜已经过去快两年了（笑）&lt;/p>
-&lt;h2 id="methodhierarchical-implicit-q-learning">Method：Hierarchical Implicit Q-learning&lt;/h2>
-&lt;p>非常简短。。。&lt;/p>
-&lt;h3 id="策略一分为二">策略一分为二&lt;/h3>
-&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-15.png"
-width="1768"
-height="253"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-15_hu9366d0c90a4dcbbccf5a82bd42190bbb_84339_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-15_hu9366d0c90a4dcbbccf5a82bd42190bbb_84339_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="Alt text"
-class="gallery-image"
-data-flex-grow="698"
-data-flex-basis="1677px"
->
-上面那个是manager学怎么产生subgoal&lt;/p>
-&lt;p>下面那个是worker学怎么接近下一个subgoal&lt;/p>
-&lt;p>A其实就是前后两个Value function的差 具体怎么减在Introduction的这一部分里介绍过了&lt;/p>
-&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-16.png"
-width="2375"
-height="859"
-srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-16_hufca7410b384905af88a7b4e6ae95b1fc_369074_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-16_hufca7410b384905af88a7b4e6ae95b1fc_369074_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-alt="Alt text"
-class="gallery-image"
-data-flex-grow="276"
-data-flex-basis="663px"
->&lt;/p>
-&lt;p>训练完value function之后分出manager和worker两个policy&lt;/p>
-&lt;h3 id="subgoal的表征方式">subgoal的表征方式&lt;/h3>
-&lt;p>直接用state的一部分当subgoal&lt;/p></description></item><item><title>心理学系列No.2——注意力危机</title><link>https://Sikongdddl.github.io/p/%E5%BF%83%E7%90%86%E5%AD%A6%E7%B3%BB%E5%88%97no.2%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%8D%B1%E6%9C%BA/</link><pubDate>Sat, 06 May 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E5%BF%83%E7%90%86%E5%AD%A6%E7%B3%BB%E5%88%97no.2%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%8D%B1%E6%9C%BA/</guid><description>&lt;h2 id="免责声明">免责声明&lt;/h2>
+&lt;/div></description></item><item><title>心理学系列No.2——注意力危机</title><link>https://Sikongdddl.github.io/p/%E5%BF%83%E7%90%86%E5%AD%A6%E7%B3%BB%E5%88%97no.2%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%8D%B1%E6%9C%BA/</link><pubDate>Sat, 06 May 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E5%BF%83%E7%90%86%E5%AD%A6%E7%B3%BB%E5%88%97no.2%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%8D%B1%E6%9C%BA/</guid><description>&lt;h2 id="免责声明">免责声明&lt;/h2>
 &lt;p>这篇博客花费了我相当长的时间，我读这本书是在五月份，这篇博客写于八月份，因此我几乎重新读了一遍这本书。&lt;/p>
 &lt;p>这部书有一些内容攻击了互联网公司，认为他们剥夺了这个时代人们的注意力。我赞成这一观点，但我没有冒犯推荐系统相关工作的意思，我想作者写这部书的本意也绝对不是抨击推荐系统这一技术本身。&lt;/p>
 &lt;p>我希望能有更多的人接受一个事实：&lt;/p>
