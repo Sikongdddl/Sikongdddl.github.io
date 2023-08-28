@@ -123,6 +123,14 @@ data-flex-basis="385px"
 &lt;p>董：整合代码 插件落槽部分&lt;/p>
 &lt;p>宫俊儒：第二后端完成天气API和星火大模型API需要的json格式化工作和相关接口准备&lt;/p>
 &lt;h4 id="20230821开发记录">20230821开发记录&lt;/h4>
+&lt;p>宫俊儒：“藏头诗”prompt调试 准备去开发前端&lt;/p>
+&lt;p>刘非凡：食谱API后端独立单元开发完成 正在往框架里整合&lt;/p>
+&lt;p>董雨康：LAVIS图片-&amp;gt;文字描述-&amp;gt;星火-&amp;gt;得到菜名和制作步骤&lt;/p>
+&lt;p>宋奕辰：rebuttal很快就能搞定 写诗的&lt;/p>
+&lt;p>雷逸 陆朋朋：页面事件基本完成 渲染还没做&lt;/p>
+&lt;h4 id="20230822开发记录">20230822开发记录&lt;/h4>
+&lt;p>宫俊儒：前端+前后端通信 明天预计做一下部署&lt;/p>
+&lt;p>宋奕辰：后端整合完善 图片接口功能完备 角色扮演prompt翻译导游讲故事&lt;/p>
 &lt;blockquote>
 &lt;p>github repo&lt;/p>
 &lt;/blockquote>
@@ -157,7 +165,23 @@ data-flex-basis="254px"
 &lt;h3 id="airport-list">airport list&lt;/h3>
 &lt;p>这个事儿要冒着被墙或者喝茶的风险&lt;/p>
 &lt;p>因为自己翻墙是违法行为，但是不违反刑法。但传播扩散机场的性质和自己翻墙不一样，可以判煽动颠覆，3-7年。&lt;/p>
-&lt;p>大家觉得自己机场不太稳定/有点贵可以来问我要一个两年90块的机场地址（笑）&lt;/p></description></item><item><title>2023科大讯飞星火营日志</title><link>https://Sikongdddl.github.io/p/2023%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%90%A5%E6%97%A5%E5%BF%97/</link><pubDate>Mon, 14 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/2023%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%90%A5%E6%97%A5%E5%BF%97/</guid><description>&lt;h2 id="写在前面">写在前面：&lt;/h2>
+&lt;p>大家觉得自己机场不太稳定/有点贵可以来问我要一个两年90块的机场地址（笑）&lt;/p>
+&lt;p>1-&amp;gt;第三组 86.75&lt;/p>
+&lt;p>2-&amp;gt;十五组 86.25&lt;/p>
+&lt;p>3-&amp;gt;十二组 85.75&lt;/p>
+&lt;p>4-&amp;gt;第二组 84.5&lt;/p>
+&lt;p>5-&amp;gt;第八组 83.5&lt;/p>
+&lt;p>6-&amp;gt;第十组 82.5&lt;/p>
+&lt;p>7-&amp;gt;十三组 81.75&lt;/p>
+&lt;p>8-&amp;gt;第五组 81.5&lt;/p>
+&lt;p>9-&amp;gt;第四组 81&lt;/p>
+&lt;p>10-&amp;gt;十一组 81&lt;/p>
+&lt;p>11-&amp;gt;十六组 80.5&lt;/p>
+&lt;p>12-&amp;gt;第七组 80.25&lt;/p>
+&lt;p>13-&amp;gt;第六组 78.75&lt;/p>
+&lt;p>14-&amp;gt;第一组 75.5&lt;/p>
+&lt;p>15-&amp;gt;十四组 75.25&lt;/p>
+&lt;p>16-&amp;gt;第九组 75&lt;/p></description></item><item><title>2023科大讯飞星火营日志</title><link>https://Sikongdddl.github.io/p/2023%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%90%A5%E6%97%A5%E5%BF%97/</link><pubDate>Mon, 14 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/2023%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%90%A5%E6%97%A5%E5%BF%97/</guid><description>&lt;h2 id="写在前面">写在前面：&lt;/h2>
 &lt;p>签了保密协议 代码 讲座内容和相关联系方式不能说&lt;/p>
 &lt;p>这边博客更新的内容应该都只是些流水帐吧&lt;/p>
 &lt;h2 id="8月14日">8月14日&lt;/h2>
@@ -2713,7 +2737,7 @@ p1行动
 &lt;/blockquote>
 &lt;h2 id="作者及书本介绍">作者及书本介绍&lt;/h2>
 &lt;p>这是我今年五一假期前逛包图发现的，一本很年轻的书。&lt;/p>
-&lt;p>作者约翰·海利是我的老相识（笑）&lt;/p>
+&lt;p>作者约翰·海利 我认识他是在读这本书之前很久 也算是老相识了（笑）&lt;/p>
 &lt;p>他在Ted上有一部非常著名的演讲，是关于成瘾和抑郁症的。这篇演讲非常精彩，观看量超过8000万次。我把链接放在这里~&lt;/p>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://www.ted.com/talks/" target="_blank" rel="noopener"
