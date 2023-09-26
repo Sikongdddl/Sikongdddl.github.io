@@ -325,278 +325,278 @@ p1行动
 </span><span class=lnt>269
 </span><span class=lnt>270
 </span><span class=lnt>271
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>#include &lt;iostream&gt;
-</span></span><span class=line><span class=cl>#include &lt;time.h&gt;
-</span></span><span class=line><span class=cl>#include &lt;vector&gt;
-</span></span><span class=line><span class=cl>using namespace std;
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;iostream&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;time.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;vector&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>class log{
-</span></span><span class=line><span class=cl>public:
-</span></span><span class=line><span class=cl>    int ls1;
-</span></span><span class=line><span class=cl>    int rs1;
-</span></span><span class=line><span class=cl>    int ls2;
-</span></span><span class=line><span class=cl>    int rs2;
-</span></span><span class=line><span class=cl>    int from_to_flag;
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>log</span><span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>ls1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>rs1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>ls2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>rs2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>from_to_flag</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    log(int a,int b,int c,int d,int e)
-</span></span><span class=line><span class=cl>    {
-</span></span><span class=line><span class=cl>        ls1 = a;
-</span></span><span class=line><span class=cl>        rs1 = b;
-</span></span><span class=line><span class=cl>        ls2 = c;
-</span></span><span class=line><span class=cl>        rs2 = d;
-</span></span><span class=line><span class=cl>        from_to_flag = e;
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>    void traverse()
-</span></span><span class=line><span class=cl>    {
-</span></span><span class=line><span class=cl>        cout&lt;&lt;ls1&lt;&lt;&#34; &#34;&lt;&lt;rs1&lt;&lt;endl;
-</span></span><span class=line><span class=cl>        cout&lt;&lt;ls2&lt;&lt;&#34; &#34;&lt;&lt;rs2&lt;&lt;endl;
-</span></span><span class=line><span class=cl>        if(!from_to_flag)
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            cout&lt;&lt;&#34;p1先手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        else
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            cout&lt;&lt;&#34;p2先手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>    };
-</span></span><span class=line><span class=cl>};
-</span></span><span class=line><span class=cl>class player{
-</span></span><span class=line><span class=cl>public:
-</span></span><span class=line><span class=cl>    int lscore;
-</span></span><span class=line><span class=cl>    int rscore;
-</span></span><span class=line><span class=cl>    int lexist;
-</span></span><span class=line><span class=cl>    int rexist;
-</span></span><span class=line><span class=cl>    player()
-</span></span><span class=line><span class=cl>    {
-</span></span><span class=line><span class=cl>        lscore = 1;
-</span></span><span class=line><span class=cl>        rscore = 1;
-</span></span><span class=line><span class=cl>        lexist = 1;
-</span></span><span class=line><span class=cl>        rexist = 1;
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>    bool end()
-</span></span><span class=line><span class=cl>    {
-</span></span><span class=line><span class=cl>        if(lexist == 0 &amp;&amp; rexist == 0)
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            return 1;
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        return 0;
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>    void reset()
-</span></span><span class=line><span class=cl>    {
-</span></span><span class=line><span class=cl>        lscore = 1;
-</span></span><span class=line><span class=cl>        rscore = 1;
-</span></span><span class=line><span class=cl>        lexist = 1;
-</span></span><span class=line><span class=cl>        rexist = 1;
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>};
+</span></span><span class=line><span class=cl>    <span class=n>log</span><span class=p>(</span><span class=kt>int</span> <span class=n>a</span><span class=p>,</span><span class=kt>int</span> <span class=n>b</span><span class=p>,</span><span class=kt>int</span> <span class=n>c</span><span class=p>,</span><span class=kt>int</span> <span class=n>d</span><span class=p>,</span><span class=kt>int</span> <span class=n>e</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>ls1</span> <span class=o>=</span> <span class=n>a</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>rs1</span> <span class=o>=</span> <span class=n>b</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>ls2</span> <span class=o>=</span> <span class=n>c</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>rs2</span> <span class=o>=</span> <span class=n>d</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>from_to_flag</span> <span class=o>=</span> <span class=n>e</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=kt>void</span> <span class=nf>traverse</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=n>ls1</span><span class=o>&lt;&lt;</span><span class=s>&#34; &#34;</span><span class=o>&lt;&lt;</span><span class=n>rs1</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=n>ls2</span><span class=o>&lt;&lt;</span><span class=s>&#34; &#34;</span><span class=o>&lt;&lt;</span><span class=n>rs2</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=o>!</span><span class=n>from_to_flag</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;p1先手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;p2先手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>player</span><span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>lscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>rscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>lexist</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>rexist</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>player</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>lscore</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>rscore</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>lexist</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>rexist</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=kt>bool</span> <span class=nf>end</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>lexist</span> <span class=o>==</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=n>rexist</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=kt>void</span> <span class=nf>reset</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>lscore</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>rscore</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>lexist</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>rexist</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>void score_tidy(player &amp;p)
-</span></span><span class=line><span class=cl>{
-</span></span><span class=line><span class=cl>    if(p.lscore == 10)
-</span></span><span class=line><span class=cl>    {
-</span></span><span class=line><span class=cl>        p.lexist = 0;
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>    if(p.rscore == 10)
-</span></span><span class=line><span class=cl>    {
-</span></span><span class=line><span class=cl>        p.rexist = 0;
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>    p.lscore %= 10;
-</span></span><span class=line><span class=cl>    p.rscore %= 10;
-</span></span><span class=line><span class=cl>}
-</span></span><span class=line><span class=cl>void move(player &amp;p, player &amp;q)
-</span></span><span class=line><span class=cl>{
-</span></span><span class=line><span class=cl>    int fromFlag = rand()%2;
-</span></span><span class=line><span class=cl>    int toFlag = rand()%2;
-</span></span><span class=line><span class=cl>    //行动者只剩左手
-</span></span><span class=line><span class=cl>    if(p.lexist == 1 &amp;&amp; p.rexist == 0)
-</span></span><span class=line><span class=cl>    {
-</span></span><span class=line><span class=cl>        cout&lt;&lt;&#34;行动者只有左手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>        if(q.lexist == 1 &amp;&amp; q.rexist == 0)
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            cout&lt;&lt;&#34;对方只有左手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>            p.lscore += q.lscore;
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        else if (q.lexist == 0 &amp;&amp; q.rexist == 1)
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            cout&lt;&lt;&#34;对方只有右手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>            p.lscore += q.rscore;
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        else
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            if(toFlag == 0)
-</span></span><span class=line><span class=cl>            {
-</span></span><span class=line><span class=cl>                cout&lt;&lt;&#34;触碰对方左手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>                p.lscore += q.lscore;
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>            else
-</span></span><span class=line><span class=cl>            {
-</span></span><span class=line><span class=cl>                cout&lt;&lt;&#34;触碰对方右手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>                p.lscore += q.rscore;
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>    //行动者只剩右手
-</span></span><span class=line><span class=cl>    else if(p.lexist == 0 &amp;&amp; p.rexist == 1)
-</span></span><span class=line><span class=cl>    {
-</span></span><span class=line><span class=cl>        cout&lt;&lt;&#34;行动者只有右手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>        if(q.lexist == 1 &amp;&amp; q.rexist == 0)
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            cout&lt;&lt;&#34;对方只有左手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>            p.rscore += q.lscore;
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        else if (q.lexist == 0 &amp;&amp; q.rexist == 1)
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            cout&lt;&lt;&#34;对方只有右手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>            p.rscore += q.rscore;
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        else
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            if(toFlag == 0)
-</span></span><span class=line><span class=cl>            {
-</span></span><span class=line><span class=cl>                cout&lt;&lt;&#34;触碰对方左手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>                p.rscore += q.lscore;
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>            else
-</span></span><span class=line><span class=cl>            {
-</span></span><span class=line><span class=cl>                cout&lt;&lt;&#34;触碰对方左手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>                p.rscore += q.rscore;
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>    //行动者由fromFlag决定
-</span></span><span class=line><span class=cl>    else
-</span></span><span class=line><span class=cl>    {
-</span></span><span class=line><span class=cl>        if(fromFlag == 0)
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            cout&lt;&lt;&#34;行动者使用左手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>            if(q.lexist == 1 &amp;&amp; q.rexist == 0)
-</span></span><span class=line><span class=cl>            {
-</span></span><span class=line><span class=cl>                cout&lt;&lt;&#34;对方只有左手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>                p.lscore += q.lscore;
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>            else if (q.lexist == 0 &amp;&amp; q.rexist == 1)
-</span></span><span class=line><span class=cl>            {
-</span></span><span class=line><span class=cl>                cout&lt;&lt;&#34;对方只有右手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>                p.lscore += q.rscore;
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>            else
-</span></span><span class=line><span class=cl>            {
-</span></span><span class=line><span class=cl>                if(toFlag == 0)
-</span></span><span class=line><span class=cl>                {
-</span></span><span class=line><span class=cl>                    cout&lt;&lt;&#34;触碰对方左手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>                    p.lscore += q.lscore;
-</span></span><span class=line><span class=cl>                }
-</span></span><span class=line><span class=cl>                else
-</span></span><span class=line><span class=cl>                {
-</span></span><span class=line><span class=cl>                    cout&lt;&lt;&#34;触碰对方右手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>                    p.lscore += q.rscore;
-</span></span><span class=line><span class=cl>                }
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        else
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            cout&lt;&lt;&#34;行动者使用右手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>            if(q.lexist == 1 &amp;&amp; q.rexist == 0)
-</span></span><span class=line><span class=cl>            {
-</span></span><span class=line><span class=cl>                cout&lt;&lt;&#34;对方只有左手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>                p.rscore += q.lscore;
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>            else if (q.lexist == 0 &amp;&amp; q.rexist == 1)
-</span></span><span class=line><span class=cl>            {
-</span></span><span class=line><span class=cl>                cout&lt;&lt;&#34;对方只有右手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>                p.rscore += q.rscore;
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>            else
-</span></span><span class=line><span class=cl>            {
-</span></span><span class=line><span class=cl>                if(toFlag == 0)
-</span></span><span class=line><span class=cl>                {
-</span></span><span class=line><span class=cl>                    cout&lt;&lt;&#34;触碰对方左手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>                    p.rscore += q.lscore;
-</span></span><span class=line><span class=cl>                }
-</span></span><span class=line><span class=cl>                else
-</span></span><span class=line><span class=cl>                {
-</span></span><span class=line><span class=cl>                    cout&lt;&lt;&#34;触碰对方右手&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>                    p.rscore += q.rscore;
-</span></span><span class=line><span class=cl>                }
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>    score_tidy(p);
-</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>score_tidy</span><span class=p>(</span><span class=n>player</span> <span class=o>&amp;</span><span class=n>p</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>p</span><span class=p>.</span><span class=n>lscore</span> <span class=o>==</span> <span class=mi>10</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>p</span><span class=p>.</span><span class=n>lexist</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span><span class=p>(</span><span class=n>p</span><span class=p>.</span><span class=n>rscore</span> <span class=o>==</span> <span class=mi>10</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>p</span><span class=p>.</span><span class=n>rexist</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>p</span><span class=p>.</span><span class=n>lscore</span> <span class=o>%=</span> <span class=mi>10</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>p</span><span class=p>.</span><span class=n>rscore</span> <span class=o>%=</span> <span class=mi>10</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>move</span><span class=p>(</span><span class=n>player</span> <span class=o>&amp;</span><span class=n>p</span><span class=p>,</span> <span class=n>player</span> <span class=o>&amp;</span><span class=n>q</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>fromFlag</span> <span class=o>=</span> <span class=n>rand</span><span class=p>()</span><span class=o>%</span><span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>toFlag</span> <span class=o>=</span> <span class=n>rand</span><span class=p>()</span><span class=o>%</span><span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=c1>//行动者只剩左手
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=k>if</span><span class=p>(</span><span class=n>p</span><span class=p>.</span><span class=n>lexist</span> <span class=o>==</span> <span class=mi>1</span> <span class=o>&amp;&amp;</span> <span class=n>p</span><span class=p>.</span><span class=n>rexist</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;行动者只有左手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>q</span><span class=p>.</span><span class=n>lexist</span> <span class=o>==</span> <span class=mi>1</span> <span class=o>&amp;&amp;</span> <span class=n>q</span><span class=p>.</span><span class=n>rexist</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;对方只有左手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>p</span><span class=p>.</span><span class=n>lscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>lscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=n>q</span><span class=p>.</span><span class=n>lexist</span> <span class=o>==</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=n>q</span><span class=p>.</span><span class=n>rexist</span> <span class=o>==</span> <span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;对方只有右手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>p</span><span class=p>.</span><span class=n>lscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>rscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span><span class=p>(</span><span class=n>toFlag</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;触碰对方左手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>p</span><span class=p>.</span><span class=n>lscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>lscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;触碰对方右手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>p</span><span class=p>.</span><span class=n>lscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>rscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=c1>//行动者只剩右手
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=k>else</span> <span class=k>if</span><span class=p>(</span><span class=n>p</span><span class=p>.</span><span class=n>lexist</span> <span class=o>==</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=n>p</span><span class=p>.</span><span class=n>rexist</span> <span class=o>==</span> <span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;行动者只有右手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>q</span><span class=p>.</span><span class=n>lexist</span> <span class=o>==</span> <span class=mi>1</span> <span class=o>&amp;&amp;</span> <span class=n>q</span><span class=p>.</span><span class=n>rexist</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;对方只有左手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>p</span><span class=p>.</span><span class=n>rscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>lscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=n>q</span><span class=p>.</span><span class=n>lexist</span> <span class=o>==</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=n>q</span><span class=p>.</span><span class=n>rexist</span> <span class=o>==</span> <span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;对方只有右手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>p</span><span class=p>.</span><span class=n>rscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>rscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span><span class=p>(</span><span class=n>toFlag</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;触碰对方左手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>p</span><span class=p>.</span><span class=n>rscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>lscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;触碰对方左手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>p</span><span class=p>.</span><span class=n>rscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>rscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=c1>//行动者由fromFlag决定
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=k>else</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>fromFlag</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;行动者使用左手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span><span class=p>(</span><span class=n>q</span><span class=p>.</span><span class=n>lexist</span> <span class=o>==</span> <span class=mi>1</span> <span class=o>&amp;&amp;</span> <span class=n>q</span><span class=p>.</span><span class=n>rexist</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;对方只有左手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>p</span><span class=p>.</span><span class=n>lscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>lscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=n>q</span><span class=p>.</span><span class=n>lexist</span> <span class=o>==</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=n>q</span><span class=p>.</span><span class=n>rexist</span> <span class=o>==</span> <span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;对方只有右手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>p</span><span class=p>.</span><span class=n>lscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>rscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span><span class=p>(</span><span class=n>toFlag</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=p>{</span>
+</span></span><span class=line><span class=cl>                    <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;触碰对方左手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                    <span class=n>p</span><span class=p>.</span><span class=n>lscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>lscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=p>}</span>
+</span></span><span class=line><span class=cl>                <span class=k>else</span>
+</span></span><span class=line><span class=cl>                <span class=p>{</span>
+</span></span><span class=line><span class=cl>                    <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;触碰对方右手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                    <span class=n>p</span><span class=p>.</span><span class=n>lscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>rscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;行动者使用右手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span><span class=p>(</span><span class=n>q</span><span class=p>.</span><span class=n>lexist</span> <span class=o>==</span> <span class=mi>1</span> <span class=o>&amp;&amp;</span> <span class=n>q</span><span class=p>.</span><span class=n>rexist</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;对方只有左手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>p</span><span class=p>.</span><span class=n>rscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>lscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=n>q</span><span class=p>.</span><span class=n>lexist</span> <span class=o>==</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=n>q</span><span class=p>.</span><span class=n>rexist</span> <span class=o>==</span> <span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;对方只有右手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>p</span><span class=p>.</span><span class=n>rscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>rscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span><span class=p>(</span><span class=n>toFlag</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=p>{</span>
+</span></span><span class=line><span class=cl>                    <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;触碰对方左手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                    <span class=n>p</span><span class=p>.</span><span class=n>rscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>lscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=p>}</span>
+</span></span><span class=line><span class=cl>                <span class=k>else</span>
+</span></span><span class=line><span class=cl>                <span class=p>{</span>
+</span></span><span class=line><span class=cl>                    <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;触碰对方右手&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                    <span class=n>p</span><span class=p>.</span><span class=n>rscore</span> <span class=o>+=</span> <span class=n>q</span><span class=p>.</span><span class=n>rscore</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>score_tidy</span><span class=p>(</span><span class=n>p</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>int main()
-</span></span><span class=line><span class=cl>{
-</span></span><span class=line><span class=cl>    unsigned int seed = time(0);
-</span></span><span class=line><span class=cl>    srand(seed);
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kt>unsigned</span> <span class=kt>int</span> <span class=n>seed</span> <span class=o>=</span> <span class=n>time</span><span class=p>(</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>srand</span><span class=p>(</span><span class=n>seed</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    vector&lt;log&gt; fail_log;
-</span></span><span class=line><span class=cl>    player *p1 = new player();
-</span></span><span class=line><span class=cl>    player *p2 = new player();
-</span></span><span class=line><span class=cl>    int episode = 0;
-</span></span><span class=line><span class=cl>    int step = 0;
-</span></span><span class=line><span class=cl>    int p1_scoreboard = 0;
-</span></span><span class=line><span class=cl>    int p2_scoreboard = 0;
-</span></span><span class=line><span class=cl>    int fail_scoreboard = 0;
-</span></span><span class=line><span class=cl>    int total_episode = 0;
-</span></span><span class=line><span class=cl>    while(1)
-</span></span><span class=line><span class=cl>    {
-</span></span><span class=line><span class=cl>        cout&lt;&lt;&#34;轮数: &#34;&lt;&lt;episode&lt;&lt;endl;
-</span></span><span class=line><span class=cl>        cout&lt;&lt;&#34;局数：&#34;&lt;&lt;step&lt;&lt;endl;
-</span></span><span class=line><span class=cl>        cout&lt;&lt;p1-&gt;lscore&lt;&lt;&#34; &#34;&lt;&lt;p1-&gt;rscore&lt;&lt;endl;
-</span></span><span class=line><span class=cl>        cout&lt;&lt;p2-&gt;lscore&lt;&lt;&#34; &#34;&lt;&lt;p2-&gt;rscore&lt;&lt;endl;
-</span></span><span class=line><span class=cl>        if(episode %2 == 0)
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            cout&lt;&lt;&#34;p1行动&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>            move(*p1,*p2);
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        else
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            cout&lt;&lt;&#34;p2行动&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>            move(*p2,*p1);
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        if(p1-&gt;end() || p2-&gt;end() || episode &gt; 200)
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            ++step;
-</span></span><span class=line><span class=cl>            if(p1-&gt;end())
-</span></span><span class=line><span class=cl>            {
-</span></span><span class=line><span class=cl>                ++p1_scoreboard;
-</span></span><span class=line><span class=cl>                total_episode += episode;
-</span></span><span class=line><span class=cl>                cout&lt;&lt;&#34;p1 won!&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>            else if(p2-&gt;end())
-</span></span><span class=line><span class=cl>            {
-</span></span><span class=line><span class=cl>                ++p2_scoreboard;
-</span></span><span class=line><span class=cl>                total_episode += episode;
-</span></span><span class=line><span class=cl>                cout&lt;&lt;&#34;p2 won!&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>            else if(episode &gt; 200)
-</span></span><span class=line><span class=cl>            {   
-</span></span><span class=line><span class=cl>                log* l = new log(p1-&gt;lscore, p1-&gt;rscore, p2-&gt;lscore, p2-&gt;rscore, episode%2==0);
-</span></span><span class=line><span class=cl>                fail_log.push_back(*l);
-</span></span><span class=line><span class=cl>                ++fail_scoreboard;
-</span></span><span class=line><span class=cl>                cout&lt;&lt;&#34;endless routine&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>            p1-&gt;reset();
-</span></span><span class=line><span class=cl>            p2-&gt;reset();
-</span></span><span class=line><span class=cl>            episode = 0;
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        ++episode;
-</span></span><span class=line><span class=cl>        if(step == 100)
-</span></span><span class=line><span class=cl>        {
-</span></span><span class=line><span class=cl>            cout&lt;&lt;&#34;总轮数为：&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>            cout&lt;&lt;total_episode&lt;&lt;endl;
-</span></span><span class=line><span class=cl>            break;
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>    cout&lt;&lt;p1_scoreboard&lt;&lt;&#34; &#34;&lt;&lt;p2_scoreboard&lt;&lt;&#34; &#34;&lt;&lt;fail_scoreboard&lt;&lt;endl;
-</span></span><span class=line><span class=cl>    for(int i = 0; i &lt; fail_log.size(); ++i)
-</span></span><span class=line><span class=cl>    {
-</span></span><span class=line><span class=cl>        cout&lt;&lt;&#34;第&#34;&lt;&lt;i&lt;&lt;&#34;次流局情况如下：&#34;&lt;&lt;endl;
-</span></span><span class=line><span class=cl>        fail_log[i].traverse();
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>    return 0;
-</span></span><span class=line><span class=cl>}
-</span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/><div class=article-details><h2 class=article-title>16组星火营项目文档</h2></div></a></article><article><a href=/p/2023%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%90%A5%E6%97%A5%E5%BF%97/><div class=article-details><h2 class=article-title>2023科大讯飞星火营日志</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
+</span></span><span class=line><span class=cl>    <span class=n>vector</span><span class=o>&lt;</span><span class=n>log</span><span class=o>&gt;</span> <span class=n>fail_log</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>player</span> <span class=o>*</span><span class=n>p1</span> <span class=o>=</span> <span class=k>new</span> <span class=n>player</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=n>player</span> <span class=o>*</span><span class=n>p2</span> <span class=o>=</span> <span class=k>new</span> <span class=n>player</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>episode</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>step</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>p1_scoreboard</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>p2_scoreboard</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>fail_scoreboard</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>total_episode</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>while</span><span class=p>(</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;轮数: &#34;</span><span class=o>&lt;&lt;</span><span class=n>episode</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;局数：&#34;</span><span class=o>&lt;&lt;</span><span class=n>step</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=n>p1</span><span class=o>-&gt;</span><span class=n>lscore</span><span class=o>&lt;&lt;</span><span class=s>&#34; &#34;</span><span class=o>&lt;&lt;</span><span class=n>p1</span><span class=o>-&gt;</span><span class=n>rscore</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=n>p2</span><span class=o>-&gt;</span><span class=n>lscore</span><span class=o>&lt;&lt;</span><span class=s>&#34; &#34;</span><span class=o>&lt;&lt;</span><span class=n>p2</span><span class=o>-&gt;</span><span class=n>rscore</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>episode</span> <span class=o>%</span><span class=mi>2</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;p1行动&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>move</span><span class=p>(</span><span class=o>*</span><span class=n>p1</span><span class=p>,</span><span class=o>*</span><span class=n>p2</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;p2行动&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>move</span><span class=p>(</span><span class=o>*</span><span class=n>p2</span><span class=p>,</span><span class=o>*</span><span class=n>p1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>p1</span><span class=o>-&gt;</span><span class=n>end</span><span class=p>()</span> <span class=o>||</span> <span class=n>p2</span><span class=o>-&gt;</span><span class=n>end</span><span class=p>()</span> <span class=o>||</span> <span class=n>episode</span> <span class=o>&gt;</span> <span class=mi>200</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=o>++</span><span class=n>step</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span><span class=p>(</span><span class=n>p1</span><span class=o>-&gt;</span><span class=n>end</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=o>++</span><span class=n>p1_scoreboard</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>total_episode</span> <span class=o>+=</span> <span class=n>episode</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;p1 won!&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span> <span class=k>if</span><span class=p>(</span><span class=n>p2</span><span class=o>-&gt;</span><span class=n>end</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=o>++</span><span class=n>p2_scoreboard</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>total_episode</span> <span class=o>+=</span> <span class=n>episode</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;p2 won!&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span> <span class=k>if</span><span class=p>(</span><span class=n>episode</span> <span class=o>&gt;</span> <span class=mi>200</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>   
+</span></span><span class=line><span class=cl>                <span class=n>log</span><span class=o>*</span> <span class=n>l</span> <span class=o>=</span> <span class=k>new</span> <span class=n>log</span><span class=p>(</span><span class=n>p1</span><span class=o>-&gt;</span><span class=n>lscore</span><span class=p>,</span> <span class=n>p1</span><span class=o>-&gt;</span><span class=n>rscore</span><span class=p>,</span> <span class=n>p2</span><span class=o>-&gt;</span><span class=n>lscore</span><span class=p>,</span> <span class=n>p2</span><span class=o>-&gt;</span><span class=n>rscore</span><span class=p>,</span> <span class=n>episode</span><span class=o>%</span><span class=mi>2</span><span class=o>==</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>                <span class=n>fail_log</span><span class=p>.</span><span class=n>push_back</span><span class=p>(</span><span class=o>*</span><span class=n>l</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>                <span class=o>++</span><span class=n>fail_scoreboard</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;endless routine&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=n>p1</span><span class=o>-&gt;</span><span class=n>reset</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>            <span class=n>p2</span><span class=o>-&gt;</span><span class=n>reset</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>            <span class=n>episode</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=o>++</span><span class=n>episode</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>step</span> <span class=o>==</span> <span class=mi>100</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;总轮数为：&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=n>total_episode</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=k>break</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=n>p1_scoreboard</span><span class=o>&lt;&lt;</span><span class=s>&#34; &#34;</span><span class=o>&lt;&lt;</span><span class=n>p2_scoreboard</span><span class=o>&lt;&lt;</span><span class=s>&#34; &#34;</span><span class=o>&lt;&lt;</span><span class=n>fail_scoreboard</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>fail_log</span><span class=p>.</span><span class=n>size</span><span class=p>();</span> <span class=o>++</span><span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>cout</span><span class=o>&lt;&lt;</span><span class=s>&#34;第&#34;</span><span class=o>&lt;&lt;</span><span class=n>i</span><span class=o>&lt;&lt;</span><span class=s>&#34;次流局情况如下：&#34;</span><span class=o>&lt;&lt;</span><span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>fail_log</span><span class=p>[</span><span class=n>i</span><span class=p>].</span><span class=n>traverse</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/p/%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C/><div class=article-details><h2 class=article-title>西部世界</h2></div></a></article><article><a href=/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/><div class=article-details><h2 class=article-title>16组星火营项目文档</h2></div></a></article><article><a href=/p/2023%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%90%A5%E6%97%A5%E5%BF%97/><div class=article-details><h2 class=article-title>2023科大讯飞星火营日志</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
 2022 -
 2023 Sikongdddl的博客</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.17.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>

@@ -190,7 +190,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="77"
 data-flex-basis="185px"
->&lt;/p></description></item><item><title>星火营干货及近日进展</title><link>https://Sikongdddl.github.io/p/%E6%98%9F%E7%81%AB%E8%90%A5%E5%B9%B2%E8%B4%A7%E5%8F%8A%E8%BF%91%E6%97%A5%E8%BF%9B%E5%B1%95/</link><pubDate>Sun, 20 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E6%98%9F%E7%81%AB%E8%90%A5%E5%B9%B2%E8%B4%A7%E5%8F%8A%E8%BF%91%E6%97%A5%E8%BF%9B%E5%B1%95/</guid><description>&lt;h2 id="为什么这篇不是论文笔记">为什么这篇不是论文笔记&lt;/h2>
+>&lt;/p></description></item><item><title>西部世界</title><link>https://Sikongdddl.github.io/p/%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C/</link><pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E8%A5%BF%E9%83%A8%E4%B8%96%E7%95%8C/</guid><description/></item><item><title>星火营干货及近日进展</title><link>https://Sikongdddl.github.io/p/%E6%98%9F%E7%81%AB%E8%90%A5%E5%B9%B2%E8%B4%A7%E5%8F%8A%E8%BF%91%E6%97%A5%E8%BF%9B%E5%B1%95/</link><pubDate>Sun, 20 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E6%98%9F%E7%81%AB%E8%90%A5%E5%B9%B2%E8%B4%A7%E5%8F%8A%E8%BF%91%E6%97%A5%E8%BF%9B%E5%B1%95/</guid><description>&lt;h2 id="为什么这篇不是论文笔记">为什么这篇不是论文笔记&lt;/h2>
 &lt;p>科大讯飞这边日程排的又满又不科学 很浪费时间
 加上最近接到了电话
 这俩事都值得汇报一下 都挺大的 就没去读论文（笑）&lt;/p>
@@ -2634,277 +2634,277 @@ p1行动
 &lt;/span>&lt;span class="lnt">271
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">#include &amp;lt;iostream&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#include &amp;lt;time.h&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#include &amp;lt;vector&amp;gt;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">using namespace std;
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c++" data-lang="c++">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;iostream&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;time.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;vector&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="k">using&lt;/span> &lt;span class="k">namespace&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class log{
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int ls1;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int rs1;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int ls2;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int rs2;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int from_to_flag;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">log&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">ls1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">rs1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">ls2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">rs2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">from_to_flag&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> log(int a,int b,int c,int d,int e)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ls1 = a;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rs1 = b;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ls2 = c;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rs2 = d;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> from_to_flag = e;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void traverse()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;ls1&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;rs1&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;ls2&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;rs2&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(!from_to_flag)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;p1先手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;p2先手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> };
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">};
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class player{
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int lscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int rscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int lexist;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int rexist;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> player()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> lscore = 1;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rscore = 1;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> lexist = 1;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rexist = 1;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> bool end()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(lexist == 0 &amp;amp;&amp;amp; rexist == 0)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return 1;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return 0;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void reset()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> lscore = 1;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rscore = 1;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> lexist = 1;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rexist = 1;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">};
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">c&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">d&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ls1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rs1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">ls2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">c&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rs2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">d&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">from_to_flag&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">traverse&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">ls1&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">rs1&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">ls2&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">rs2&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="n">from_to_flag&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;p1先手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;p2先手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">player&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">lscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">rscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">lexist&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">rexist&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">player&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">lscore&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rscore&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">lexist&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rexist&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">bool&lt;/span> &lt;span class="nf">end&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">lexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">rexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">reset&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">lscore&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rscore&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">lexist&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rexist&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void score_tidy(player &amp;amp;p)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(p.lscore == 10)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.lexist = 0;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(p.rscore == 10)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.rexist = 0;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.lscore %= 10;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.rscore %= 10;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void move(player &amp;amp;p, player &amp;amp;q)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int fromFlag = rand()%2;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int toFlag = rand()%2;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //行动者只剩左手
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(p.lexist == 1 &amp;amp;&amp;amp; p.rexist == 0)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;行动者只有左手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(q.lexist == 1 &amp;amp;&amp;amp; q.rexist == 0)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;对方只有左手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.lscore += q.lscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else if (q.lexist == 0 &amp;amp;&amp;amp; q.rexist == 1)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;对方只有右手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.lscore += q.rscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(toFlag == 0)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;触碰对方左手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.lscore += q.lscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;触碰对方右手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.lscore += q.rscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //行动者只剩右手
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else if(p.lexist == 0 &amp;amp;&amp;amp; p.rexist == 1)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;行动者只有右手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(q.lexist == 1 &amp;amp;&amp;amp; q.rexist == 0)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;对方只有左手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.rscore += q.lscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else if (q.lexist == 0 &amp;amp;&amp;amp; q.rexist == 1)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;对方只有右手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.rscore += q.rscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(toFlag == 0)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;触碰对方左手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.rscore += q.lscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;触碰对方左手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.rscore += q.rscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //行动者由fromFlag决定
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(fromFlag == 0)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;行动者使用左手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(q.lexist == 1 &amp;amp;&amp;amp; q.rexist == 0)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;对方只有左手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.lscore += q.lscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else if (q.lexist == 0 &amp;amp;&amp;amp; q.rexist == 1)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;对方只有右手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.lscore += q.rscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(toFlag == 0)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;触碰对方左手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.lscore += q.lscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;触碰对方右手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.lscore += q.rscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;行动者使用右手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(q.lexist == 1 &amp;amp;&amp;amp; q.rexist == 0)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;对方只有左手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.rscore += q.lscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else if (q.lexist == 0 &amp;amp;&amp;amp; q.rexist == 1)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;对方只有右手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.rscore += q.rscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(toFlag == 0)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;触碰对方左手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.rscore += q.lscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;触碰对方右手&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p.rscore += q.rscore;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> score_tidy(p);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="nf">score_tidy&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">player&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lexist&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rexist&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span> &lt;span class="o">%=&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span> &lt;span class="o">%=&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="nf">move&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">player&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">player&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">fromFlag&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">rand&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">toFlag&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">rand&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//行动者只剩左手
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;行动者只有左手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;对方只有左手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;对方只有右手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">toFlag&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;触碰对方左手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;触碰对方右手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//行动者只剩右手
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;行动者只有右手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;对方只有左手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;对方只有右手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">toFlag&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;触碰对方左手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;触碰对方左手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//行动者由fromFlag决定
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">fromFlag&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;行动者使用左手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;对方只有左手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;对方只有右手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">toFlag&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;触碰对方左手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;触碰对方右手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;行动者使用右手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;对方只有左手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rexist&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;对方只有右手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">toFlag&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;触碰对方左手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">lscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;触碰对方右手&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">rscore&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">score_tidy&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">int main()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> unsigned int seed = time(0);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> srand(seed);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">unsigned&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">seed&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">time&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">srand&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">seed&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> vector&amp;lt;log&amp;gt; fail_log;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> player *p1 = new player();
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> player *p2 = new player();
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int episode = 0;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int step = 0;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int p1_scoreboard = 0;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int p2_scoreboard = 0;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int fail_scoreboard = 0;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int total_episode = 0;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> while(1)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;轮数: &amp;#34;&amp;lt;&amp;lt;episode&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;局数：&amp;#34;&amp;lt;&amp;lt;step&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;p1-&amp;gt;lscore&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;p1-&amp;gt;rscore&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;p2-&amp;gt;lscore&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;p2-&amp;gt;rscore&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(episode %2 == 0)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;p1行动&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> move(*p1,*p2);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;p2行动&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> move(*p2,*p1);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(p1-&amp;gt;end() || p2-&amp;gt;end() || episode &amp;gt; 200)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ++step;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(p1-&amp;gt;end())
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ++p1_scoreboard;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> total_episode += episode;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;p1 won!&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else if(p2-&amp;gt;end())
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ++p2_scoreboard;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> total_episode += episode;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;p2 won!&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else if(episode &amp;gt; 200)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> log* l = new log(p1-&amp;gt;lscore, p1-&amp;gt;rscore, p2-&amp;gt;lscore, p2-&amp;gt;rscore, episode%2==0);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> fail_log.push_back(*l);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ++fail_scoreboard;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;endless routine&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p1-&amp;gt;reset();
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> p2-&amp;gt;reset();
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> episode = 0;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ++episode;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(step == 100)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;总轮数为：&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;total_episode&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> break;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;p1_scoreboard&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;p2_scoreboard&amp;lt;&amp;lt;&amp;#34; &amp;#34;&amp;lt;&amp;lt;fail_scoreboard&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for(int i = 0; i &amp;lt; fail_log.size(); ++i)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cout&amp;lt;&amp;lt;&amp;#34;第&amp;#34;&amp;lt;&amp;lt;i&amp;lt;&amp;lt;&amp;#34;次流局情况如下：&amp;#34;&amp;lt;&amp;lt;endl;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> fail_log[i].traverse();
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return 0;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">vector&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">log&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">fail_log&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">player&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">p1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">player&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">player&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="n">p2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">player&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">episode&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">step&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">p1_scoreboard&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">p2_scoreboard&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">fail_scoreboard&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">total_episode&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;轮数: &amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">episode&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;局数：&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">step&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">p1&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">lscore&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">p1&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">rscore&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">p2&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">lscore&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">p2&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">rscore&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">episode&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="mi">2&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;p1行动&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">move&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">p1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">p2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;p2行动&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">move&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">p2&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">p1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p1&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">end&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">p2&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">end&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="n">episode&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">200&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">++&lt;/span>&lt;span class="n">step&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p1&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">end&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">++&lt;/span>&lt;span class="n">p1_scoreboard&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">total_episode&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">episode&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;p1 won!&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p2&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">end&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">++&lt;/span>&lt;span class="n">p2_scoreboard&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">total_episode&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="n">episode&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;p2 won!&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">episode&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">200&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">log&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="n">l&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p1&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">lscore&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">p1&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">rscore&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">p2&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">lscore&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">p2&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">rscore&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">episode&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fail_log&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">push_back&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">++&lt;/span>&lt;span class="n">fail_scoreboard&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;endless routine&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p1&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">reset&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">p2&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">reset&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">episode&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">++&lt;/span>&lt;span class="n">episode&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">step&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;总轮数为：&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">total_episode&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">p1_scoreboard&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">p2_scoreboard&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">fail_scoreboard&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">fail_log&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">size&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="o">++&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;第&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="s">&amp;#34;次流局情况如下：&amp;#34;&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">fail_log&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">traverse&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>心理学系列No.2——注意力危机</title><link>https://Sikongdddl.github.io/p/%E5%BF%83%E7%90%86%E5%AD%A6%E7%B3%BB%E5%88%97no.2%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%8D%B1%E6%9C%BA/</link><pubDate>Sat, 06 May 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E5%BF%83%E7%90%86%E5%AD%A6%E7%B3%BB%E5%88%97no.2%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%8D%B1%E6%9C%BA/</guid><description>&lt;h2 id="免责声明">免责声明&lt;/h2>
@@ -2914,6 +2914,25 @@ p1行动
 &lt;blockquote>
 &lt;p>认知上的强大体现在允许多种互相矛盾的观点和理论同时存在于自己的大脑之中。&lt;/p>
 &lt;/blockquote>
+&lt;h2 id="注意力与我">注意力与我&lt;/h2>
+&lt;p>我来自一个边陲小镇（这话我见人就说，听过好多遍的朋友请原谅我，因为不知道这个的话会看不懂接下来这一段话），高中时和班主任发生过非常严重的争吵，争吵的内容是关于对手机的使用。&lt;/p>
+&lt;p>老师坚持认为手机会成瘾，沾上“手机瘾”人就完了，要求我不再使用它，并举出一系列某某超级高中的同学高中时只使用老年机，但最后很出色的例子。但我坚持认为在教育资源如此不均衡的今天，互联网的存在是我获取知识的重要途径，如果我也可以只在学校中获得足够的资源，我也不需要使用手机。但现在一切尘埃落定，我可以说我们那个学校的资源无法满足我。&lt;/p>
+&lt;p>我高中时是很凶狠的人，拿起手机说玩十分钟不会玩十一分钟，查询资料时也效率极高，但我发现随着时间的流逝，自己越来越抵抗不了它的“诱惑”。在频繁的发现自己周末时把手机丢下，几个小时已经过去了的时候，我一度陷入很深的自我怀疑：我的意志力真的如此弱小以至于自己连“手机瘾”都抵抗不了吗？&lt;/p>
+&lt;p>当然，后来我才意识到所谓的“手机瘾”本质上是注意力的下降，我当然很快的找到了一些办法来恢复它，而不是一味的自责和逼迫自己做到一些自己也不知道要怎么做到的事。&lt;/p>
+&lt;blockquote>
+&lt;p>注意：这是许多人面对成瘾的常见错误，只关注表面现象并要求自己克服表面现象只会让问题越来越糟。&lt;/p>
+&lt;p>不去分析现象背后的原因，或者逃避故意不去分析，往往是更容易被想到并被使用的策略，因为这在思想上几乎没有难度，只需要行为上的勤奋。&lt;/p>
+&lt;p>举个例子，当我发现自己玩手机的时间失控这个现象时，我没有像一般人那样简单的归因，责怪自己懒惰，然后采取一些可笑的行为如开始约束自己的使用时间，或者直接放弃使用手机。说这些行为可笑是因为只要求自己做到这些却不明白为什么要做到的话 是永远达不到这些要求的。这本身是一种异化。关于这个话题我非常感兴趣，也许之后会单独开一篇博客来聊。&lt;/p>
+&lt;p>我采取的行动立刻进行深度的归因，并得到了是“自己的注意力被破坏”这个结论，并因此采取弥补自己注意力的行动。与上面的那种精神上的懒惰相比，这样做至少有三个优势：&lt;/p>
+&lt;ul>
+&lt;li>我不会自责 因为这种注意力的丧失是我输给了推荐系统，而不是自己出现了问题。因此不会消耗资源在自责这件事上。&lt;/li>
+&lt;li>我非常有动力行动，因为这种行动是为了让我自己变得更好，而上面的那种行动更多是为了“避免自己犯错”。&lt;/li>
+&lt;li>我的行动非常有效，因为我对“手机成瘾”这一现象背后的原因分析的非常准确。&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>我当时开始冥想，在学校频繁的高峰体验和心流也让我的注意力水平轻松恢复，并保持在了比较高的程度。事实上，当我意识到对手机的“沉迷”并不是自己的错误时，它带给我的伤害与它带给我的好处相比就微不足道了。&lt;/p>
+&lt;p>作为佐证，我在小时候被诊断为“多动症”，但我最终取得了比较高的成就，因此我相信自己的专注能力和集中程度是超过绝大多数人的，因为我并不觉得自己的天赋强大到可以用非常差的注意力水平获得比其他人强很多的结果。&lt;/p>
+&lt;p>因此，这种与自己的注意力对抗的经历让我对这个话题十分感兴趣。偶然遇到这本书，读完后我真的获得了由衷的快乐，它没有教会我太多东西，但帮助我把许多的想法整理成了一个很合理的体系。&lt;/p>
 &lt;h2 id="作者及书本介绍">作者及书本介绍&lt;/h2>
 &lt;p>这是我今年五一假期前逛包图发现的，一本很年轻的书。&lt;/p>
 &lt;p>作者约翰·海利 我认识他是在读这本书之前很久 也算是老相识了（笑）&lt;/p>
@@ -2966,10 +2985,101 @@ data-flex-basis="866px"
 &lt;p>这种加速的原因是，系统中出现的信息越来越多了。很自然的，人们专注于其中某一部分的时间就变少了。在2007年，一个人接收的信息总量已经相当于每天174张报纸。我们被浸泡在了信息中，简直就像对着消防水带喝水一样。&lt;/p>
 &lt;p>当我们生活在自己的注意力资源限度以外时，那些需要投入稳定注意力和长期关注的事情就会被我们更容易荒废。&lt;/p>
 &lt;p>Hari很自然的提出了一个疑惑：如果我们被大量的信息搞得不知所措，那为什么阻止这件事发生的力量这么小呢？&lt;/p>
-&lt;p>神经科学领域的厄尔教授（Earl Miller）回答了他。人们活在一种幻觉之中：我可以同时做好多件事情，因此并不十分在意自己被大量的信息打扰。但事实上，人是串行的，我们在同一时间只能产生一个或两个想法。当人同时做几件事时，事实上是在不同的事情之间来回切换，这种切换会带来性能的开销，而且让大脑非常容易出错。&lt;/p>
+&lt;p>神经科学领域的厄尔教授（Earl Miller）回答了他。人们活在一种幻觉之中：我可以同时做好多件事情，因此并不十分在意自己被大量的信息打扰，反而会有快感。但事实上，人是串行的，我们在同一时间只能产生一个或两个想法。当人同时做几件事时，事实上是在不同的事情之间来回切换，这种切换会带来性能的开销，而且让大脑非常容易出错。&lt;/p>
 &lt;p>因此，Hari感受到的平静，就是久违的接受信息量在注意力限度内的感觉。他可以选择自己以什么速度喝水，而不是被消防水带洗胃。他也第一次允许自己长时间专注于一件事情。&lt;/p>
 &lt;h3 id="原因心流受阻">原因：心流受阻&lt;/h3>
-&lt;p>Hari开始感到恐慌，焦虑和无所事事。&lt;/p></description></item><item><title>心理学系列No.1——习得性无助</title><link>https://Sikongdddl.github.io/p/%E5%BF%83%E7%90%86%E5%AD%A6%E7%B3%BB%E5%88%97no.1%E4%B9%A0%E5%BE%97%E6%80%A7%E6%97%A0%E5%8A%A9/</link><pubDate>Tue, 04 Apr 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E5%BF%83%E7%90%86%E5%AD%A6%E7%B3%BB%E5%88%97no.1%E4%B9%A0%E5%BE%97%E6%80%A7%E6%97%A0%E5%8A%A9/</guid><description>&lt;p>由于是系列的第一篇，所以要简单介绍一下这个系列打算发什么以及自己为什么想发&lt;/p>
+&lt;p>Hari开始感到恐慌，焦虑和无所事事。&lt;/p>
+&lt;p>他迫切的想拿回手机 他想念那种生活 他对电子产品严重成瘾 因为他本质上是在用这种渴望来麻痹自己的空洞。&lt;/p>
+&lt;p>这种空洞来自于人的自恋 在社交媒体上每个人都在疯狂的炫耀和分享 来满足自己的自恋需求 而当离开电子产品后 Hari无法分享和炫耀了，也看不到别人对他的评价了。这种感觉就像：世界对他说，他不重要了。&lt;/p>
+&lt;p>填补这种空洞的方式就是心流 大概可以概括为：长期专注的进行一件高难度的工作。它的快乐来自于过程本身，而不是到达终点后任何形式的奖励。比如攀岩，艺术创作等。&lt;/p>
+&lt;p>美国心理学家米哈里（Mihaly Csikszentmihalyi）创建了心流这一概念，他建议没有体验过心流的人以这样一种方式找到心流：&lt;/p>
+&lt;blockquote>
+&lt;p>选择一个目标，确保这个目标对自己有意义，并尝试把自己的能力发挥到自己可以做到的程度，不会觉得任务太简单，也不要觉得太困难。&lt;/p>
+&lt;/blockquote>
+&lt;p>（编者注：就像俺写Lab一样 五六个小时很快就会过去 这三年以来很多时候熬夜都是因为自己并没有意识到时间的流逝）&lt;/p>
+&lt;p>心流是最高级别的注意力形式 而且有助于注意力的恢复和提升。它的存在意味着，人类天生是享受高度集中的注意力状态的，并且有做到这件事的能力。&lt;/p>
+&lt;p>而推荐系统把我们当成斯金纳的鸽子来对待，这对心流的摧毁是非常严重的，因此这极大的打击了人的注意力。&lt;/p>
+&lt;p>Hari意识到 只是通过远离干扰的方式来获得休息是不够的，他迟早会被干扰再次拉回从前的状态。他需要一些主动积极地目标来获得心流，于是他开始了写作，并愉快的度过了剩下的时间。&lt;/p>
+&lt;p>但同时他也意识到自己的研究不能停在这里，因为几乎没有人能像他一样有底气和能力给自己这样的三个月假期来完成对自己注意力的救赎。&lt;/p>
+&lt;h3 id="原因身心疲惫">原因：身心疲惫&lt;/h3>
+&lt;p>睡眠不足本身就是对注意力的摧残。&lt;/p>
+&lt;p>许多人的睡眠（包括许多时候的我在内）根本称不上是睡眠，抱着手机在床上辗转反侧，然后突然失去意识，这更像是一种昏迷，就像一头犀牛被注射了超量的镇定剂后在横冲直撞，然后一头撞到地上陷入沉睡。&lt;/p>
+&lt;p>我个人对脑科学的态度比较悲观，因此这一段中对脑科学相关专家的访谈与意见整理我就不复述了。大体上是这么意思：&lt;/p>
+&lt;ul>
+&lt;li>睡眠不足会让注意力下降（有实验依据）&lt;/li>
+&lt;li>积极睡眠时大脑会进行修复 让我们第二天起来“神清气爽” 而上述的那种昏迷式的睡眠不会&lt;/li>
+&lt;li>不要把手机当成自己的孩子一样惦念 生怕自己错过什么信息&lt;/li>
+&lt;/ul>
+&lt;p>Hari在这里讲，这同样是无法指导大家行为的一个原因。因为几乎所有人都知道睡眠充足比不充足要好，但现实是大多数人无法选择充足的睡眠。&lt;/p>
+&lt;h3 id="原因深度阅读崩溃">原因：深度阅读崩溃&lt;/h3>
+&lt;p>初中时看到报道说中国人的阅读习惯是崩溃的，美国平均每人每年可以读十三本书，算下来每个月要读一本书左右，但中国平均每人每年只有一本。&lt;/p>
+&lt;p>2017年美国人平均每人每天花17分钟阅读，但花在手机上5.4小时。
+看到这个数据时我一度觉得好像美国人也不怎么读书嘛，但转念一想每天17分钟的话，每个月有大概十个小时左右 读一本书差不多是够了。&lt;/p>
+&lt;p>书籍是人类一生中能接触过的最纯粹，最常见的心流。
+当大多数人无法坚持读完一本书时，这足以说明人们的注意力已经在相当程度上被剥夺。&lt;/p>
+&lt;p>这是因为我们收集到的信息与收集信息的媒介息息相关。当新的媒介技术（如电视，推特等）出现时，它并不是像一个管道一样，把输入的信息一点不差的输出给它的使用者，而是为所有的使用者戴上滤镜。&lt;/p>
+&lt;p>Hari这里发表了对于twitter,facebook,ins等社交媒介的一系列超级暴论，非常精彩，我在这里简单列举几段：&lt;/p>
+&lt;blockquote>
+&lt;p>对于推特，无论你是美国总统，还是民主党总统候选人，你都在通过该媒体吸收消息，再将其发送给关注你的人。这意味着什么呢？&lt;/p>
+&lt;ul>
+&lt;li>你不应该长时间只专注于任何一件事，因为一条推特的长度上限是280个字符，所以这个世界可以被280个字符理解。&lt;/li>
+&lt;li>这个世界可以被快速的解读。&lt;/li>
+&lt;li>最重要的是，人们是否立即同意并赞扬你那些简短、简单、快速的陈述。被许多人立刻点赞的那个陈述就是成功的，被人立刻忽视或谴责的陈述就是失败的。当你发推文时你就默认了这三个前提的正确性，所以你是戴着这些滤镜来打量世界的。（这与微博非常相似）&lt;/li>
+&lt;/ul>
+&lt;p>脸书呢？这个媒介传递的讯息是什么？&lt;/p>
+&lt;ul>
+&lt;li>你生活的目的是为了向其他人展示它，而且你每天都要努力像你的朋友们展示经过编辑的生活亮点。&lt;/li>
+&lt;li>重要的是人们是否会立刻喜欢上这些你编辑过的生活亮点。&lt;/li>
+&lt;li>如果你经常去看别人的精彩生活，他们也会看你的，那么这些人就是你的朋友，这就是你的友谊。（这与微信朋友圈非常相似）&lt;/li>
+&lt;/ul>
+&lt;p>ins又是什么情况呢？&lt;/p>
+&lt;ul>
+&lt;li>重要的是你长的怎么样。&lt;/li>
+&lt;li>重要的是你长的怎么样。&lt;/li>
+&lt;li>重要的是你长的怎么样。&lt;/li>
+&lt;li>重要的是人们喜不喜欢你的外表。&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>深度阅读的崩溃是由纸质书籍在这种环境中的没落引起的，因为纸质书籍作为媒介，带给我们的阅读习惯是：&lt;/p>
+&lt;ul>
+&lt;li>生活是复杂的，你想了解它必须花一些时间深入思考。&lt;/li>
+&lt;li>将注意力缩小在一件事上，一句一句一页一页的读书是有价值的。&lt;/li>
+&lt;li>去深入思考别人的生活和思想逻辑，这样是值得的，每个人都像你自己一样拥有复杂的内心生活。&lt;/li>
+&lt;/ul>
+&lt;p>社交媒体中的那些媒介本身带来的滤镜喂养了人性中那些丑陋而肤浅的东西，如急于求成，虚荣和以貌取人。在这些地方处心积虑、按他们的游戏规则取得成功也只会让Hari不开心，他更喜欢那个读了很多书的自己。&lt;/p>
+&lt;p>为了验证自己的以上想法，Hari找到了Raymond Mar，一位多伦多大学的心理学教授。他们进行过这样的一个实验来探究阅读本身是怎么影响我们的思维方式的：观察阅读小说的程度与同理心之间的关系。&lt;/p>
+&lt;blockquote>
+&lt;p>阶段1：&lt;/p>
+&lt;/blockquote>
+&lt;p>被试看到一个名字列表，其中混有一些小说家，要求被试圈出小说家的名字，来表征被试阅读小说的程度。读得越多就可以辨认出越多的小说家。&lt;/p>
+&lt;blockquote>
+&lt;p>阶段2：&lt;/p>
+&lt;/blockquote>
+&lt;p>进行测试：展示眼睛的图片询问此人在想什么；观察真实人物的相处视频分析他们之间的关系和发生的事情。这可以表征同理心的强弱。&lt;/p>
+&lt;p>测试结果表明，读小说越多就越能准确的读出别人的情绪。&lt;/p>
+&lt;p>Raymond很开心的说，这是因为读书会创造一种独特的意识形态，人的注意力同时被外在的吸引到了书上的文字上，也同时向内进行着对书中内容的想象和心理模拟。我们可能在现实生活中与朋友相处时，也在使用相同的注意方式，即向外关注朋友们的特征，同时向内想象他们这样做的原因。从这个角度来说，小说才是最好的虚拟现实模拟器，因为你可以在其中看到一些绝对无法在生活中遇到的人的经历。&lt;/p>
+&lt;p>因此，同理心是一种很高级别的注意力形式。社交媒体媒介同样有着相同的增强同理心的作用，因为前面描述的一切同样发生在使用社交媒体的过程中。由于碎片化的形式，他们对同理心的增强是显著更微弱的，但至少不会破坏人的同理心。&lt;/p>
+&lt;p>结束时Hari问Raymond为什么要研究这种东西，Raymond一改科研时的严肃认真，对Hari说：&lt;/p>
+&lt;blockquote>
+&lt;p>现在我们所有人都陷入了同样的泥潭（注意力的危机），在朝着一个灾难性结局前进。如果我们想解决这些问题就绝对不能单独行动。这也是我觉得同理心如此宝贵的原因。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="原因思维漫游停滞">原因：思维漫游停滞&lt;/h3>
+&lt;p>注意力不只是像一束聚光灯一样打在我们想关注的东西上，它更重要的一种存在形式是思维的漫游。&lt;/p>
+&lt;p>我从小到大一直有这种漫游的习惯，脑补了一个完整的世界观以及其中发生的故事，还尝试着写成小说记录下来，当然后来没有成功。&lt;/p>
+&lt;p>初中时有次去查干湖，晚上躺在像蒙古包一样的巨大帐篷里，盯着天顶一言不发看了一个多小时，我的妈妈第一次观察到我的漫游状态，感到惊恐，问我脑子里怎么会有这么多的想法支撑着我进行这种漫游，我笑了笑没有说话。&lt;/p>
+&lt;p>神经领域的杰出科学家Marcus Rachel发现，当我们并没有被告知需要专注在某一件事上，允许自己的思维开始漫游时，我们的大脑并没有像不工作的肌肉那样静息休息，而是相当活跃。&lt;/p>
+&lt;p>Nathan Spreng和Jonathan Smallwood的工作表明，思维漫游的过程中至少有这三件事情在发生：&lt;/p>
+&lt;ul>
+&lt;li>你慢慢理解世界。例如读书时会有一小部分注意力分散出去，联想着书本的内容和自己的生活有什么联系、联想书中的内容是否自相矛盾、联想前后之间的关联。然后在一些时候突然想起过去的经历，这都是为了理解这本书的主题。理解生活也很需要这个过程。&lt;/li>
+&lt;li>事物之间开始建立新的联系，从而让你想出一些事情的解决方案。创造的本质不是让一件事情凭空诞生，而是让两件事情产生关联。当某些事情悬而未决时，大脑会希望它趋于顺利进行下去。大家可以试一下晚上睡觉前读几遍一首比较短的古诗，睡醒后一定可以把它背下来的。许多重大的突破都发生在这种思维的漫游里。&lt;/li>
+&lt;li>思想离开了时间的限制，回忆过去也预测未来，摆脱那种狭隘的、摆在面前的压力后的思考有助于自己为未来做准备。&lt;/li>
+&lt;/ul>
+&lt;p>遗憾大多数人只把聚光灯式的注意力当作努力，而认为思维漫游是一种懒惰，我们整个文化都是建立在这种假设上的。要提高工作效率，就不可能只研究怎么让自己的聚光灯状态保持更久，而忽视思维漫游状态。因为我们不能一直吸收外界的信息，却不给自己的大脑时间来加工处理他们。&lt;/p>
+&lt;p>&lt;strong>子曰，学而不思则罔。&lt;/strong>&lt;/p>
+&lt;p>前面我们已经探索过许多导致那种聚光灯式的注意力丢失的原因，这些原因同样导致我们的思维漫游减少甚至停滞。&lt;/p>
+&lt;p>不间断的信息轰炸不会给我们留下足够的时间和注意力来进行思维漫游。&lt;/p>
+&lt;p>Hari坚持认为可以提高注意力水平的事都可以让主观感受变好，但奇怪的是，有研究表明思维漫游进行时人的幸福感是不高的。Hari认为在压力小和安全的情况下，这种思考是毫无疑问快乐的。但当压力很大或危险来临时，允许自己思维漫游就会让自己被压力困扰。&lt;/p>
+&lt;h4 id="hari的失败">Hari的失败&lt;/h4></description></item><item><title>心理学系列No.1——习得性无助</title><link>https://Sikongdddl.github.io/p/%E5%BF%83%E7%90%86%E5%AD%A6%E7%B3%BB%E5%88%97no.1%E4%B9%A0%E5%BE%97%E6%80%A7%E6%97%A0%E5%8A%A9/</link><pubDate>Tue, 04 Apr 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E5%BF%83%E7%90%86%E5%AD%A6%E7%B3%BB%E5%88%97no.1%E4%B9%A0%E5%BE%97%E6%80%A7%E6%97%A0%E5%8A%A9/</guid><description>&lt;p>由于是系列的第一篇，所以要简单介绍一下这个系列打算发什么以及自己为什么想发&lt;/p>
 &lt;p>这个系列大概会发一些：&lt;/p>
 &lt;ul>
 &lt;li>心理学相关的理论介绍，有些理论是跟着书一起出来的，就会发读书笔记。&lt;/li>
