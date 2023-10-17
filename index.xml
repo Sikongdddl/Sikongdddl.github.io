@@ -1,4 +1,175 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sikongdddl的博客</title><link>https://Sikongdddl.github.io/</link><description>Recent content on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 04 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于作者和博客</title><link>https://Sikongdddl.github.io/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85%E5%92%8C%E5%8D%9A%E5%AE%A2/</link><pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85%E5%92%8C%E5%8D%9A%E5%AE%A2/</guid><description>&lt;p>&lt;strong>关于作者：&lt;/strong>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sikongdddl的博客</title><link>https://Sikongdddl.github.io/</link><description>Recent content on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>2023-2024-1 Week5周报</title><link>https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/</link><pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/</guid><description>&lt;h2 id="comsol案例体验">COMSOL案例体验&lt;/h2>
+&lt;h3 id="扳手儿">扳手儿&lt;/h3>
+&lt;p>模型导入 界面视觉操作 材料 参数&lt;/p>
+&lt;p>固体力学操作 网格 研究 结果&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image.png"
+width="846"
+height="469"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image_hu622310137fefaf513fb34cd926e9c5bd_58617_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image_hu622310137fefaf513fb34cd926e9c5bd_58617_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="烧内存"
+class="gallery-image"
+data-flex-grow="180"
+data-flex-basis="432px"
+>&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-1.png"
+width="684"
+height="24"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-1_hu6dea2892629e0fd748c950b94f34c20e_3753_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-1_hu6dea2892629e0fd748c950b94f34c20e_3753_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="2850"
+data-flex-basis="6840px"
+>&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-2.png"
+width="929"
+height="550"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-2_hucfc3ea64f878b4c8b5f3c791edff514b_92198_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-2_hucfc3ea64f878b4c8b5f3c791edff514b_92198_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="应力"
+class="gallery-image"
+data-flex-grow="168"
+data-flex-basis="405px"
+>&lt;/p>
+&lt;h3 id="母线板-多物理场">母线板-多物理场&lt;/h3>
+&lt;p>焦耳热-电流/热&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-3.png"
+width="595"
+height="524"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-3_hu5f81886a3ee1bee1e599d8435ef460de_63217_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-3_hu5f81886a3ee1bee1e599d8435ef460de_63217_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="网格儿"
+class="gallery-image"
+data-flex-grow="113"
+data-flex-basis="272px"
+>&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-4.png"
+width="641"
+height="562"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-4_hued3fef2873a5fbf92c2f74b1612250dc_39496_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-4_hued3fef2873a5fbf92c2f74b1612250dc_39496_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="钛合金电通更大 显著更热"
+class="gallery-image"
+data-flex-grow="114"
+data-flex-basis="273px"
+>&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-6.png"
+width="635"
+height="535"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-6_hu36da002da1a63fafe5143035a7b84c72_57514_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-6_hu36da002da1a63fafe5143035a7b84c72_57514_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="电流密度分布"
+class="gallery-image"
+data-flex-grow="118"
+data-flex-basis="284px"
+>&lt;/p>
+&lt;h2 id="ets-sj">ETS-SJ&lt;/h2>
+&lt;h3 id="架构理解">架构理解&lt;/h3>
+&lt;p>绝对路径、拼音命名这些就不吐槽了，这一坨东西代码量不小，但是这不是类图很混乱的理由，我简单贴几张他们的类图大家感受感受&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-7.png"
+width="466"
+height="601"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-7_hu7530e045883380955daac10d5b54ecf5_57826_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-7_hu7530e045883380955daac10d5b54ecf5_57826_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="来自软件官方文档"
+class="gallery-image"
+data-flex-grow="77"
+data-flex-basis="186px"
+>&lt;/p>
+&lt;p>先挑软件实现与理论知识耦合较少的部分开始优化：&lt;/p>
+&lt;p>求解模块和有关专业知识联系最密切，前处理模块居中，后处理模块和专业知识联系最少 故优先优化这一部分：&lt;/p>
+&lt;h3 id="架构调整准备">架构调整准备&lt;/h3>
+&lt;h3 id="其它问题及调整打算">其它问题及调整打算&lt;/h3>
+&lt;h4 id="关于页面">关于页面&lt;/h4>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-8.png"
+width="1920"
+height="1080"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-8_huca3fbe3e1a406add7cfb188c35338733_266292_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-8_huca3fbe3e1a406add7cfb188c35338733_266292_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="qt ui designer"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>&lt;/p>
+&lt;p>Qt支持图形化Ui开发，自动生成代码&lt;/p>
+&lt;p>我本来以为这事儿只有不会写代码的小朋友才干 我自己的两个QT项目的UI都是代码搓的（虽然加起来只有3000行）&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-9.png"
+width="819"
+height="849"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-9_hud34ad77bf8991279472125104536b6e7_104461_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-9_hud34ad77bf8991279472125104536b6e7_104461_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="不好看是另一码事"
+class="gallery-image"
+data-flex-grow="96"
+data-flex-basis="231px"
+>&lt;/p>
+&lt;p>没想到他们是这么干的（小声&lt;/p>
+&lt;p>所以好消息是这个页面好不好看和它的功能是完全解耦了的 这也是我坚持想用qt creator的主要原因&lt;/p>
+&lt;p>坏消息是后期得找个审美比较好的朋友来画画 我反正审美还是挺烂的&lt;/p>
+&lt;h4 id="关于合作开发">关于合作开发：&lt;/h4>
+&lt;p>项目结构还是相当大的，开个github方便版本管理&lt;/p>
+&lt;p>但我们肯定不能开源 所以得private repository&lt;/p>
+&lt;p>问题是github的private就安全吗 其实也不好说
+哪天我号被盗了把这种程度的科研成果泄密了就太夸张了&lt;/p>
+&lt;p>最好的办法是给咱们自己的服务器上搭一套git 这个是绝对安全的 只是稍微麻烦一些&lt;/p>
+&lt;p>如果有服务器的话 可以我来管理 监控方面普罗米修斯已经很成熟了 给它加个前端就行 SSH也挺熟练的&lt;/p>
+&lt;h4 id="能不能别惦记这vs了">能不能别惦记这VS了&lt;/h4>
+&lt;blockquote>
+&lt;p>不懂为什么写Qt不用Qtcreator(雾) 而且为什么是Qt4.3啊 这软件不是21年开发的吗 我21年写大作业用的版本都比这个高&lt;/p>
+&lt;/blockquote>
+&lt;p>个人讨厌visual studio这个IDE 打算向Qt creater重构&lt;/p>
+&lt;p>但是晨飞学长说英特仿真后面要二次开发 他们只用VS&lt;/p>
+&lt;p>希望沟通下能改变他们的想法&lt;/p>
+&lt;h4 id="求解器整合">求解器整合&lt;/h4>
+&lt;p>晨飞学长和我解释了这个软件叫“前后处理软件”的原因，因为求解器这部分是我们实验室的特色&lt;/p>
+&lt;p>但我仍然觉得手动出来运行求解器实在是过分抽象了&lt;/p>
+&lt;p>有必要整合进软件运行过程之中，后续更新求解器只需要我去配个CI/CD，求解器代码有更新发个pull request就好了&lt;/p>
+&lt;h4 id="学习路径">学习路径&lt;/h4>
+&lt;p>我的数理基础还过得去（荣誉课程） 但是都太基础了&lt;/p>
+&lt;p>得把用到的这几个物理场再学一遍 但我不知道什么学习路径比较合适&lt;/p>
+&lt;p>球球学长学姐指点&lt;/p>
+&lt;h2 id="ai-for-science">AI for Science&lt;/h2>
+&lt;p>人不读论文是没办法搞科研的
+&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-10.png"
+width="851"
+height="212"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-10_hudbe8bd386cfbda82bbcbb17818b53c09_67470_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-10_hudbe8bd386cfbda82bbcbb17818b53c09_67470_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="DAC2023BestPaper"
+class="gallery-image"
+data-flex-grow="401"
+data-flex-basis="963px"
+>&lt;/p>
+&lt;p>最先选这篇是因为：&lt;/p>
+&lt;ul>
+&lt;li>我之前是做RL的 具体来说是做offline model-based的goal-conditioned sparse reward之后可以的话当然也是想继续做RL的&lt;/li>
+&lt;li>DAC好像是EDA的会议里唯一一篇CCF-A 我对期刊不了解&lt;/li>
+&lt;/ul>
+&lt;h3 id="abstract">Abstract&lt;/h3>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-11.png"
+width="591"
+height="561"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-11_hu13d9ec0e8209adda6908654d34bfb058_95358_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-11_hu13d9ec0e8209adda6908654d34bfb058_95358_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="a full CCD pipeline"
+class="gallery-image"
+data-flex-grow="105"
+data-flex-basis="252px"
+>&lt;/p>
+&lt;p>很细 RL只用在了选violating endpoints上 其它的部分还是尊重了CCD本来的成果 但我没接触过CCD，估计也许以后也不会接触CCD。&lt;/p>
+&lt;p>主要是关注为什么选endpoint要用RL，原文里讲的很确切了：&lt;/p>
+&lt;blockquote>
+&lt;p>RL thus becomes a promising solution as it does
+not require any labeled data and has been demonstrated to achieve never-seen, high-quality optimization results in many fields&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="think-about-it">Think about it&lt;/h3>
+&lt;p>这几年AI for Sciense搞的火热 杨小康老师在张江那个会我还被抓去听了 听下来觉得有的领域里的确是直接力大砖飞就完事了 什么约束都不加的&lt;/p>
+&lt;p>但目前看下来EDA里做AI还是要尊重一下基本规律&lt;/p>
+&lt;p>这也和我的预期大致相符 面对一个解析解找不到或者找到了也没用的问题时（湍流、蛋白质折叠结构预测、symbolic regression&amp;hellip;）不如试试AI，尤其是不如试试强化学习，万一能行不就赚大了。&lt;/p>
+&lt;p>之前组里有且仅有一个20级同学在做symbolic regression，他的model已经知道什么是三角函数了（知道的标准大概是那些三角函数的初等变换比我们俩算的还快），这个是他的prp，当时做出来我也乐了半天，虽然这和我一点关系也没有（笑）。&lt;/p>
+&lt;p>这里贴一篇我觉得非常好地描述了AI4S中AI到底起了什么样的作用的博客作为结尾叭&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.zhihu.com/question/547902474" target="_blank" rel="noopener"
+>https://www.zhihu.com/question/547902474&lt;/a>&lt;/p></description></item><item><title>关于作者和博客</title><link>https://Sikongdddl.github.io/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85%E5%92%8C%E5%8D%9A%E5%AE%A2/</link><pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85%E5%92%8C%E5%8D%9A%E5%AE%A2/</guid><description>&lt;p>&lt;strong>关于作者：&lt;/strong>&lt;/p>
 &lt;p>SJTU2020级软件工程专业 系统软件方向在读&lt;/p>
 &lt;p>2024-2029 上海交通大学电院 直博&lt;/p>
 &lt;p>研究方向：EDA（electronic design automation）&lt;/p>
