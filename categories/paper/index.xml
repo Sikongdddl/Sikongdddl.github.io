@@ -66,6 +66,27 @@ data-flex-basis="284px"
 &lt;h2 id="ets-sj">ETS-SJ&lt;/h2>
 &lt;h3 id="架构理解">架构理解&lt;/h3>
 &lt;p>绝对路径、拼音命名这些就不吐槽了，这一坨东西代码量不小，但是这不是类图很混乱的理由，我简单贴几张他们的类图大家感受感受&lt;/p>
+&lt;p>（supported by powerDesigner）&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-12.png"
+width="910"
+height="690"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-12_huc1ed8a3fc6e693b4f0792efcf572db45_164196_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-12_huc1ed8a3fc6e693b4f0792efcf572db45_164196_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="数据存储模式"
+class="gallery-image"
+data-flex-grow="131"
+data-flex-basis="316px"
+>&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-13.png"
+width="884"
+height="539"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-13_hu2bd848f183b6392b793445afd2eab401_126757_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-13_hu2bd848f183b6392b793445afd2eab401_126757_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="紧耦合开发"
+class="gallery-image"
+data-flex-grow="164"
+data-flex-basis="393px"
+>&lt;/p>
 &lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-7.png"
 width="466"
 height="601"
@@ -77,8 +98,29 @@ data-flex-grow="77"
 data-flex-basis="186px"
 >&lt;/p>
 &lt;p>先挑软件实现与理论知识耦合较少的部分开始优化：&lt;/p>
-&lt;p>求解模块和有关专业知识联系最密切，前处理模块居中，后处理模块和专业知识联系最少 故优先优化这一部分：&lt;/p>
 &lt;h3 id="架构调整准备">架构调整准备&lt;/h3>
+&lt;h4 id="显示相关">显示相关&lt;/h4>
+&lt;p>混乱的最主要原因是所有业务逻辑都使用了INTESIMLib（他们自己的库），而且不知道是不是Lib问题，这些业务逻辑全都和显示掺杂在一起&lt;/p>
+&lt;p>这里的“显示与控制”最后都要拆开，业务逻辑只提供需要显示的数据，不参与显示逻辑&lt;/p>
+&lt;p>比如：&lt;/p>
+&lt;p>MainWindowAgent MainWindow SJBaseMainWindow SJGuiBase变为两层：&lt;/p>
+&lt;p>界面元素（暂定GuiComponent）+ 界面逻辑（可以沿用MainWindowAgent）&lt;/p>
+&lt;p>写成这样很可能是因为他们安排了两个人开发这个部分 然后交流不充份&lt;/p>
+&lt;h4 id="intesim学习成本">INTESIM学习成本&lt;/h4>
+&lt;p>这东西没文档（商业行为不好评价） 所以我也不知道怎么在他们的规则里大改 后面找到瓶颈之后如果我自己重构他们的库里的功能：&lt;/p>
+&lt;ul>
+&lt;li>肯定是能写出来&lt;/li>
+&lt;li>性能估计也确实会更好&lt;/li>
+&lt;li>但是费时费力&lt;/li>
+&lt;/ul>
+&lt;h4 id="meshpart">MeshPart&lt;/h4>
+&lt;p>这个部分是目前来看最需要重构的 原因：&lt;/p>
+&lt;ul>
+&lt;li>完全由INTESIMLib开发&lt;/li>
+&lt;li>与求解直接相关 但是求解是我们自己在写要去调整的&lt;/li>
+&lt;/ul>
+&lt;p>这边需要一些建好的模型来单独测试这个部分的性能
+准备先看看只改逻辑剪枝能快多少&lt;/p>
 &lt;h3 id="其它问题及调整打算">其它问题及调整打算&lt;/h3>
 &lt;h4 id="关于页面">关于页面&lt;/h4>
 &lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/image-8.png"
@@ -104,7 +146,7 @@ data-flex-grow="96"
 data-flex-basis="231px"
 >&lt;/p>
 &lt;p>没想到他们是这么干的（小声&lt;/p>
-&lt;p>所以好消息是这个页面好不好看和它的功能是完全解耦了的 这也是我坚持想用qt creator的主要原因&lt;/p>
+&lt;p>所以好消息是这个页面好不好看和它的功能是完全解耦了的 这个部分谁都能干 这也是我坚持想用qt creator的原因之一&lt;/p>
 &lt;p>坏消息是后期得找个审美比较好的朋友来画画 我反正审美还是挺烂的&lt;/p>
 &lt;h4 id="关于合作开发">关于合作开发：&lt;/h4>
 &lt;p>项目结构还是相当大的，开个github方便版本管理&lt;/p>
