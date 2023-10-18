@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sikongdddl的博客</title><link>https://Sikongdddl.github.io/post/</link><description>Recent content in Posts on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>2023-2024-1 Week5周报</title><link>https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/</link><pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/</guid><description>&lt;h2 id="comsol案例体验">COMSOL案例体验&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sikongdddl的博客</title><link>https://Sikongdddl.github.io/post/</link><description>Recent content in Posts on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>2023-2024-1 Week5周报</title><link>https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/</link><pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/</guid><description>&lt;h2 id="目录">目录：&lt;/h2>
+&lt;ul>
+&lt;li>COMSOL案例体验 初步了解多物理场软件功能（just a joke）&lt;/li>
+&lt;li>ETS-SJ代码分析与重构建议
+&lt;ul>
+&lt;li>显示架构调整&lt;/li>
+&lt;li>有关INTESIM Lib的问题&lt;/li>
+&lt;li>Mesh模块&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>未来调整打算及其它问题
+&lt;ul>
+&lt;li>GUI页面开发可解耦&lt;/li>
+&lt;li>关于服务器管理与合作开发&lt;/li>
+&lt;li>更换IDE（VS-Qtcreator）&lt;/li>
+&lt;li>求解器整合&lt;/li>
+&lt;li>专业知识学习路径&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>强化学习领域AI4Science论文调研&lt;/li>
+&lt;/ul>
+&lt;h2 id="comsol案例体验">COMSOL案例体验&lt;/h2>
 &lt;h3 id="扳手儿">扳手儿&lt;/h3>
 &lt;p>模型导入 界面视觉操作 材料 参数&lt;/p>
 &lt;p>固体力学操作 网格 研究 结果&lt;/p>
