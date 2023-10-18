@@ -6,6 +6,19 @@ date: 2023-10-13
 categories:
     - paper
 ---
+## 目录：
+* COMSOL案例体验 初步了解多物理场软件功能（just a joke）
+* ETS-SJ代码分析与重构建议
+  * 显示架构调整
+  * 有关INTESIM Lib的问题
+  * Mesh模块
+* 未来调整打算及其它问题 
+  * GUI页面开发可解耦
+  * 关于服务器管理与合作开发
+  * 更换IDE（VS-Qtcreator）
+  * 求解器整合
+  * 专业知识学习路径
+* 强化学习领域AI4Science论文调研
 ## COMSOL案例体验
 ### 扳手儿
 模型导入 界面视觉操作 材料 参数
