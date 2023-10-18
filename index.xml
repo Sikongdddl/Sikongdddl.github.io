@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sikongdddl的博客</title><link>https://Sikongdddl.github.io/</link><description>Recent content on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>2023-2024-1 Week5周报</title><link>https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/</link><pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/</guid><description>&lt;h2 id="目录">目录：&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sikongdddl的博客</title><link>https://Sikongdddl.github.io/</link><description>Recent content on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 17 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>2023-2024-1 Week6周报</title><link>https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/</link><pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/</guid><description>&lt;h2 id="目录">目录：&lt;/h2>
+&lt;h2 id="ai-for-science">AI for Science&lt;/h2>
+&lt;p>人不读论文是没办法搞科研的
+&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image.png"
+width="830"
+height="342"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image_huf93cd3ae7f0382b776b492d54d483820_64410_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image_huf93cd3ae7f0382b776b492d54d483820_64410_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="NIPS2021"
+class="gallery-image"
+data-flex-grow="242"
+data-flex-basis="582px"
+>&lt;/p>
+&lt;p>选这篇是因为：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>认识严骏驰老师 AI研究院呆过的少见有人不认识严老师（笑）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-1.png"
+width="1400"
+height="446"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-1_hu1854a0a2a70cf11eec5063fff7e1e2a0_66396_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-1_hu1854a0a2a70cf11eec5063fff7e1e2a0_66396_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="JunChi"
+class="gallery-image"
+data-flex-grow="313"
+data-flex-basis="753px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>原来EDA能发NIPS的 NIPS当之无愧AI第一会&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="abstract">Abstract&lt;/h3>
+&lt;p>我们强化学习太厉害啦！&lt;/p>
+&lt;h3 id="think-about-it">Think about it&lt;/h3></description></item><item><title>2023-2024-1 Week5周报</title><link>https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/</link><pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/</guid><description>&lt;h2 id="前言">前言：&lt;/h2>
+&lt;p>本来以为这周汇报的 如果是下周的话明天（星期四）上午能不能约老师讨论下（笑） 最近各个方面都刚开始 想法还挺多的&lt;/p>
+&lt;h2 id="目录">目录：&lt;/h2>
 &lt;ul>
 &lt;li>COMSOL案例体验 初步了解多物理场软件功能（just a joke）&lt;/li>
 &lt;li>ETS-SJ代码分析与重构建议
