@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sikongdddl的博客</title><link>https://Sikongdddl.github.io/post/</link><description>Recent content in Posts on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 17 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>2023-2024-1 Week6周报</title><link>https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/</link><pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/</guid><description>&lt;h2 id="目录">目录：&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sikongdddl的博客</title><link>https://Sikongdddl.github.io/post/</link><description>Recent content in Posts on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 17 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>2023-2024-1 Week6周报</title><link>https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/</link><pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/</guid><description>&lt;h2 id="spatial-acis--hoops">SPATIAL ACIS &amp;amp;&amp;amp; HOOPS&lt;/h2>
+&lt;p>建模的&lt;/p>
+&lt;p>ACIS：核心支持&lt;/p>
+&lt;p>HOOPS：交互应用&lt;/p>
+&lt;p>没找到资源 盗版抓的严？&lt;/p>
 &lt;h2 id="ai-for-science">AI for Science&lt;/h2>
 &lt;p>人不读论文是没办法搞科研的
 &lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image.png"
@@ -29,12 +33,147 @@ data-flex-basis="753px"
 >&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>原来EDA能发NIPS的 NIPS当之无愧AI第一会&lt;/p>
+&lt;p>原来EDA能发NIPS的&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="abstract">Abstract&lt;/h3>
-&lt;p>我们强化学习太厉害啦！&lt;/p>
-&lt;h3 id="think-about-it">Think about it&lt;/h3></description></item><item><title>2023-2024-1 Week5周报</title><link>https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/</link><pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/</guid><description>&lt;h2 id="前言">前言：&lt;/h2>
+&lt;p>强化学习做布局管理需要解决：&lt;/p>
+&lt;ul>
+&lt;li>可扩展性&lt;/li>
+&lt;li>reward function设计&lt;/li>
+&lt;li>end-to-end learning&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-2.png"
+width="1071"
+height="786"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-2_huc0243fe3d0a6e86cad5edbe3d338f60c_144327_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-2_huc0243fe3d0a6e86cad5edbe3d338f60c_144327_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="布局布线"
+class="gallery-image"
+data-flex-grow="136"
+data-flex-basis="327px"
+>&lt;/p>
+&lt;h4 id="布局问题强化学习-deepplace">布局问题：强化学习 DeepPlace&lt;/h4>
+&lt;p>policy iteration 这里作者用了PPO&lt;/p>
+&lt;p>输入网表（H=（V,E） 节点表示元件 边表示线）&lt;/p>
+&lt;p>期待得到绕线长度更短和拥塞更少的布局&lt;/p>
+&lt;p>之后引入布线问题进入DeepPR部分 把线总长作为两个任务的reward&lt;/p>
+&lt;h4 id="network-design">network design&lt;/h4>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-3.png"
+width="924"
+height="511"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-3_hu091e89558297499bf40680f260ffd154_75150_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-3_hu091e89558297499bf40680f260ffd154_75150_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="policy network"
+class="gallery-image"
+data-flex-grow="180"
+data-flex-basis="433px"
+>&lt;/p>
+&lt;h4 id="reward-function">reward function&lt;/h4>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-4.png"
+width="497"
+height="37"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-4_hu6977370f43720b3c1361501f3fd3d764_10155_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-4_hu6977370f43720b3c1361501f3fd3d764_10155_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="reward function"
+class="gallery-image"
+data-flex-grow="1343"
+data-flex-basis="3223px"
+>&lt;/p>
+&lt;p>P:placement solution&lt;/p>
+&lt;p>H:netlist&lt;/p>
+&lt;p>线越短 拥塞越少越好&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-5.png"
+width="740"
+height="37"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-5_hu04e76d1ca392096100c7e1736f8d572c_11341_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-5_hu04e76d1ca392096100c7e1736f8d572c_11341_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Wirelength"
+class="gallery-image"
+data-flex-grow="2000"
+data-flex-basis="4800px"
+>&lt;/p>
+&lt;p>拥塞那部分用的是RUDY&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-6.png"
+width="444"
+height="277"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-6_hu9bee223e802fade536302d6db3e85b4a_57696_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-6_hu9bee223e802fade536302d6db3e85b4a_57696_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="RUDY"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
+>&lt;/p>
+&lt;p>解决Sparse reward：random network distillation&lt;/p>
+&lt;p>简单来说就是另外维护一个随机初始化的网络 当前的agent行动后加上这样一个reward来鼓励它的探索&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-7.png"
+width="262"
+height="59"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-7_hu1e8f719e83b2c462612f8aaca30ac765_4581_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-7_hu1e8f719e83b2c462612f8aaca30ac765_4581_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="RND"
+class="gallery-image"
+data-flex-grow="444"
+data-flex-basis="1065px"
+>&lt;/p>
+&lt;h3 id="think-about-it">Think about it&lt;/h3>
+&lt;p>这篇工作是21年的 那会儿深度强化学习还是个新鲜玩意儿 工作确实挺出色 但估计放到现在是中不了NIPS的&lt;/p>
+&lt;p>这篇里能学到的主要是它的问题形式化方法（canvas直接当成图片输入；网表处理成GNN）和一些训练时候的trick（RND）&lt;/p>
+&lt;p>以及RL的优势可能反而在于：&lt;/p>
+&lt;p>很多时候我们允许放一个超参在这里慢慢调 作者无法给出任何形式化的证明来说明布局和布线哪个对最终的结果影响更大 那就放个超参调咯&lt;/p>
+&lt;h3 id="王瀚宸-what-can-ai-do-for-science">王瀚宸-What can AI do for Science&lt;/h3>
+&lt;p>2014-2018 南大物理 本科
+2018-2022 剑桥ML PHD
+2023-2026 Stanford&amp;amp;Genentech&lt;/p>
+&lt;h4 id="ai-aided-data-collection-and-curation-for-scientific-research">AI-aided data collection and curation for scientific research&lt;/h4>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-8.png"
+width="851"
+height="685"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-8_huaa24f34b78182437e5900034ea83698e_169771_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-8_huaa24f34b78182437e5900034ea83698e_169771_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="124"
+data-flex-basis="298px"
+>&lt;/p>
+&lt;p>那群做推荐系统冷启动的很喜欢这么干 但是这事儿好像没见有人在EDA里做&lt;/p>
+&lt;p>因为他们有需要的适用场合（新用户注册马上把它抓住）&lt;/p>
+&lt;h4 id="ai-based-generation-of-scientific-hypotheses">AI-based generation of scientific hypotheses&lt;/h4>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-9.png"
+width="842"
+height="380"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-9_hu1bcf17279881f6dd7e6ab7bde7f84d71_80725_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-9_hu1bcf17279881f6dd7e6ab7bde7f84d71_80725_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="221"
+data-flex-basis="531px"
+>&lt;/p>
+&lt;p>symbolic regression&lt;/p>
+&lt;p>那群人做梦都想在一些没有解析解的地方猜出点公式 不展开说了 做出来了就是Nature Science级别的成果&lt;/p>
+&lt;h4 id="ai-driven-experimentation-and-simulation">AI-driven experimentation and simulation&lt;/h4>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-10.png"
+width="835"
+height="285"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-10_huc36eb8ac0512ac236646abcf80da502f_59762_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-10_huc36eb8ac0512ac236646abcf80da502f_59762_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="292"
+data-flex-basis="703px"
+>&lt;/p>
+&lt;p>这事儿就真的只有理科在做了 我有个朋友致远化学的 做计算化学的 拿到了X-lance的直博offer 但是没去（笑）&lt;/p>
+&lt;h4 id="something-unpleasant-to-say">something unpleasant to say&lt;/h4>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-11.png"
+width="821"
+height="382"
+srcset="https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-11_hu6899592b6042990920526215927c1b3f_91300_480x0_resize_box_3.png 480w, https://Sikongdddl.github.io/p/2023-2024-1-week6%E5%91%A8%E6%8A%A5/image-11_hu6899592b6042990920526215927c1b3f_91300_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Alt text"
+class="gallery-image"
+data-flex-grow="214"
+data-flex-basis="515px"
+>&lt;/p></description></item><item><title>2023-2024-1 Week5周报</title><link>https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/</link><pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/2023-2024-1-week5%E5%91%A8%E6%8A%A5/</guid><description>&lt;h2 id="前言">前言：&lt;/h2>
 &lt;p>本来以为这周汇报的 如果是下周的话明天（星期四）上午能不能约老师讨论下（笑） 最近各个方面都刚开始 想法还挺多的&lt;/p>
 &lt;h2 id="目录">目录：&lt;/h2>
 &lt;ul>
