@@ -1,7 +1,7 @@
 ---
-title: 心理学系列No.5——有效的安慰
+title: 心理学系列No.3——有效的安慰
 description: 自我探索的一块拼图
-date: 2023-11-07
+date: 2023-11-19
 
 categories:
     - think
