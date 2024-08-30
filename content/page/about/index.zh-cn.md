@@ -4,7 +4,7 @@ description: 二流大学一流专业的三流程序员
 date: '2023-10-04'
 
 license: CC BY-NC-ND
-lastmod: '2023-10-04'
+lastmod: '2024-08-31'
 menu:
     main: 
         weight: -90
@@ -17,7 +17,7 @@ SJTU2020级软件工程专业 系统软件方向在读
 
 2024-2029 上海交通大学电院 直博 
 
-研究方向：EDA（electronic design automation）
+研究方向：model-based Reinforcement learning
 
 边陲小镇的高考状元，致远工科2020级唯一弃子 
 
