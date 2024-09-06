@@ -4,7 +4,7 @@ description: Harford积极心理学公开课
 date: 2023-11-26
 
 categories:
-    - think
+    - psychology
 ---
 
 ## 作者及书本介绍

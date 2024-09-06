@@ -4,7 +4,7 @@ description: 马丁·塞利格曼
 date: 2023-04-04
 
 categories:
-    - think
+    - psychology
 ---
 由于是系列的第一篇，所以要简单介绍一下这个系列打算发什么以及自己为什么想发
 

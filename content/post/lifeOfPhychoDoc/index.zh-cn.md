@@ -4,7 +4,7 @@ description: 职业选择
 date: 2023-11-24
 
 categories:
-    - think
+    - psychology
 ---
 ## 关于书本
 这是二十二位心理咨询师共同完成的一本自传
