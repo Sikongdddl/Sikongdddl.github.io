@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>paper on Sikongdddl的博客</title><link>https://Sikongdddl.github.io/categories/paper/</link><description>Recent content in paper on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 01 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/categories/paper/index.xml" rel="self" type="application/rss+xml"/><item><title>光电计算读书笔记</title><link>https://Sikongdddl.github.io/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link><pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid><description>&lt;h2 id="对光电计算领域的认识">对光电计算领域的认识&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>paper on Sikongdddl的博客</title><link>https://Sikongdddl.github.io/categories/paper/</link><description>Recent content in paper on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 23 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/categories/paper/index.xml" rel="self" type="application/rss+xml"/><item><title>论文综述</title><link>https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/</link><pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/</guid><description>&lt;p>&lt;img src="https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/image.png"
+width="740"
+height="147"
+srcset="https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/image_hu15146202356712916016.png 480w, https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/image_hu14123350847961076659.png 1024w"
+loading="lazy"
+alt="A Suevey of Large Language Models"
+class="gallery-image"
+data-flex-grow="503"
+data-flex-basis="1208px"
+>&lt;/p>
+&lt;h2 id="overview">OVERVIEW&lt;/h2>
+&lt;h3 id="background">background&lt;/h3>
+&lt;h4 id="scaling-laws">scaling laws&lt;/h4>
+&lt;h4 id="emergent-abilities">emergent abilities&lt;/h4>
+&lt;ul>
+&lt;li>in-context learning without gradient update&lt;/li>
+&lt;li>instruction following after fine-tuning&lt;/li>
+&lt;li>step-by-step reasoning for deriving the final answer&lt;/li>
+&lt;/ul>
+&lt;h4 id="key-techniques-for-llms">key techniques for llms&lt;/h4>
+&lt;ul>
+&lt;li>scaling(力大砖飞)&lt;/li>
+&lt;li>training tricks&lt;/li>
+&lt;li>ability eliciting&lt;/li>
+&lt;li>alignment tuning(align with human values)&lt;/li>
+&lt;li>tools manipulation(调用工具解决非文本场景)&lt;/li>
+&lt;/ul>
+&lt;h3 id="technical-evolution-of-gpt-series">technical evolution of GPT-series&lt;/h3>
+&lt;h4 id="early-explorations">Early Explorations&lt;/h4>
+&lt;p>引入transformer的GPT1（2017）
+generative, decoder-only tranformer, pretrain+fine-tune 核心架构在这个时候就确定了&lt;/p>
+&lt;p>GPT2 参数量来到1.5B 对于multi-task引入了概率形式表征（p(output|input, task)） 用word prediction解决问题&lt;/p>
+&lt;p>&lt;img src="https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/predict_word.png"
+width="840"
+height="274"
+srcset="https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/predict_word_hu12862881974991289372.png 480w, https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/predict_word_hu3659701441608840462.png 1024w"
+loading="lazy"
+alt="anything is word_prediction"
+class="gallery-image"
+data-flex-grow="306"
+data-flex-basis="735px"
+>&lt;/p>
+&lt;h4 id="capacity-leap">Capacity Leap&lt;/h4>
+&lt;p>GPT2的表现是不如SotA的，但已经被广泛用在了dialog任务中。基于GPT2的GPT3随后诞生。&lt;/p>
+&lt;p>2020年，GPT3给全世界上了一课，scaling到175B后，他敢于声称自己实现了ICL（in-context learning）。此时NLP的任务已经被GPT3拿下，许多reasoning和domainadaptation的任务也被拿下。&lt;/p>
+&lt;h4 id="capacity-enhancement">Capacity Enhancement&lt;/h4>
+&lt;p>在GPT3的基础上，openAI继续了两方面的工作：training on code data(用代码数据集代替一部分自然语言，这产生了GPT3.5)和human alignment(跟人交互的强化学习 RLHF，这产生了InstructGPT)。&lt;/p>
+&lt;h4 id="milestones-of-llm">Milestones of LLM&lt;/h4>
+&lt;ul>
+&lt;li>ChatGPT:RLHF+code data (based on GPT3.5 and GPT4)&lt;/li>
+&lt;li>GPT-4:multi-model signals， stronger and more safely&lt;/li>
+&lt;li>GPT-4V, GPT-4 turbo and so on&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;h2 id="resources-of-llms">Resources of llms&lt;/h2></description></item><item><title>光电计算读书笔记</title><link>https://Sikongdddl.github.io/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link><pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid><description>&lt;h2 id="对光电计算领域的认识">对光电计算领域的认识&lt;/h2>
 &lt;p>读到的这四篇工作各有千秋 实验部分没有仔细看 因为一方面这已经是很顶级的工作了，另一方面只要效果出来不输给传统方法，就是行得通的&lt;/p>
 &lt;p>其中三篇是用光电的手段实现了一些传统方式的模型结构或算法：经典深度神经网络，卷积和VAE。另一篇是在光电的可扩展性方面做出了一些尝试，用基础元件的堆叠来实现“可编程”的光电模型。&lt;/p>
 &lt;p>光电计算要做的事情是在硬件层面使用光学技术（衍射等）来实现电子元件支持的算符和操作，从而让依赖电子元件的算法摆脱电子元件性能瓶颈。例如宾夕法尼亚大学的那篇工作，用部分光学元件实现了一个做图片分类的神经网络，处理一张图片的速度竟然是0.57ns，这是任何运行在计算机上的程序都无法做到的，因为0.57ns只相当于一个2GHZ的CPU的一个时钟周期。&lt;/p>
