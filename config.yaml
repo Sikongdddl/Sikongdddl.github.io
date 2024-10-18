@@ -1,7 +1,8 @@
 baseurl: https://Sikongdddl.github.io
 languageCode: en-us
 theme: hugo-theme-stack
-paginate: 5
+pagination:
+    pagerSize: 5
 title: Example Site
 
 languages:
@@ -13,8 +14,9 @@ languages:
     zh-cn:
         languageName: 中文
         title: Sikongdddl的博客
-        description: 二流大学一流专业的三流程序员
         weight: 1
+        params:
+            description: 二流大学一流专业的三流程序员
 
 # Change it to your Disqus shortname before using
 disqusShortname: hugo-theme-stack
