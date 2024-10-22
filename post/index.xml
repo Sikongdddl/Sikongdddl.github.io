@@ -97,60 +97,7 @@ java在这件事上得天独厚，jar包内包括了完整的java运行环境，
 前端出了问题有可能是任何地方的问题，所以我们最后部署前端。&lt;/p>
 &lt;p>当我第一次清理掉本地所有的应用程序，在浏览器中输入一个地址后正常访问着项目没有任何阻碍时，一种奇妙的，无法在任何地方体会到的自由感拥抱了我。我们部署的内容也许是自己的玩具，也许是甲方的需求，也许是真正解决着实际问题的重要项目。不管它是什么，它离互联网上那些形形色色的网站，只差花三十五块买一个域名了。&lt;/p>
 &lt;p>做到后记得恭喜自己攻克了一个领域，从此面对部署任务时请习惯被当作经验丰富的专家对待（）。&lt;/p>
-&lt;p>————司空&lt;/p></description></item><item><title>论文综述</title><link>https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/</link><pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/</guid><description>&lt;p>&lt;img src="https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/image.png"
-width="740"
-height="147"
-srcset="https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/image_hu15146202356712916016.png 480w, https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/image_hu14123350847961076659.png 1024w"
-loading="lazy"
-alt="A Suevey of Large Language Models"
-class="gallery-image"
-data-flex-grow="503"
-data-flex-basis="1208px"
->&lt;/p>
-&lt;h2 id="overview">OVERVIEW&lt;/h2>
-&lt;h3 id="background">background&lt;/h3>
-&lt;h4 id="scaling-laws">scaling laws&lt;/h4>
-&lt;h4 id="emergent-abilities">emergent abilities&lt;/h4>
-&lt;ul>
-&lt;li>in-context learning without gradient update&lt;/li>
-&lt;li>instruction following after fine-tuning&lt;/li>
-&lt;li>step-by-step reasoning for deriving the final answer&lt;/li>
-&lt;/ul>
-&lt;h4 id="key-techniques-for-llms">key techniques for llms&lt;/h4>
-&lt;ul>
-&lt;li>scaling(力大砖飞)&lt;/li>
-&lt;li>training tricks&lt;/li>
-&lt;li>ability eliciting&lt;/li>
-&lt;li>alignment tuning(align with human values)&lt;/li>
-&lt;li>tools manipulation(调用工具解决非文本场景)&lt;/li>
-&lt;/ul>
-&lt;h3 id="technical-evolution-of-gpt-series">technical evolution of GPT-series&lt;/h3>
-&lt;h4 id="early-explorations">Early Explorations&lt;/h4>
-&lt;p>引入transformer的GPT1（2017）
-generative, decoder-only tranformer, pretrain+fine-tune 核心架构在这个时候就确定了&lt;/p>
-&lt;p>GPT2 参数量来到1.5B 对于multi-task引入了概率形式表征（p(output|input, task)） 用word prediction解决问题&lt;/p>
-&lt;p>&lt;img src="https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/predict_word.png"
-width="840"
-height="274"
-srcset="https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/predict_word_hu12862881974991289372.png 480w, https://Sikongdddl.github.io/p/%E8%AE%BA%E6%96%87%E7%BB%BC%E8%BF%B0/predict_word_hu3659701441608840462.png 1024w"
-loading="lazy"
-alt="anything is word_prediction"
-class="gallery-image"
-data-flex-grow="306"
-data-flex-basis="735px"
->&lt;/p>
-&lt;h4 id="capacity-leap">Capacity Leap&lt;/h4>
-&lt;p>GPT2的表现是不如SotA的，但已经被广泛用在了dialog任务中。基于GPT2的GPT3随后诞生。&lt;/p>
-&lt;p>2020年，GPT3给全世界上了一课，scaling到175B后，他敢于声称自己实现了ICL（in-context learning）。此时NLP的任务已经被GPT3拿下，许多reasoning和domainadaptation的任务也被拿下。&lt;/p>
-&lt;h4 id="capacity-enhancement">Capacity Enhancement&lt;/h4>
-&lt;p>在GPT3的基础上，openAI继续了两方面的工作：training on code data(用代码数据集代替一部分自然语言，这产生了GPT3.5)和human alignment(跟人交互的强化学习 RLHF，这产生了InstructGPT)。&lt;/p>
-&lt;h4 id="milestones-of-llm">Milestones of LLM&lt;/h4>
-&lt;ul>
-&lt;li>ChatGPT:RLHF+code data (based on GPT3.5 and GPT4)&lt;/li>
-&lt;li>GPT-4:multi-model signals， stronger and more safely&lt;/li>
-&lt;li>GPT-4V, GPT-4 turbo and so on&amp;hellip;&lt;/li>
-&lt;/ul>
-&lt;h2 id="resources-of-llms">Resources of llms&lt;/h2></description></item><item><title>优绩主义——离开小镇的船票</title><link>https://Sikongdddl.github.io/p/%E4%BC%98%E7%BB%A9%E4%B8%BB%E4%B9%89%E7%A6%BB%E5%BC%80%E5%B0%8F%E9%95%87%E7%9A%84%E8%88%B9%E7%A5%A8/</link><pubDate>Thu, 05 Sep 2024 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E4%BC%98%E7%BB%A9%E4%B8%BB%E4%B9%89%E7%A6%BB%E5%BC%80%E5%B0%8F%E9%95%87%E7%9A%84%E8%88%B9%E7%A5%A8/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>————司空&lt;/p></description></item><item><title>优绩主义——离开小镇的船票</title><link>https://Sikongdddl.github.io/p/%E4%BC%98%E7%BB%A9%E4%B8%BB%E4%B9%89%E7%A6%BB%E5%BC%80%E5%B0%8F%E9%95%87%E7%9A%84%E8%88%B9%E7%A5%A8/</link><pubDate>Thu, 05 Sep 2024 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E4%BC%98%E7%BB%A9%E4%B8%BB%E4%B9%89%E7%A6%BB%E5%BC%80%E5%B0%8F%E9%95%87%E7%9A%84%E8%88%B9%E7%A5%A8/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
 &lt;blockquote>
 &lt;p>七月二十号晚上&lt;/p>
 &lt;/blockquote>
