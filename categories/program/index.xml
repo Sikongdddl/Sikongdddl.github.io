@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>program on Sikongdddl的博客</title><link>https://Sikongdddl.github.io/categories/program/</link><description>Recent content in program on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 17 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/categories/program/index.xml" rel="self" type="application/rss+xml"/><item><title>全栈部署技术整理</title><link>https://Sikongdddl.github.io/p/%E5%85%A8%E6%A0%88%E9%83%A8%E7%BD%B2%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86/</link><pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E5%85%A8%E6%A0%88%E9%83%A8%E7%BD%B2%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>2022年的暑假项目里，摆了全程没有帮到忙的我接下了最后一个部分的工作：部署。那次花了我三周的时间，最后在我的两位dalao朋友的帮助下顺利完成。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>program on Sikongdddl的博客</title><link>https://Sikongdddl.github.io/categories/program/</link><description>Recent content in program on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 17 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/categories/program/index.xml" rel="self" type="application/rss+xml"/><item><title>全栈部署技术整理</title><link>https://Sikongdddl.github.io/p/%E5%85%A8%E6%A0%88%E9%83%A8%E7%BD%B2%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86/</link><pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E5%85%A8%E6%A0%88%E9%83%A8%E7%BD%B2%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86/</guid><description>&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>2022年的暑假项目里，摆了全程没有帮到忙的我接下了最后一个部分的工作：部署。那次花了我三周的时间，最后在我的两位dalao朋友的帮助下顺利完成。&lt;/p>
 &lt;p>2024年的某个下午，我被赶鸭子上架，需要重新部署一遍自己的某个项目，从买服务器开始算起一共花了三个小时。&lt;/p>
 &lt;p>技术不能带给我足够的刺激正是因为如此，第二次做需要花费的时间和精力往往不及第一次的十分之一。&lt;/p>
-&lt;h2 id="web技术栈简介">web技术栈简介&lt;/h2>
-&lt;p>部署的本质是把程序从运行在自己的电脑上，转为运行在服务器上。这个话说出来有点像讲脱口秀了，因为这个需求看起来真的很好笑。但至少在以下场合有实际意义：&lt;/p>
+&lt;h2 id="web技术栈简介">web技术栈简介
+&lt;/h2>&lt;p>部署的本质是把程序从运行在自己的电脑上，转为运行在服务器上。这个话说出来有点像讲脱口秀了，因为这个需求看起来真的很好笑。但至少在以下场合有实际意义：&lt;/p>
 &lt;ul>
 &lt;li>只有服务器的性能才能满足实际需求，不会真的有人觉得自己的电脑运行12316可以让大家在春运的时候抢到火车票吧&lt;/li>
 &lt;li>自己的机器没有公网IP，无法被直接访问，又不敢去玩内网穿透那一套东西&lt;/li>
@@ -35,37 +35,37 @@
 &lt;li>后端：在数据库中查询用户名和密码是否匹配，返回给前端匹配结果&lt;/li>
 &lt;li>前端：根据匹配结果渲染登陆成功页面或登陆失败页面&lt;/li>
 &lt;/ul>
-&lt;h2 id="数据库部署">数据库部署&lt;/h2>
-&lt;p>服务器数据库安装+远程连接（强烈推荐）
+&lt;h2 id="数据库部署">数据库部署
+&lt;/h2>&lt;p>服务器数据库安装+远程连接（强烈推荐）
 把大象放进冰箱 啊不是 把数据库放在服务器中总共分三步：下载，运行，维护数据。
 没有使用过任何一种数据库，或者想问存数据为什么不用excel的同学可以关掉了，后面的笑点你可能get不到~&lt;/p>
-&lt;h3 id="下载">下载：&lt;/h3>
-&lt;p>当服务器了就看清楚自己要下的是不是服务端，以用的人非常多的关系型数据库mysql为例，在ubuntu中mysql-server是我们需要的数据库服务器，而apt install mysql推荐的mysql-client-balabala不能上桌。&lt;/p>
+&lt;h3 id="下载">下载：
+&lt;/h3>&lt;p>当服务器了就看清楚自己要下的是不是服务端，以用的人非常多的关系型数据库mysql为例，在ubuntu中mysql-server是我们需要的数据库服务器，而apt install mysql推荐的mysql-client-balabala不能上桌。&lt;/p>
 &lt;p>如果你使用的是另一种操作系统（windows除外），或另一种数据库，那么请去stack overflow上搜索“xx系统 xx服务器安装” 然后点开第一条帖子按顺序做。&lt;/p>
-&lt;h3 id="运行">运行：&lt;/h3>
-&lt;p>虽然伟大的操作系统（如ubuntu）知道数据库应该一直运行，但有些不那么伟大的操作系统（如windows）并不知道，所以请谨慎仔细地检查你的数据库正在工作。不要一会登陆不上，一会连接失败，到处搜bug改配置文件越弄越乱。&lt;/p>
+&lt;h3 id="运行">运行：
+&lt;/h3>&lt;p>虽然伟大的操作系统（如ubuntu）知道数据库应该一直运行，但有些不那么伟大的操作系统（如windows）并不知道，所以请谨慎仔细地检查你的数据库正在工作。不要一会登陆不上，一会连接失败，到处搜bug改配置文件越弄越乱。&lt;/p>
 &lt;p>在伟大的ubuntu中，可以通过systemctl status mysql来查看。如果你的操作系统不是伟大的ubuntu，也不是windows，那么你可以尝试把‘systemsctl’换掉，或者不用换。如果你的数据库不是mysql，那么你可以尝试把‘mysql’换掉。换成什么请参考stack overflow。&lt;/p>
-&lt;h3 id="维护数据">维护数据：&lt;/h3>
-&lt;p>我相信很多人使用数据库时，手头已经有了一些数据需要放进去。这可能是之前的遗留数据，也可能是项目的启动数据。除非你想在往往没有图形化界面的服务器中一句一句写SQL，化身非洲民工时薪高达0.4$，否则请认真使用伟大的自动生成脚本功能。&lt;/p>
+&lt;h3 id="维护数据">维护数据：
+&lt;/h3>&lt;p>我相信很多人使用数据库时，手头已经有了一些数据需要放进去。这可能是之前的遗留数据，也可能是项目的启动数据。除非你想在往往没有图形化界面的服务器中一句一句写SQL，化身非洲民工时薪高达0.4$，否则请认真使用伟大的自动生成脚本功能。&lt;/p>
 &lt;p>绝大多数的主流数据库支持从数据表自动生成建表语句，如果你的数据格式并不是非常整齐，也可以借助伟大的生成式人工智能：谈天吉皮提来让它非常整齐。mysql有强大的mysqldump，几乎可以满足所有场合的数据-SQL转换需求。其它数据库请自行参考stack overflow。&lt;/p>
-&lt;h3 id="远程连接">远程连接：&lt;/h3>
-&lt;p>众所周知啊，分三步的东西都有四步（雾）。事实上以上三步足以对服务器数据库进行使用和维护，但强烈推荐大家进行远程连接。现行的数据库可视化集成开发环境（如Navicat(交大邮箱激活免费使用一年)、Datagrip（jetbrain家的，交大邮箱激活免费使用一辈子））的强大超乎你的想象，可以十倍百倍的提升效率。&lt;/p>
+&lt;h3 id="远程连接">远程连接：
+&lt;/h3>&lt;p>众所周知啊，分三步的东西都有四步（雾）。事实上以上三步足以对服务器数据库进行使用和维护，但强烈推荐大家进行远程连接。现行的数据库可视化集成开发环境（如Navicat(交大邮箱激活免费使用一年)、Datagrip（jetbrain家的，交大邮箱激活免费使用一辈子））的强大超乎你的想象，可以十倍百倍的提升效率。&lt;/p>
 &lt;p>需要注意的是，mysql数据库默认禁止一切非localhost用户的访问，想远程连接mysql数据库，你往往需要：&lt;/p>
 &lt;ul>
 &lt;li>打开访问ip限制（请去stack overflow）&lt;/li>
 &lt;li>确保用户名和密码可以登录mysql（请去stack overflow，并注意mysql8的密码机制与过往版本不同，不要念错了经）&lt;/li>
 &lt;li>确保服务器防火墙打开了mysql的端口（如果你的mysql密码过分脆弱（如123456），请绝对不要在使用复杂密码前这么做，否则早晚你的数据库会被扫描机扫进来删库勒索。）&lt;/li>
 &lt;/ul>
-&lt;h2 id="后端部署">后端部署&lt;/h2>
-&lt;p>把小象放进冰箱里一共也分三步：打包，运行，报错之后悲鸣&lt;/p>
-&lt;h3 id="打包">打包：&lt;/h3>
-&lt;p>除非你想把整个后端项目（这往往有几个G）都拖到服务器上运行和调试，否则先生成它的可执行版本绝对是正确的选择。
+&lt;h2 id="后端部署">后端部署
+&lt;/h2>&lt;p>把小象放进冰箱里一共也分三步：打包，运行，报错之后悲鸣&lt;/p>
+&lt;h3 id="打包">打包：
+&lt;/h3>&lt;p>除非你想把整个后端项目（这往往有几个G）都拖到服务器上运行和调试，否则先生成它的可执行版本绝对是正确的选择。
 java在这件事上得天独厚，jar包内包括了完整的java运行环境，可以在绝大多数系统中运行。而java的主流框架（如springboot）常常整合了maven，让打包这件事变成了一键式的傻瓜操作。如果你使用的语言不是java，请参考stack overflow用其他方式完成打包这件事。&lt;/p>
-&lt;h3 id="运行-1">运行&lt;/h3>
-&lt;p>如果你们服务器的上行带宽足够大，把整个项目挪到服务器里运行也并不是一件特别让人难接受的事，就是有点不优雅。从这个意义上，如果不追求优雅，后端的部署是相对最容易的。&lt;/p>
+&lt;h3 id="运行-1">运行
+&lt;/h3>&lt;p>如果你们服务器的上行带宽足够大，把整个项目挪到服务器里运行也并不是一件特别让人难接受的事，就是有点不优雅。从这个意义上，如果不追求优雅，后端的部署是相对最容易的。&lt;/p>
 &lt;p>对java来说，如果你的服务器中是一个jar包，那么你只需要java -jar运行它。对其它语言，当只能使用命令行时，在服务器内配置它的运行环境有时是一件让人抓狂的事，尤其是许多时候，各种版本之间复杂的依赖关系无法从报错中体现出来，需要更多的耐心。&lt;/p>
-&lt;h3 id="悲鸣">悲鸣&lt;/h3>
-&lt;p>由于后端项目需要与数据库非常频繁的交互，因此部署后端时看到花花绿绿的报错实在是再正常不过了。任何一个正常的人在抗压能力不那么强时，看到它们都会悲鸣。我曾经在这里卡了三天后，于项目晨会中大声悲鸣，并被助教和朋友共同安慰。&lt;/p>
+&lt;h3 id="悲鸣">悲鸣
+&lt;/h3>&lt;p>由于后端项目需要与数据库非常频繁的交互，因此部署后端时看到花花绿绿的报错实在是再正常不过了。任何一个正常的人在抗压能力不那么强时，看到它们都会悲鸣。我曾经在这里卡了三天后，于项目晨会中大声悲鸣，并被助教和朋友共同安慰。&lt;/p>
 &lt;p>有效制止悲鸣的办法是分解任务，比如：&lt;/p>
 &lt;ul>
 &lt;li>1.悲鸣，累了就不鸣了&lt;/li>
@@ -74,12 +74,12 @@ java在这件事上得天独厚，jar包内包括了完整的java运行环境，
 &lt;li>3.在后端开发的过程中频繁使用postman在本地测试，不要写一千行代码之后自信满满的部署上去，一起debug。不要允许一些自己都不完全理解的代码存在于你的项目中。&lt;/li>
 &lt;/ul>
 &lt;p>Anything you can&amp;rsquo;t create, You don&amp;rsquo;t understand.&lt;/p>
-&lt;h3 id="docker">Docker&lt;/h3>
-&lt;p>这同样是一个没有必要做，却可以极大提高生产力的工具。&lt;/p>
+&lt;h3 id="docker">Docker
+&lt;/h3>&lt;p>这同样是一个没有必要做，却可以极大提高生产力的工具。&lt;/p>
 &lt;p>显而易见的是，对不同的开发环境，不同的服务器系统来说，配置环境总是一件让人崩溃的事。尤其是需要在同一台机器上存在多个环境时，它们之间的交互也让人生畏。Docker基于这种需求场景诞生。只要你配好了docker，你就再也不用配置环境了。&lt;/p>
 &lt;p>需要注意的是，docker的不同容器之间有强隔离，因此请务必认真学习容器间通信后再进行使用。不要搞出把后端和服务器分别放在两个容器中，然后想不明白后端为什么找不到服务器这种笑话。&lt;/p>
-&lt;h2 id="前端部署">前端部署&lt;/h2>
-&lt;p>忙完这么一通之后，恭喜你已经离成功不远啦，最后一步要做的就是将前端也丢在服务器中运行。
+&lt;h2 id="前端部署">前端部署
+&lt;/h2>&lt;p>忙完这么一通之后，恭喜你已经离成功不远啦，最后一步要做的就是将前端也丢在服务器中运行。
 这里就不把大象放在冰箱里了，因为几乎所有的“前端部署”都是通过反向代理完成的，而nginx是无人能出其右的反向代理技术。&lt;/p>
 &lt;p>想说明白反向代理是什么，就要说明白正向代理是什么，就要先说明白代理是什么。&lt;/p>
 &lt;p>有时我们无法直接访问一个网页，就像我们不能直接买到海外的产品一样，此时代理的作用跟代购基本是一样的。
@@ -97,16 +97,16 @@ java在这件事上得天独厚，jar包内包括了完整的java运行环境，
 前端出了问题有可能是任何地方的问题，所以我们最后部署前端。&lt;/p>
 &lt;p>当我第一次清理掉本地所有的应用程序，在浏览器中输入一个地址后正常访问着项目没有任何阻碍时，一种奇妙的，无法在任何地方体会到的自由感拥抱了我。我们部署的内容也许是自己的玩具，也许是甲方的需求，也许是真正解决着实际问题的重要项目。不管它是什么，它离互联网上那些形形色色的网站，只差花三十五块买一个域名了。&lt;/p>
 &lt;p>做到后记得恭喜自己攻克了一个领域，从此面对部署任务时请习惯被当作经验丰富的专家对待（）。&lt;/p>
-&lt;p>————司空&lt;/p></description></item><item><title>16组星火营项目文档</title><link>https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/</guid><description>&lt;h1 id="sikongdddl的文档">Sikongdddl的文档&lt;/h1>
-&lt;h2 id="环境相关">环境相关&lt;/h2>
-&lt;h3 id="python">python&lt;/h3>
-&lt;h3 id="go">go&lt;/h3>
-&lt;h2 id="项目相关">项目相关&lt;/h2>
-&lt;p>github repo地址：&lt;/p>
+&lt;p>————司空&lt;/p></description></item><item><title>16组星火营项目文档</title><link>https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/</link><pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/</guid><description>&lt;h1 id="sikongdddl的文档">Sikongdddl的文档
+&lt;/h1>&lt;h2 id="环境相关">环境相关
+&lt;/h2>&lt;h3 id="python">python
+&lt;/h3>&lt;h3 id="go">go
+&lt;/h3>&lt;h2 id="项目相关">项目相关
+&lt;/h2>&lt;p>github repo地址：&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/Sikongdddl/SparkPlugin16" target="_blank" rel="noopener"
 >https://github.com/Sikongdddl/SparkPlugin16&lt;/a>&lt;/p>
-&lt;h3 id="架构">架构&lt;/h3>
-&lt;blockquote>
+&lt;h3 id="架构">架构
+&lt;/h3>&lt;blockquote>
 &lt;p>前端：&lt;/p>
 &lt;/blockquote>
 &lt;p>输入：用户纯文本输入 原始问题input&lt;/p>
@@ -141,8 +141,8 @@ class="gallery-image"
 data-flex-grow="160"
 data-flex-basis="385px"
 >&lt;/p>
-&lt;h3 id="项目管理风格加分点">“项目管理风格”加分点：&lt;/h3>
-&lt;blockquote>
+&lt;h3 id="项目管理风格加分点">“项目管理风格”加分点：
+&lt;/h3>&lt;blockquote>
 &lt;p>晨会&lt;/p>
 &lt;/blockquote>
 &lt;p>每天开个15min小会 每个人介绍一下以下内容：&lt;/p>
@@ -152,21 +152,21 @@ data-flex-basis="385px"
 &lt;li>昨天遇到了什么问题自己有点难解决&lt;/li>
 &lt;/ul>
 &lt;p>做好会议记录 其实一共也就五天的时间 五场会&lt;/p>
-&lt;h4 id="20230820开发记录">20230820开发记录&lt;/h4>
-&lt;p>雷逸 陆朋朋：前端Vue页面搭建完成&lt;/p>
+&lt;h4 id="20230820开发记录">20230820开发记录
+&lt;/h4>&lt;p>雷逸 陆朋朋：前端Vue页面搭建完成&lt;/p>
 &lt;p>董雨康 宋奕辰 刘非凡：第一后端打通天气API中 从命令行输入问题，根据关键词选择API 生成可以提问的json问星火大模型 已经调通&lt;/p>
 &lt;p>宋：从高德API获得json&lt;/p>
 &lt;p>刘非凡：把json润色后返回星火大模型 让大模型返回文本语言&lt;/p>
 &lt;p>董：整合代码 插件落槽部分&lt;/p>
 &lt;p>宫俊儒：第二后端完成天气API和星火大模型API需要的json格式化工作和相关接口准备&lt;/p>
-&lt;h4 id="20230821开发记录">20230821开发记录&lt;/h4>
-&lt;p>宫俊儒：“藏头诗”prompt调试 准备去开发前端&lt;/p>
+&lt;h4 id="20230821开发记录">20230821开发记录
+&lt;/h4>&lt;p>宫俊儒：“藏头诗”prompt调试 准备去开发前端&lt;/p>
 &lt;p>刘非凡：食谱API后端独立单元开发完成 正在往框架里整合&lt;/p>
 &lt;p>董雨康：LAVIS图片-&amp;gt;文字描述-&amp;gt;星火-&amp;gt;得到菜名和制作步骤&lt;/p>
 &lt;p>宋奕辰：rebuttal很快就能搞定 写诗的&lt;/p>
 &lt;p>雷逸 陆朋朋：页面事件基本完成 渲染还没做&lt;/p>
-&lt;h4 id="20230822开发记录">20230822开发记录&lt;/h4>
-&lt;p>宫俊儒：前端+前后端通信 明天预计做一下部署&lt;/p>
+&lt;h4 id="20230822开发记录">20230822开发记录
+&lt;/h4>&lt;p>宫俊儒：前端+前后端通信 明天预计做一下部署&lt;/p>
 &lt;p>宋奕辰：后端整合完善 图片接口功能完备 角色扮演prompt翻译导游讲故事&lt;/p>
 &lt;blockquote>
 &lt;p>github repo&lt;/p>
@@ -191,16 +191,16 @@ data-flex-basis="254px"
 &lt;/blockquote>
 &lt;p>我们这个文档本身就是个很大的加分点
 后面最好还是大家都来参与一些编写工作 记录一下自己的开发日志之类的&lt;/p>
-&lt;h3 id="分工">分工&lt;/h3>
-&lt;p>陆朋朋 雷逸 前端网站开发&lt;/p>
+&lt;h3 id="分工">分工
+&lt;/h3>&lt;p>陆朋朋 雷逸 前端网站开发&lt;/p>
 &lt;p>宫俊儒 二级后端开发 架构&lt;/p>
 &lt;p>宋奕辰 刘非凡 董雨康 一级后端开发（天气插件开发）&lt;/p>
 &lt;p>宋奕辰 宫俊儒 Rebuttal插件开发&lt;/p>
 &lt;p>刘非凡 董雨康 食谱插件开发&lt;/p>
-&lt;h3 id="推荐技术">推荐技术&lt;/h3>
-&lt;h3 id="其他一些有的没的">其他一些有的没的&lt;/h3>
-&lt;h3 id="airport-list">airport list&lt;/h3>
-&lt;p>这个事儿要冒着被墙或者喝茶的风险&lt;/p>
+&lt;h3 id="推荐技术">推荐技术
+&lt;/h3>&lt;h3 id="其他一些有的没的">其他一些有的没的
+&lt;/h3>&lt;h3 id="airport-list">airport list
+&lt;/h3>&lt;p>这个事儿要冒着被墙或者喝茶的风险&lt;/p>
 &lt;p>因为自己翻墙是违法行为，但是不违反刑法。但传播扩散机场的性质和自己翻墙不一样，可以判煽动颠覆，3-7年。&lt;/p>
 &lt;p>大家觉得自己机场不太稳定/有点贵可以来问我要一个两年90块的机场地址（笑）&lt;/p>
 &lt;p>1-&amp;gt;第三组 86.75&lt;/p>
@@ -218,26 +218,26 @@ data-flex-basis="254px"
 &lt;p>13-&amp;gt;第六组 78.75&lt;/p>
 &lt;p>14-&amp;gt;第一组 75.5&lt;/p>
 &lt;p>15-&amp;gt;十四组 75.25&lt;/p>
-&lt;p>16-&amp;gt;第九组 75&lt;/p></description></item><item><title>2023科大讯飞星火营日志</title><link>https://Sikongdddl.github.io/p/2023%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%90%A5%E6%97%A5%E5%BF%97/</link><pubDate>Mon, 14 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/2023%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%90%A5%E6%97%A5%E5%BF%97/</guid><description>&lt;h2 id="写在前面">写在前面：&lt;/h2>
-&lt;p>签了保密协议 代码 讲座内容和相关联系方式不能说&lt;/p>
+&lt;p>16-&amp;gt;第九组 75&lt;/p></description></item><item><title>2023科大讯飞星火营日志</title><link>https://Sikongdddl.github.io/p/2023%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%90%A5%E6%97%A5%E5%BF%97/</link><pubDate>Mon, 14 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/2023%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E8%90%A5%E6%97%A5%E5%BF%97/</guid><description>&lt;h2 id="写在前面">写在前面：
+&lt;/h2>&lt;p>签了保密协议 代码 讲座内容和相关联系方式不能说&lt;/p>
 &lt;p>这边博客更新的内容应该都只是些流水帐吧&lt;/p>
-&lt;h2 id="8月14日">8月14日&lt;/h2>
-&lt;p>和组里朋友@ycsong一起过来的&lt;/p>
+&lt;h2 id="8月14日">8月14日
+&lt;/h2>&lt;p>和组里朋友@ycsong一起过来的&lt;/p>
 &lt;p>三点半抵达800一晚的酒店
 晚饭去附近的商场解决 六点回到酒店没绷住 睡了一个小时&lt;/p>
 &lt;p>晚上syc配了两个小时的交大VPN（笑）&lt;/p>
 &lt;p>明天上午没有安排活动 有点期待这边的早餐午餐了&lt;/p>
 &lt;p>有继续在失眠 算上傍晚补的一觉一共睡了五个半小时吧&lt;/p>
-&lt;h2 id="8月15日">8月15日&lt;/h2>
-&lt;p>早餐出乎意料的丰盛&lt;/p>
+&lt;h2 id="8月15日">8月15日
+&lt;/h2>&lt;p>早餐出乎意料的丰盛&lt;/p>
 &lt;p>下午拉去看发布会，总的来说没什么新鲜技术，但是至少算是一份及格的答卷了&lt;/p>
 &lt;p>这也让我开始思考 中国的审查环境有没有可能允许真正的llm出现 虽然这和我自己的研究方向可谓是风马牛不相及（笑）&lt;/p>
 &lt;p>看完发布会被拉去吃晚餐 依旧是丰盛的自助 然后尬尬的玩了俩小时莫名其妙的游戏 还上去输掉了一局先手必胜的游戏，我是先手（笑） 这个游戏有空了可以写一篇儿&lt;/p>
 &lt;p>明天好像要从早通勤到晚，上午一段参观 一节课 下午两节课 晚上团建&lt;/p>
 &lt;p>我不知道自己还有没有这么多精力可以挥霍了&lt;/p>
 &lt;p>十点多了，读会儿书，洗洗睡了。&lt;/p>
-&lt;h2 id="8月16日">8月16日&lt;/h2>
-&lt;p>昨天睡了个好觉&lt;/p>
+&lt;h2 id="8月16日">8月16日
+&lt;/h2>&lt;p>昨天睡了个好觉&lt;/p>
 &lt;p>上午开营仪式 然后一天上了三节课&lt;/p>
 &lt;p>总的来说比较水 讲课的风格属于那种会的不用听，不会的听了也不懂的类型（笑&lt;/p>
 &lt;p>讯飞的食堂特别挤，倒是没有很难吃。电梯特别挤，而且高峰区不停低层，爬了好多楼。&lt;/p>
@@ -245,8 +245,8 @@ data-flex-basis="254px"
 &lt;p>晚上玩的还挺开心 没想到（笑&lt;/p>
 &lt;p>但是没有交到朋友（笑 不知道明天分组怎么办 看起来一组要七八个人的样子（笑&lt;/p>
 &lt;p>随便吧 忙的时候是不会焦虑的&lt;/p>
-&lt;h2 id="8月17日-8月18日">8月17日 8月18日&lt;/h2>
-&lt;p>日程被排的满而不科学&lt;/p>
+&lt;h2 id="8月17日-8月18日">8月17日 8月18日
+&lt;/h2>&lt;p>日程被排的满而不科学&lt;/p>
 &lt;p>十七号正经996了一天，浪费一整天的时间听大课+BOSS直聘；十八号一天做了两天的工作，忙到十二点四十回酒店&lt;/p>
 &lt;p>这两天小宋的手要准备拆线了 加上有些感冒 应该准备要回家了 不看在老板的面子上我也不会在这里继续工作啦&lt;/p>
 &lt;p>熟悉我的朋友应该知道我这人最讨厌拿工作时间体现工作量，所以很反感这种单纯压榨大家时间的企业文化&lt;/p>
@@ -263,16 +263,16 @@ data-flex-basis="254px"
 &lt;p>今天按理应该是比较开心的，但我好像只是表面上被调动了起来，或者去为了调动别人做做样子罢了。&lt;/p>
 &lt;p>我只是真的有些厌倦了 不那么想继续了&lt;/p>
 &lt;p>欲买桂花同载酒，终不似少年游&lt;/p>
-&lt;p>2023/8/19 司空 凌晨于合肥乐富强酒店18楼&lt;/p></description></item><item><title>1+1+1+1游戏</title><link>https://Sikongdddl.github.io/p/1-1-1-1%E6%B8%B8%E6%88%8F/</link><pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/1-1-1-1%E6%B8%B8%E6%88%8F/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>我小的时候玩过这样的一个游戏：&lt;/p>
+&lt;p>2023/8/19 司空 凌晨于合肥乐富强酒店18楼&lt;/p></description></item><item><title>1+1+1+1游戏</title><link>https://Sikongdddl.github.io/p/1-1-1-1%E6%B8%B8%E6%88%8F/</link><pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/1-1-1-1%E6%B8%B8%E6%88%8F/</guid><description>&lt;h2 id="introduction">Introduction
+&lt;/h2>&lt;p>我小的时候玩过这样的一个游戏：&lt;/p>
 &lt;p>两个人面对面，伸出双手做“1”的手势，然后依次行动&lt;/p>
 &lt;p>每次行动时，用自己的一只手碰对方的一只手，并把自己这只手上的数字变成二者的和&lt;/p>
 &lt;p>如果和为10 就把这一只手放下&lt;/p>
 &lt;p>率先放下两只手的人获胜&lt;/p>
 &lt;p>我小的时候在想，这个游戏的背后是否有某种最优策略？其中的“标准解法”和对应的数学模型又该如何得到呢？&lt;/p>
 &lt;p>如今我拥有了扎实的代码水平和不扎实的数学基础，决定来对这个儿时的问题进行一些深入研究。&lt;/p>
-&lt;h2 id="工欲善其事必先利其器">工欲善其事，必先利其器&lt;/h2>
-&lt;p>由于数学太烂，我的代码水平显著强于数学水平，想不明白就先用代码多玩几次，规律可能自己就出来了。&lt;/p>
+&lt;h2 id="工欲善其事必先利其器">工欲善其事，必先利其器
+&lt;/h2>&lt;p>由于数学太烂，我的代码水平显著强于数学水平，想不明白就先用代码多玩几次，规律可能自己就出来了。&lt;/p>
 &lt;p>所以我首先完成了这个游戏的一个简单的模拟器和日志输出&lt;/p>
 &lt;blockquote>
 &lt;p>强烈建议没玩过这个游戏的来和我玩一次 不然下面的东西可能会把人看晕&lt;/p>
@@ -348,10 +348,10 @@ p1行动
 对方只有左手&lt;/p>
 &lt;p>game over!&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="实验">实验&lt;/h2>
-&lt;p>既然有了这样一个模拟器，让它帮我跑一些实验也就十分自然了。&lt;/p>
-&lt;h3 id="统计模拟">统计模拟&lt;/h3>
-&lt;p>我们高强度使用模拟器，让双方以完全随机的策略玩这个游戏几万次（CPU震怒），并在此过程中收集一些统计信息。&lt;/p>
+&lt;h2 id="实验">实验
+&lt;/h2>&lt;p>既然有了这样一个模拟器，让它帮我跑一些实验也就十分自然了。&lt;/p>
+&lt;h3 id="统计模拟">统计模拟
+&lt;/h3>&lt;p>我们高强度使用模拟器，让双方以完全随机的策略玩这个游戏几万次（CPU震怒），并在此过程中收集一些统计信息。&lt;/p>
 &lt;blockquote>
 &lt;p>显而易见的是，我们在进行大批量的实验前应该担心这个游戏是否存在”死局“，即两位游戏者陷入无论使用什么策略都无法结束的局面。&lt;/p>
 &lt;p>直接说结论，在其中一人剩余两只手时，游戏最终一定会进入每人只剩一只手的局面，或者直接结束。&lt;/p>
@@ -417,8 +417,8 @@ p1行动
 &lt;p>其中，关于先手优胜问题，由于表现并不十分稳定，并没有吸引我足够多的注意力。&lt;/p>
 &lt;p>但后者，关于流局这件事，深深的吸引了我。&lt;/p>
 &lt;p>因此这篇博客从此正式跑偏，从研究最优策略转为研究流局问题。&lt;/p>
-&lt;h3 id="流局">流局&lt;/h3>
-&lt;p>只需要略微改动下代码，把流局的情况最后一幕拿出来观赏一下即可发现：&lt;/p>
+&lt;h3 id="流局">流局
+&lt;/h3>&lt;p>只需要略微改动下代码，把流局的情况最后一幕拿出来观赏一下即可发现：&lt;/p>
 &lt;p>所有流局情况同胚 属于这样一个循环之中：&lt;/p>
 &lt;p>(2 1)-&amp;gt;[3 1]-&amp;gt;(3 4)-&amp;gt;[7 4]-&amp;gt;(7 1)-&amp;gt;[8 1]-&amp;gt;(8 9)-&amp;gt;[7 9]-&amp;gt;(7 6)-&amp;gt;[3 6]-&amp;gt;(3 9)-&amp;gt;[2 9]-&amp;gt;(2 1)&lt;/p>
 &lt;p>其中，用小括号括起来表示左边先手，用中括号则反之&lt;/p>
@@ -434,8 +434,8 @@ p1行动
 &lt;blockquote>
 &lt;p>2 1-&amp;gt;1 3-&amp;gt;3 4-&amp;gt;4 7-&amp;gt;7 1-&amp;gt;1 8-&amp;gt;8 9-&amp;gt;9 7-&amp;gt;7 6-&amp;gt;6 3-&amp;gt;3 9-&amp;gt;9 2-&amp;gt;2 1&lt;/p>
 &lt;/blockquote>
-&lt;h3 id="流局中的数学">流局中的数学&lt;/h3>
-&lt;p>前面我们已经讨论过，流局只发生在双方都只剩一只手的情况下。&lt;/p>
+&lt;h3 id="流局中的数学">流局中的数学
+&lt;/h3>&lt;p>前面我们已经讨论过，流局只发生在双方都只剩一只手的情况下。&lt;/p>
 &lt;p>这是一个相对平凡的情况，比较适合进行一个数学建模。
 当两个人都只有一只手时，下面这个矩阵可以代表全部的起始情况：&lt;/p>
 &lt;p>let E =&lt;/p>
@@ -482,8 +482,8 @@ p1行动
 &lt;li>还有没有别的循环：这个问题比较朴素，由于一只手+一只手不存在“选择”的余地，暴力求解可知，不再有别的循环&lt;/li>
 &lt;li>为什么这一组循环会导致流局：这涉及到流局的本质，这个问题被我解决了，诸位看官请看。&lt;/li>
 &lt;/ul>
-&lt;h3 id="流局的本质">流局的本质&lt;/h3>
-&lt;p>让我们观察这个序列，不难发现它是一个有点意思的，性质类似于斐波那契数列的数对列&lt;/p>
+&lt;h3 id="流局的本质">流局的本质
+&lt;/h3>&lt;p>让我们观察这个序列，不难发现它是一个有点意思的，性质类似于斐波那契数列的数对列&lt;/p>
 &lt;p>2 1-&amp;gt;3 1-&amp;gt;3 4-&amp;gt;7 4-&amp;gt;7 1-&amp;gt;8 1-&amp;gt;8 9-&amp;gt;7 9-&amp;gt;7 6-&amp;gt;3 6-&amp;gt;3 9-&amp;gt;2 9-&amp;gt;2 1&lt;/p>
 &lt;p>其中&lt;/p>
 &lt;blockquote>
@@ -507,12 +507,12 @@ p1行动
 &lt;p>奇妙的是，我当然不是第一个发现以这两个数字开头的斐波那契数列性质比较特殊的人。&lt;/p>
 &lt;p>第一个发现的人叫卢卡斯(Lucas)，大家感兴趣可以去搜一下Lucas sequence，它在解决斐波那契的相关问题中表现极为突出。
 我们面对的这个数列就是它，只是被mod10了。&lt;/p>
-&lt;h2 id="写在最后">写在最后&lt;/h2>
-&lt;p>我很爱这种探索的过程，即使儿时的游戏也能带给我无尽的快乐和挑战。
+&lt;h2 id="写在最后">写在最后
+&lt;/h2>&lt;p>我很爱这种探索的过程，即使儿时的游戏也能带给我无尽的快乐和挑战。
 还有好多相关工作没有完成！&lt;/p>
 &lt;p>其实有点玩物丧志，如果这两天工作顺利，有空闲时间的话，我会回来继续更新的&lt;/p>
-&lt;h2 id="开个源">开个源&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
+&lt;h2 id="开个源">开个源
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
 &lt;/span>&lt;span class="lnt"> 2

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>paper on Sikongdddl的博客</title><link>https://Sikongdddl.github.io/categories/paper/</link><description>Recent content in paper on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 01 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/categories/paper/index.xml" rel="self" type="application/rss+xml"/><item><title>光电计算读书笔记</title><link>https://Sikongdddl.github.io/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link><pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid><description>&lt;h2 id="对光电计算领域的认识">对光电计算领域的认识&lt;/h2>
-&lt;p>读到的这四篇工作各有千秋 实验部分没有仔细看 因为一方面这已经是很顶级的工作了，另一方面只要效果出来不输给传统方法，就是行得通的&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>paper on Sikongdddl的博客</title><link>https://Sikongdddl.github.io/categories/paper/</link><description>Recent content in paper on Sikongdddl的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 01 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Sikongdddl.github.io/categories/paper/index.xml" rel="self" type="application/rss+xml"/><item><title>光电计算读书笔记</title><link>https://Sikongdddl.github.io/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link><pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid><description>&lt;h2 id="对光电计算领域的认识">对光电计算领域的认识
+&lt;/h2>&lt;p>读到的这四篇工作各有千秋 实验部分没有仔细看 因为一方面这已经是很顶级的工作了，另一方面只要效果出来不输给传统方法，就是行得通的&lt;/p>
 &lt;p>其中三篇是用光电的手段实现了一些传统方式的模型结构或算法：经典深度神经网络，卷积和VAE。另一篇是在光电的可扩展性方面做出了一些尝试，用基础元件的堆叠来实现“可编程”的光电模型。&lt;/p>
 &lt;p>光电计算要做的事情是在硬件层面使用光学技术（衍射等）来实现电子元件支持的算符和操作，从而让依赖电子元件的算法摆脱电子元件性能瓶颈。例如宾夕法尼亚大学的那篇工作，用部分光学元件实现了一个做图片分类的神经网络，处理一张图片的速度竟然是0.57ns，这是任何运行在计算机上的程序都无法做到的，因为0.57ns只相当于一个2GHZ的CPU的一个时钟周期。&lt;/p>
 &lt;p>paper里看到一段话很贴切：&lt;/p>
@@ -24,21 +24,21 @@
 &lt;li>可扩展性 这个应该是最重要的&lt;/li>
 &lt;/ul>
 &lt;p>总的来说这是个让我感到振奋的研究领域，也有可能是读的这几篇都是nature science级别的工作，这些工作肯定很让人振奋（笑）&lt;/p>
-&lt;h2 id="潜在的可以开展的方向">潜在的可以开展的方向&lt;/h2>
-&lt;h3 id="大模型">大模型&lt;/h3>
-&lt;p>说实话我第一篇（宾夕法尼亚大学做DNN那篇）读到一半，大概意识到这个领域想做什么后，第一反应就是transformer能不能用这种形式创造出来，哪怕量产的时间和经济成本再高，我也觉得这是件有意义的事情。&lt;/p>
+&lt;h2 id="潜在的可以开展的方向">潜在的可以开展的方向
+&lt;/h2>&lt;h3 id="大模型">大模型
+&lt;/h3>&lt;p>说实话我第一篇（宾夕法尼亚大学做DNN那篇）读到一半，大概意识到这个领域想做什么后，第一反应就是transformer能不能用这种形式创造出来，哪怕量产的时间和经济成本再高，我也觉得这是件有意义的事情。&lt;/p>
 &lt;p>因为GPT系的大模型就是decoder-only的transformer的堆叠，传统方式训练它消耗的人力和物力已经是天文数字了。也许是因为对领域的了解依然不足，我现在读完之后依然觉得如果光电可以做出transformer元件，像reconfigurable DPU那样去堆叠它来进行大模型的训练是一件有意义的事。&lt;/p>
 &lt;p>VAE能做，卷积能做，甚至RNN都能做出个类似的，transformer应该也能做吧。
 如果能解决单个元件的量产和元件之间的通信，以及中间权重的存储这三个问题，那也许用光电实现的大模型落地就只是时间问题了。我不信他比现在的大模型更贵（&lt;/p>
 &lt;p>也许任何一个科研人员都不希望看到某个领域最优秀的成果像NLP的大模型这样，沦为一个要投入巨大的人力物力才有收益的怪物。&lt;/p>
-&lt;h3 id="可扩展性">可扩展性&lt;/h3>
-&lt;p>读到一些光电或者纯光学的硬件实现的深度学习概念让我哭笑不得 因为我从软件的角度出发思考这个问题得到的答案和实际的解决办法相去甚远。&lt;/p>
+&lt;h3 id="可扩展性">可扩展性
+&lt;/h3>&lt;p>读到一些光电或者纯光学的硬件实现的深度学习概念让我哭笑不得 因为我从软件的角度出发思考这个问题得到的答案和实际的解决办法相去甚远。&lt;/p>
 &lt;p>可编程本身是一个很珍贵的属性。我可以在集成开发环境里实现各种各样的天马行空的想法，但它的前提条件是硬件支持已经到位了。因此在硬件层面做改变时，很多我这种做软件的人完全想象不到的困难就会产生。&lt;/p>
 &lt;p>我记得有篇工作详细的解释了，怎么利用材料的跳变做出了一个以电压作为自变量的Relu函数，这让我很受打击。因为这意味着前几年那些面向深度学习模型的炼丹操作完全无法在光电这边实现，连一个Relu都这么难做，调整模型的成本绝对不是放在几张显卡上跑几个小时那么简单。&lt;/p>
 &lt;p>我难以想象这个领域工作的可扩展性会以什么样的方式提升，开发出一种基本元件（像DPU那种）并把它进行堆叠来实现编程也许是一个好主意，但自由度依然没有真正的编程那么高。我期待光电领域的汇编语言或高级语言出现。&lt;/p>
 &lt;p>当然，像可扩展性这种软件层面的提升都要随着硬件的改变而改变。当年的汇编程序员是比谁代码写的更短的，而不是比谁代码写得更好。如果存储资源一直十分昂贵的话，高级语言或许都不会诞生。&lt;/p>
-&lt;h2 id="相关知识储备">相关知识储备&lt;/h2>
-&lt;p>硬件也分传统的电子硬件和光学硬件，我对电子硬件多少还有些了解，对光学硬件就基本没有接触过了。&lt;/p>
+&lt;h2 id="相关知识储备">相关知识储备
+&lt;/h2>&lt;p>硬件也分传统的电子硬件和光学硬件，我对电子硬件多少还有些了解，对光学硬件就基本没有接触过了。&lt;/p>
 &lt;blockquote>
 &lt;p>软件方面&lt;/p>
 &lt;/blockquote>
@@ -50,13 +50,13 @@
 &lt;/blockquote>
 &lt;p>我的理论知识就停留在致远的数理方法了，学过一些简单的复变函数，积分变换和数学物理方程，但我并不了解信号与系统 数字信号处理等等知识。&lt;/p>
 &lt;p>ipads实验室过硬的操作系统课程让我对电子计算硬件有一些了解。我们面向一个运行在qemu中的，微内核的chcore操作系统写过lab，实现了诸如系统启动，内存分配，IPC，线程调度，文件系统等等功能，算是初步接触过面向电子计算硬件的开发工作。&lt;/p>
-&lt;h2 id="要学习的技能">要学习的技能&lt;/h2>
-&lt;p>我对光学硬件应该算是一窍不通了（笑），上次接触还是大一做物理实验，这个要重点进修一下&lt;/p>
+&lt;h2 id="要学习的技能">要学习的技能
+&lt;/h2>&lt;p>我对光学硬件应该算是一窍不通了（笑），上次接触还是大一做物理实验，这个要重点进修一下&lt;/p>
 &lt;p>以及很多时候我解决问题的第一想法都是从软件层面出发的，把很多硬件支持当成理所当然的事，并且不怎么在乎试错成本。online judge提交几十次，看到模型第一反应是调参&amp;hellip;这都是并不适合做类似读到的这几篇论文的这种研究的。&lt;/p>
-&lt;h2 id="论文内容简述">论文内容简述&lt;/h2>
-&lt;p>按发刊时间顺序排列&lt;/p>
-&lt;h3 id="large-scale-neuromorphic-optoelectronic-computing-with-a-reconfigurable-diffractive-processing-unit">Large-scale neuromorphic optoelectronic computing with a reconfigurable diffractive processing unit&lt;/h3>
-&lt;p>这篇主要关注可扩展性 提出了实现不同ANN架构的DPU集群神经网络（衍射计算单元） 并提出了一种自适应的训练方法（类似退火 在第k次训练中更新第一层到第k层的权重 随着k增加到总层数 训练完成） 我以前读到过的这篇工作：&lt;/p>
+&lt;h2 id="论文内容简述">论文内容简述
+&lt;/h2>&lt;p>按发刊时间顺序排列&lt;/p>
+&lt;h3 id="large-scale-neuromorphic-optoelectronic-computing-with-a-reconfigurable-diffractive-processing-unit">Large-scale neuromorphic optoelectronic computing with a reconfigurable diffractive processing unit
+&lt;/h3>&lt;p>这篇主要关注可扩展性 提出了实现不同ANN架构的DPU集群神经网络（衍射计算单元） 并提出了一种自适应的训练方法（类似退火 在第k次训练中更新第一层到第k层的权重 随着k增加到总层数 训练完成） 我以前读到过的这篇工作：&lt;/p>
 &lt;blockquote>
 &lt;p>ROD: Reception-aware Online Distillation for Sparse Graphs&lt;/p>
 &lt;/blockquote>
@@ -81,8 +81,8 @@ data-flex-basis="415px"
 &lt;p>d图是更大型的 中间加入了一些feature map&lt;/p>
 &lt;p>e图类似RNN&lt;/p>
 &lt;p>实验是在c图那种架构的神经网络上做的MNIST和RNN架构上的人类动作识别 后者已经是相当可以的数据集了&lt;/p>
-&lt;h3 id="parallel-convolutional-processing-using-an-integrated-photonic-tensor-core">Parallel convolutional processing using an integrated photonic tensor core&lt;/h3>
-&lt;p>光量子我之前有一点点了解&lt;/p>
+&lt;h3 id="parallel-convolutional-processing-using-an-integrated-photonic-tensor-core">Parallel convolutional processing using an integrated photonic tensor core
+&lt;/h3>&lt;p>光量子我之前有一点点了解&lt;/p>
 &lt;p>致远的科研体验课程zirc中的物理方向金贤敏老师是做光量子的
 那门课抢的很激烈 我选老师的时候没选中他 后来在致远学者计划那边聊天的时候 听他讲过一个小时的光量子&lt;/p>
 &lt;p>这篇是21年的工作 那个时候深度神经网络卷生卷死 模型越来越杂 这里认为瓶颈在卷积上也很合理&lt;/p>
@@ -104,8 +104,8 @@ data-flex-basis="356px"
 &lt;p>只改变卷积的计算方式，在MNIST上，这种光学卷积的CNN和传统CNN达到了相差无几的效果 卷积本身的正确性也很OK&lt;/p>
 &lt;p>但是为什么没有看到关于提速情况的实验呢 这个矩阵也只是个9*4的，完全体现不出并行的效果&lt;/p>
 &lt;p>后面附录里看到作者说矩阵大了之后精度会下降，而且下降程度和矩阵大小成正比&lt;/p>
-&lt;h3 id="an-on-chip-photonic-deep-neural-network-for-image-classification">An on-chip photonic deep neural network for image classification&lt;/h3>
-&lt;p>做图像识别的神经网络&lt;/p>
+&lt;h3 id="an-on-chip-photonic-deep-neural-network-for-image-classification">An on-chip photonic deep neural network for image classification
+&lt;/h3>&lt;p>做图像识别的神经网络&lt;/p>
 &lt;p>线性计算部分由光学来做 非线性激活部分还是光电的&lt;/p>
 &lt;p>&lt;img src="https://Sikongdddl.github.io/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image.png"
 width="1618"
@@ -136,8 +136,8 @@ data-flex-basis="411px"
 &lt;p>芯片本身怎么烧的没看 实在是看不懂一点（笑）&lt;/p>
 &lt;p>可扩展性比较差（模型是物理上焊死的）&lt;/p>
 &lt;p>效果跟传统的神经网络差不太多（手写字母二分类四分类识别实验） 但是速度快（0.57ns 和电子计算方式已经不在一个数量级了）&lt;/p>
-&lt;h3 id="photonic-unsupervised-learning-variational-autoencoder-for-high-throughput-and-low-latency-image-transmission">Photonic unsupervised learning variational autoencoder for high-throughput and low-latency image transmission&lt;/h3>
-&lt;p>光电硬件实现的VAE 做image transmission又快又准 真没想过VAE还能干这个&lt;/p>
+&lt;h3 id="photonic-unsupervised-learning-variational-autoencoder-for-high-throughput-and-low-latency-image-transmission">Photonic unsupervised learning variational autoencoder for high-throughput and low-latency image transmission
+&lt;/h3>&lt;p>光电硬件实现的VAE 做image transmission又快又准 真没想过VAE还能干这个&lt;/p>
 &lt;p>图片传输的瓶颈在电信号和光信号的转换上&lt;/p>
 &lt;p>说的有点对 我们是不是把科技树点歪了，为什么数据用光纤传输，但是输入输出非要用电子元件处理呢（笑&lt;/p>
 &lt;p>当前的全光学神经网络都是做分类任务的 图片传输还需要模型有重建能力 所以像VAE GAN这种网络才能做光纤这里的图像传输&lt;/p>
@@ -163,8 +163,8 @@ data-flex-basis="211px"
 &lt;p>B：真正的光纤&lt;/p>
 &lt;p>C：General mode下，输入数字信号（把图片转化成二进制）时的encode-decode是无偏的 因为是光学信号 已经可以进行图片传输&lt;/p>
 &lt;p>D：Data-specific mode下，输入灰度图片信号时效果也还OK 专门用来进行高通量图片传输&lt;/p>
-&lt;h2 id="大模型强化学习proposal">大模型强化学习proposal&lt;/h2>
-&lt;p>&lt;img src="https://Sikongdddl.github.io/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5.png"
+&lt;h2 id="大模型强化学习proposal">大模型强化学习proposal
+&lt;/h2>&lt;p>&lt;img src="https://Sikongdddl.github.io/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5.png"
 width="890"
 height="1151"
 srcset="https://Sikongdddl.github.io/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5_hu13145324605797604989.png 480w, https://Sikongdddl.github.io/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5_hu3667377055095751355.png 1024w"
@@ -190,16 +190,16 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="77"
 data-flex-basis="185px"
->&lt;/p></description></item><item><title>星火营干货及近日进展</title><link>https://Sikongdddl.github.io/p/%E6%98%9F%E7%81%AB%E8%90%A5%E5%B9%B2%E8%B4%A7%E5%8F%8A%E8%BF%91%E6%97%A5%E8%BF%9B%E5%B1%95/</link><pubDate>Sun, 20 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E6%98%9F%E7%81%AB%E8%90%A5%E5%B9%B2%E8%B4%A7%E5%8F%8A%E8%BF%91%E6%97%A5%E8%BF%9B%E5%B1%95/</guid><description>&lt;h2 id="为什么这篇不是论文笔记">为什么这篇不是论文笔记&lt;/h2>
-&lt;p>科大讯飞这边日程排的又满又不科学 很浪费时间
+>&lt;/p></description></item><item><title>星火营干货及近日进展</title><link>https://Sikongdddl.github.io/p/%E6%98%9F%E7%81%AB%E8%90%A5%E5%B9%B2%E8%B4%A7%E5%8F%8A%E8%BF%91%E6%97%A5%E8%BF%9B%E5%B1%95/</link><pubDate>Sun, 20 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/%E6%98%9F%E7%81%AB%E8%90%A5%E5%B9%B2%E8%B4%A7%E5%8F%8A%E8%BF%91%E6%97%A5%E8%BF%9B%E5%B1%95/</guid><description>&lt;h2 id="为什么这篇不是论文笔记">为什么这篇不是论文笔记
+&lt;/h2>&lt;p>科大讯飞这边日程排的又满又不科学 很浪费时间
 加上最近接到了电话
 这俩事都值得汇报一下 都挺大的 就没去读论文（笑）&lt;/p>
-&lt;h2 id="讯飞星火大模型相关">讯飞星火大模型相关&lt;/h2>
-&lt;p>去年12月项目开始，5月6日发布13B参数量模型，8月15日发布65B参数量模型&lt;/p>
+&lt;h2 id="讯飞星火大模型相关">讯飞星火大模型相关
+&lt;/h2>&lt;p>去年12月项目开始，5月6日发布13B参数量模型，8月15日发布65B参数量模型&lt;/p>
 &lt;p>效果低于GPT3.5 但是低的不多 比国内其他大模型还是好一些的&lt;/p>
 &lt;p>借了华为一部分算力资源支持 加上讯飞常年做输入法和语音识别，训练数据质量很高，清洗数据方法也很成熟 所以虽然仓促但是能做出来&lt;/p>
-&lt;h2 id="星火营相关">星火营相关&lt;/h2>
-&lt;p>成员基本是全国985211的硕士博士生 本科生偏少
+&lt;h2 id="星火营相关">星火营相关
+&lt;/h2>&lt;p>成员基本是全国985211的硕士博士生 本科生偏少
 很多人都是带着活过来这边 一边被老板push一边做这边的事（笑）&lt;/p>
 &lt;blockquote>
 &lt;p>8.15-8.17上大课&lt;/p>
@@ -232,8 +232,8 @@ data-flex-basis="185px"
 &lt;p>组队运气不好 本来最厉害的大哥（交大18级硕士毕业，去北京工作了几年回来读博）被老板叫回去了 除了宋能帮到比较大的忙以外 其它几位朋友基础都比较差&lt;/p>
 &lt;p>现在项目是我在架构和管理 进度比较乐观 工作强度也不大 估计明天就能做完 但应该不考虑奖金的事情了 真能拿到奖金的话回来就充公（笑）&lt;/p>
 &lt;p>也算是有收获的 感觉自己和别人（尤其是比较菜的朋友）交流的能力显著增强 也慢慢明白要怎么和更厉害的人相处才让双方都舒服&lt;/p>
-&lt;h2 id="关于戴院士组里来交大就职的老师">关于戴院士组里来交大就职的老师&lt;/h2>
-&lt;p>写到这才发现我不知道她叫什么名字（笑）&lt;/p>
+&lt;h2 id="关于戴院士组里来交大就职的老师">关于戴院士组里来交大就职的老师
+&lt;/h2>&lt;p>写到这才发现我不知道她叫什么名字（笑）&lt;/p>
 &lt;p>8月19日晚收到了面试电话 简单交流了下&lt;/p>
 &lt;p>交流内容大概包括：&lt;/p>
 &lt;ul>
@@ -252,8 +252,8 @@ data-flex-basis="185px"
 &lt;p>最后的结论：&lt;/p>
 &lt;ul>
 &lt;li>她说这波有好多学生 所以现在不能确定下来（这句话翻来覆去说了好几次 婉拒了属于是） 让我确认拿到推免资格后再联系她一次&lt;/li>
-&lt;/ul></description></item><item><title>Reinforcement Learning from Passive Data via Latent Intentions</title><link>https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/</link><pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/</guid><description>&lt;img src="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/bookface.jpg" alt="Featured image of post Reinforcement Learning from Passive Data via Latent Intentions " />&lt;h2 id="abstract">Abstract&lt;/h2>
-&lt;p>大多数真实视频对RL来说都比较难办 因为不知道怎么定义value function和action label&lt;/p>
+&lt;/ul></description></item><item><title>Reinforcement Learning from Passive Data via Latent Intentions</title><link>https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/</link><pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/</guid><description>&lt;img src="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/bookface.jpg" alt="Featured image of post Reinforcement Learning from Passive Data via Latent Intentions " />&lt;h2 id="abstract">Abstract
+&lt;/h2>&lt;p>大多数真实视频对RL来说都比较难办 因为不知道怎么定义value function和action label&lt;/p>
 &lt;p>这些被称为passive data 被动可能被动在无法落入现成的评价体系里&lt;/p>
 &lt;p>这里提出model intentions：猜下一步action后变化情况的概率分布。&lt;/p>
 &lt;blockquote>
@@ -264,8 +264,8 @@ data-flex-basis="185px"
 &lt;li>&lt;a class="link" href="https://github.com/dibyaghosh/icvf_release" target="_blank" rel="noopener"
 >https://github.com/dibyaghosh/icvf_release&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>非常耐心地讲了一下RL为什么难以处理真实数据 因为缺乏好用的评价指标&lt;/p>
+&lt;h2 id="introduction">Introduction
+&lt;/h2>&lt;p>非常耐心地讲了一下RL为什么难以处理真实数据 因为缺乏好用的评价指标&lt;/p>
 &lt;p>这篇工作引入了intension space Z,以此作为value function的主要参考。&lt;/p>
 &lt;p>agent在环境中怎么互动和怎么探索有轮子，工作主要集中在：&lt;/p>
 &lt;ul>
@@ -284,11 +284,11 @@ data-flex-basis="1021px"
 >&lt;/p>
 &lt;p>这个老师比较诙谐&lt;/p>
 &lt;p>图比较好理解，latent space的内容是“对未来假设进行一些动作会发生的情况的预测”，拿这个和st st+1凑一个value function。&lt;/p>
-&lt;h2 id="formulation">Formulation&lt;/h2>
-&lt;p>马尔可夫链 没啥新鲜东西&lt;/p>
-&lt;h2 id="methodrl-using-passive-data">Method：RL using passive Data&lt;/h2>
-&lt;h3 id="icvf-intension-conditioned-value-function">ICVF intension-conditioned value function&lt;/h3>
-&lt;p>传统的RL学一个Q function state-action对
+&lt;h2 id="formulation">Formulation
+&lt;/h2>&lt;p>马尔可夫链 没啥新鲜东西&lt;/p>
+&lt;h2 id="methodrl-using-passive-data">Method：RL using passive Data
+&lt;/h2>&lt;h3 id="icvf-intension-conditioned-value-function">ICVF intension-conditioned value function
+&lt;/h3>&lt;p>传统的RL学一个Q function state-action对
 我们学一个Z function，用intension代替state,用outcome代替action&lt;/p>
 &lt;p>以前是状态随着action改变 现在是猜一个intension，拿一个outcome检验，再猜下一个&lt;/p>
 &lt;p>那这个和dreamer相差非常大了（笑）&lt;/p>
@@ -314,8 +314,8 @@ data-flex-grow="369"
 data-flex-basis="886px"
 >&lt;/p>
 &lt;p>这样可以让基于intension的value function和具体的任务解耦 所以他说这个预训练方法适用于所有任务&lt;/p>
-&lt;h3 id="learning-representations-from-icvf">learning representations from ICVF&lt;/h3>
-&lt;p>这个Value function黑盒的 怎么说明它对接下来的RL任务起到了多少作用呢？&lt;/p>
+&lt;h3 id="learning-representations-from-icvf">learning representations from ICVF
+&lt;/h3>&lt;p>这个Value function黑盒的 怎么说明它对接下来的RL任务起到了多少作用呢？&lt;/p>
 &lt;ul>
 &lt;li>转化成的state representation必须能比较容易的从model里得到&lt;/li>
 &lt;li>面对一个具体的task，这个state representation必须对具体的reward有用&lt;/li>
@@ -369,8 +369,8 @@ data-flex-grow="128"
 data-flex-basis="307px"
 >&lt;/p>
 &lt;p>没看懂（笑）&lt;/p>
-&lt;h3 id="learning-icvf-from-passive-data">learning ICVF from passive data&lt;/h3>
-&lt;p>最后一块拼图&lt;/p>
+&lt;h3 id="learning-icvf-from-passive-data">learning ICVF from passive data
+&lt;/h3>&lt;p>最后一块拼图&lt;/p>
 &lt;p>证明了ICVF有用和怎么用之后 问题就是ICVF怎么来了&lt;/p>
 &lt;p>这里只是提出了一种task情境下的passive data-ICVF 是一个multi-linear 多重线性&lt;/p>
 &lt;p>&lt;img src="https://Sikongdddl.github.io/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-7.png"
@@ -384,13 +384,13 @@ data-flex-grow="375"
 data-flex-basis="900px"
 >&lt;/p>
 &lt;p>很无聊 就是从（st,at,st+1）的buffer里拿一堆数据丢进这个所谓的ICVF&lt;/p>
-&lt;h3 id="实验">实验&lt;/h3>
-&lt;p>明天补上（笑） 他们自己搭了环境 不是传统的offline环境 还挺有趣的&lt;/p></description></item><item><title>HIQL：Offline Goal-Conditioned RL with Latent States as Actions</title><link>https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/</link><pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/</guid><description>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/bookface.png" alt="Featured image of post HIQL：Offline Goal-Conditioned RL with Latent States as Actions" />&lt;h2 id="just-deliver-something">Just deliver something&lt;/h2>
-&lt;p>在2023年3月到5月这段时间我进行过一些subgoal-based RL的研究和尝试，比较遗憾没有什么结果。&lt;/p>
+&lt;h3 id="实验">实验
+&lt;/h3>&lt;p>明天补上（笑） 他们自己搭了环境 不是传统的offline环境 还挺有趣的&lt;/p></description></item><item><title>HIQL：Offline Goal-Conditioned RL with Latent States as Actions</title><link>https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/</link><pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate><guid>https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/</guid><description>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/bookface.png" alt="Featured image of post HIQL：Offline Goal-Conditioned RL with Latent States as Actions" />&lt;h2 id="just-deliver-something">Just deliver something
+&lt;/h2>&lt;p>在2023年3月到5月这段时间我进行过一些subgoal-based RL的研究和尝试，比较遗憾没有什么结果。&lt;/p>
 &lt;p>老板推荐，偶然发现了这位来自UC伯克利的小日子老师做了很多subgoal的工作。&lt;/p>
 &lt;p>这我不得抱起来狠狠拜读！&lt;/p>
-&lt;h2 id="abstract">Abstract&lt;/h2>
-&lt;p>如果能给subgoal组织成良好的结构，先找近的，一步一步往远走就容易一些&lt;/p>
+&lt;h2 id="abstract">Abstract
+&lt;/h2>&lt;p>如果能给subgoal组织成良好的结构，先找近的，一步一步往远走就容易一些&lt;/p>
 &lt;p>组织方式和director很像 一层manager一层worker。&lt;/p>
 &lt;p>manager从state得到latent representation作为subgoal，worker实现subgoal&lt;/p>
 &lt;p>特殊的地方在于这个产生了manager和worker的value function不含action&lt;/p>
@@ -398,8 +398,8 @@ data-flex-basis="900px"
 &lt;li>&lt;a class="link" href="https://seohong.me/projects/hiql/" target="_blank" rel="noopener"
 >https://seohong.me/projects/hiql/&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>offline go-conditioned RL问题：&lt;/p>
+&lt;h2 id="introduction">Introduction
+&lt;/h2>&lt;p>offline go-conditioned RL问题：&lt;/p>
 &lt;ul>
 &lt;li>（state, goal）-&amp;gt; value function学不出来&lt;/li>
 &lt;li>offline数据源太多，合并进入传统RL方法有困难&lt;/li>
@@ -445,8 +445,8 @@ data-flex-basis="376px"
 &lt;p>worker需要学的是怎么到达眼前这个subgoal&lt;/p>
 &lt;p>亮点是IQL和manager不关心action，所以能应对offline的大量数据
 而且不需要experts trajectories&lt;/p>
-&lt;h2 id="preliminaries">Preliminaries&lt;/h2>
-&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-3.png"
+&lt;h2 id="preliminaries">Preliminaries
+&lt;/h2>&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-3.png"
 width="1984"
 height="568"
 srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-3_hu5093988605636373014.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-3_hu8750701904703264978.png 1024w"
@@ -548,9 +548,9 @@ data-flex-basis="3211px"
 >&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;h2 id="hierarchical-policy-structure">Hierarchical policy structure&lt;/h2>
-&lt;h3 id="作者眼中sparse-reward困难的原因信噪比">作者眼中sparse reward困难的原因：信噪比&lt;/h3>
-&lt;ul>
+&lt;h2 id="hierarchical-policy-structure">Hierarchical policy structure
+&lt;/h2>&lt;h3 id="作者眼中sparse-reward困难的原因信噪比">作者眼中sparse reward困难的原因：信噪比
+&lt;/h3>&lt;ul>
 &lt;li>final reward很远的时候，不同的state之间输出的value差别会很小 这导致一些错误的action是可以得到纠正的 所以很难分辨action的质量&lt;/li>
 &lt;li>更糟糕的是，在难以分辨的有效值以外充满大量的噪声
 &lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-13.png"
@@ -563,10 +563,10 @@ data-flex-grow="187"
 data-flex-basis="451px"
 >&lt;/li>
 &lt;/ul>
-&lt;h3 id="hierarchical-policy-structure-1">hierarchical policy structure&lt;/h3>
-&lt;p>重复描述Introduction中对应的这一部分&lt;/p>
-&lt;h3 id="toy环境上的理论证明">toy环境上的理论证明&lt;/h3>
-&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-14.png"
+&lt;h3 id="hierarchical-policy-structure-1">hierarchical policy structure
+&lt;/h3>&lt;p>重复描述Introduction中对应的这一部分&lt;/p>
+&lt;h3 id="toy环境上的理论证明">toy环境上的理论证明
+&lt;/h3>&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-14.png"
 width="748"
 height="303"
 srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-14_hu3900190084271125760.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-14_hu18308696043511301803.png 1024w"
@@ -588,10 +588,10 @@ data-flex-basis="592px"
 &lt;li>证明了他们方法的manager和worker犯错概率都要比flat策略更低&lt;/li>
 &lt;/ul>
 &lt;p>如果我刚学完概统我肯定能把这段看懂，可惜已经过去快两年了（笑）&lt;/p>
-&lt;h2 id="methodhierarchical-implicit-q-learning">Method：Hierarchical Implicit Q-learning&lt;/h2>
-&lt;p>非常简短。。。&lt;/p>
-&lt;h3 id="策略一分为二">策略一分为二&lt;/h3>
-&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-15.png"
+&lt;h2 id="methodhierarchical-implicit-q-learning">Method：Hierarchical Implicit Q-learning
+&lt;/h2>&lt;p>非常简短。。。&lt;/p>
+&lt;h3 id="策略一分为二">策略一分为二
+&lt;/h3>&lt;p>&lt;img src="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-15.png"
 width="1768"
 height="253"
 srcset="https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-15_hu6705147845887462504.png 480w, https://Sikongdddl.github.io/p/hiqloffline-goal-conditioned-rl-with-latent-states-as-actions/image-15_hu2434592652863290169.png 1024w"
@@ -615,5 +615,5 @@ data-flex-grow="276"
 data-flex-basis="663px"
 >&lt;/p>
 &lt;p>训练完value function之后分出manager和worker两个policy&lt;/p>
-&lt;h3 id="subgoal的表征方式">subgoal的表征方式&lt;/h3>
-&lt;p>直接用state的一部分当subgoal&lt;/p></description></item></channel></rss>
+&lt;h3 id="subgoal的表征方式">subgoal的表征方式
+&lt;/h3>&lt;p>直接用state的一部分当subgoal&lt;/p></description></item></channel></rss>
