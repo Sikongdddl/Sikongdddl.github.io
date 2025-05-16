@@ -18,9 +18,7 @@ menu:
 
 研究方向：Model-based Reinforcement Learning， SafeRL
 
-边陲小镇的高考状元，致远工科2020级唯一弃子 
-
-一个可以不卑不亢地说“我的一生真是艰难”的人
+边陲小镇的高考状元，心理学爱好者
 
 我的邮箱是 gongjunru@sjtu.edu.cn 有任何问题欢迎邮件联系
 
