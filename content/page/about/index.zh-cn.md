@@ -13,11 +13,10 @@ menu:
 ---
 **关于作者：**
 
-SJTU2020级软件工程专业 系统软件方向在读
+2020-2024 SJTU SE 系统软件方向
+2024-2029 上海交通大学人工智能研究院 直博
 
-2024-2029 上海交通大学电院 直博 
-
-研究方向：model-based Reinforcement learning
+研究方向：Model-based Reinforcement Learning， SafeRL
 
 边陲小镇的高考状元，致远工科2020级唯一弃子 
 
