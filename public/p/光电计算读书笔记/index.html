@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="对光电计算领域的认识 读到的这四篇工作各有千秋 实验部分没有仔细看 因为一方面这已经是很顶级的工作了，另一方面只要效果出来不输给传统方法，就是行得通的\n其中三篇是用光电的手段实现了一些传统方式的模型结构或算法：经典深度神经网络，卷积和VAE。另一篇是在光电的可扩展性方面做出了一些尝试，用基础元件的堆叠来实现“可编程”的光电模型。\n">
+<title>光电计算读书笔记</title>
+
+<link rel='canonical' href='http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="光电计算读书笔记">
+<meta property='og:description' content="对光电计算领域的认识 读到的这四篇工作各有千秋 实验部分没有仔细看 因为一方面这已经是很顶级的工作了，另一方面只要效果出来不输给传统方法，就是行得通的\n其中三篇是用光电的手段实现了一些传统方式的模型结构或算法：经典深度神经网络，卷积和VAE。另一篇是在光电的可扩展性方面做出了一些尝试，用基础元件的堆叠来实现“可编程”的光电模型。\n">
+<meta property='og:url' content='http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/'>
+<meta property='og:site_name' content='Sikongdddl的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-09-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-09-01T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="光电计算读书笔记">
+<meta name="twitter:description" content="对光电计算领域的认识 读到的这四篇工作各有千秋 实验部分没有仔细看 因为一方面这已经是很顶级的工作了，另一方面只要效果出来不输给传统方法，就是行得通的\n其中三篇是用光电的手段实现了一些传统方式的模型结构或算法：经典深度神经网络，卷积和VAE。另一篇是在光电的可扩展性方面做出了一些尝试，用基础元件的堆叠来实现“可编程”的光电模型。\n">
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Sikongdddl的博客</a></h1>
+            <h2 class="site-description">欲买桂花同载酒，终不似，少年游</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Sikongdddl'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85%E5%92%8C%E5%8D%9A%E5%AE%A2/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于作者和博客</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文件夹</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>相关链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#对光电计算领域的认识">对光电计算领域的认识</a></li>
+    <li><a href="#潜在的可以开展的方向">潜在的可以开展的方向</a>
+      <ol>
+        <li><a href="#大模型">大模型</a></li>
+        <li><a href="#可扩展性">可扩展性</a></li>
+      </ol>
+    </li>
+    <li><a href="#相关知识储备">相关知识储备</a></li>
+    <li><a href="#要学习的技能">要学习的技能</a></li>
+    <li><a href="#论文内容简述">论文内容简述</a>
+      <ol>
+        <li><a href="#large-scale-neuromorphic-optoelectronic-computing-with-a-reconfigurable-diffractive-processing-unit">Large-scale neuromorphic optoelectronic computing with a reconfigurable diffractive processing unit</a></li>
+        <li><a href="#parallel-convolutional-processing-using-an-integrated-photonic-tensor-core">Parallel convolutional processing using an integrated photonic tensor core</a></li>
+        <li><a href="#an-on-chip-photonic-deep-neural-network-for-image-classification">An on-chip photonic deep neural network for image classification</a></li>
+        <li><a href="#photonic-unsupervised-learning-variational-autoencoder-for-high-throughput-and-low-latency-image-transmission">Photonic unsupervised learning variational autoencoder for high-throughput and low-latency image transmission</a></li>
+      </ol>
+    </li>
+    <li><a href="#大模型强化学习proposal">大模型强化学习proposal</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/paper/" style="background-color: #2a3b22; color: #eee;">
+                paper
+            </a>
+        
+            <a href="/categories/think/" style="background-color: #9d2a77; color: #fff;">
+                think
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">光电计算读书笔记</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 01, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 10 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="对光电计算领域的认识">对光电计算领域的认识
+</h2><p>读到的这四篇工作各有千秋 实验部分没有仔细看 因为一方面这已经是很顶级的工作了，另一方面只要效果出来不输给传统方法，就是行得通的</p>
+<p>其中三篇是用光电的手段实现了一些传统方式的模型结构或算法：经典深度神经网络，卷积和VAE。另一篇是在光电的可扩展性方面做出了一些尝试，用基础元件的堆叠来实现“可编程”的光电模型。</p>
+<p>光电计算要做的事情是在硬件层面使用光学技术（衍射等）来实现电子元件支持的算符和操作，从而让依赖电子元件的算法摆脱电子元件性能瓶颈。例如宾夕法尼亚大学的那篇工作，用部分光学元件实现了一个做图片分类的神经网络，处理一张图片的速度竟然是0.57ns，这是任何运行在计算机上的程序都无法做到的，因为0.57ns只相当于一个2GHZ的CPU的一个时钟周期。</p>
+<p>paper里看到一段话很贴切：</p>
+<blockquote>
+<p>Optical computing uses photons instead of electrons for computation, and this process can overcome the inherent limitations of electronics and improve the energy efficiency, processing speed and computational throughput by orders of magnitude.</p></blockquote>
+<p>这是一个技术上已经比较成熟的领域，和纯电子计算相比，光电计算有一些非常显著的优势：（当然这完全是两个领域，对比没有太大意义，但也因为完全是两个领域，才能取得难以想象的突破）</p>
+<ul>
+<li>速度极快 这是由于传输信息的底层方式不同</li>
+<li>更适合处理光学信息（如处理光纤中的数据）</li>
+<li>单元体积极小</li>
+</ul>
+<p>它也有一些比较明显的劣势：</p>
+<ul>
+<li>可扩展性非常差 以前总开玩笑说代码改不了，焊死了，这回是真焊死了。调整模型在光电元件上十分困难 也许需要重新做一张芯片。其中一篇增加可扩展性的工作思路是使用基本元件进行堆叠和编程，但这种基本元件的量产难度也依然存在。我们也许很难像蚀刻芯片那样来批量化的制造光电元件，这可能让许多算力的解放只能发生在实验室中，发生在某一个细致的领域内，通用的光电计算机好像已经诞生（金贤敏老师的工作），但普及仍然有很大距离。</li>
+<li>开发调试成本。做硬件肯定比写代码要更加困难。正如那个著名的笑话所讲，硬件工程师的耗材可以堆满一间实验室，而软件工程师的耗材在自动售货机中就可以全部找到。</li>
+</ul>
+<p>这个领域内评价一篇工作好坏的指标大概有以下三个：</p>
+<ul>
+<li>实现效果 用光电实现的对应技术的效果至少要对标传统方式实现的技术 能超越就更棒了</li>
+<li>速度 这个一般是远远超过传统方法的</li>
+<li>可扩展性 这个应该是最重要的</li>
+</ul>
+<p>总的来说这是个让我感到振奋的研究领域，也有可能是读的这几篇都是nature science级别的工作，这些工作肯定很让人振奋（笑）</p>
+<h2 id="潜在的可以开展的方向">潜在的可以开展的方向
+</h2><h3 id="大模型">大模型
+</h3><p>说实话我第一篇（宾夕法尼亚大学做DNN那篇）读到一半，大概意识到这个领域想做什么后，第一反应就是transformer能不能用这种形式创造出来，哪怕量产的时间和经济成本再高，我也觉得这是件有意义的事情。</p>
+<p>因为GPT系的大模型就是decoder-only的transformer的堆叠，传统方式训练它消耗的人力和物力已经是天文数字了。也许是因为对领域的了解依然不足，我现在读完之后依然觉得如果光电可以做出transformer元件，像reconfigurable DPU那样去堆叠它来进行大模型的训练是一件有意义的事。</p>
+<p>VAE能做，卷积能做，甚至RNN都能做出个类似的，transformer应该也能做吧。
+如果能解决单个元件的量产和元件之间的通信，以及中间权重的存储这三个问题，那也许用光电实现的大模型落地就只是时间问题了。我不信他比现在的大模型更贵（</p>
+<p>也许任何一个科研人员都不希望看到某个领域最优秀的成果像NLP的大模型这样，沦为一个要投入巨大的人力物力才有收益的怪物。</p>
+<h3 id="可扩展性">可扩展性
+</h3><p>读到一些光电或者纯光学的硬件实现的深度学习概念让我哭笑不得 因为我从软件的角度出发思考这个问题得到的答案和实际的解决办法相去甚远。</p>
+<p>可编程本身是一个很珍贵的属性。我可以在集成开发环境里实现各种各样的天马行空的想法，但它的前提条件是硬件支持已经到位了。因此在硬件层面做改变时，很多我这种做软件的人完全想象不到的困难就会产生。</p>
+<p>我记得有篇工作详细的解释了，怎么利用材料的跳变做出了一个以电压作为自变量的Relu函数，这让我很受打击。因为这意味着前几年那些面向深度学习模型的炼丹操作完全无法在光电这边实现，连一个Relu都这么难做，调整模型的成本绝对不是放在几张显卡上跑几个小时那么简单。</p>
+<p>我难以想象这个领域工作的可扩展性会以什么样的方式提升，开发出一种基本元件（像DPU那种）并把它进行堆叠来实现编程也许是一个好主意，但自由度依然没有真正的编程那么高。我期待光电领域的汇编语言或高级语言出现。</p>
+<p>当然，像可扩展性这种软件层面的提升都要随着硬件的改变而改变。当年的汇编程序员是比谁代码写的更短的，而不是比谁代码写得更好。如果存储资源一直十分昂贵的话，高级语言或许都不会诞生。</p>
+<h2 id="相关知识储备">相关知识储备
+</h2><p>硬件也分传统的电子硬件和光学硬件，我对电子硬件多少还有些了解，对光学硬件就基本没有接触过了。</p>
+<blockquote>
+<p>软件方面</p></blockquote>
+<p>在交大软工这边造了三年轮子，让我有足够的对新技术的热情和学习能力，支持我在较短时间内学会一门新的开发语言或技术。很多课程需要的知识都是以前没有接触过，但在同时忙很多事的情况下，一个学期内掌握并出活的。</p>
+<p>做过一些大模型结合强化学习的工作，相关proposal会贴在最后。在科大讯飞出差期间写过面向大模型的插件，比较了解GPT系的大模型：包括发展历史，原理和调用方法。</p>
+<p>玩过的东西很杂很乱，像hugo stack，普罗米修斯等等， 一些诸如服务器管理、实验室博客这种杂七杂八的事情我应该上手都会比较快。另外我可以完整的写一套包括前端 后端 消息中间件和数据库的网站，并发数100以下没有问题，可以帮忙造一些轮子提高大家的工作效率（笑）。也许一些仿真工作（如果有的话）也可以我来做 我用过multisim、simulink这种东西，虽然不知道光学的硬件要怎么仿真，但应该学起来也比较快。</p>
+<blockquote>
+<p>硬件方面</p></blockquote>
+<p>我的理论知识就停留在致远的数理方法了，学过一些简单的复变函数，积分变换和数学物理方程，但我并不了解信号与系统 数字信号处理等等知识。</p>
+<p>ipads实验室过硬的操作系统课程让我对电子计算硬件有一些了解。我们面向一个运行在qemu中的，微内核的chcore操作系统写过lab，实现了诸如系统启动，内存分配，IPC，线程调度，文件系统等等功能，算是初步接触过面向电子计算硬件的开发工作。</p>
+<h2 id="要学习的技能">要学习的技能
+</h2><p>我对光学硬件应该算是一窍不通了（笑），上次接触还是大一做物理实验，这个要重点进修一下</p>
+<p>以及很多时候我解决问题的第一想法都是从软件层面出发的，把很多硬件支持当成理所当然的事，并且不怎么在乎试错成本。online judge提交几十次，看到模型第一反应是调参&hellip;这都是并不适合做类似读到的这几篇论文的这种研究的。</p>
+<h2 id="论文内容简述">论文内容简述
+</h2><p>按发刊时间顺序排列</p>
+<h3 id="large-scale-neuromorphic-optoelectronic-computing-with-a-reconfigurable-diffractive-processing-unit">Large-scale neuromorphic optoelectronic computing with a reconfigurable diffractive processing unit
+</h3><p>这篇主要关注可扩展性 提出了实现不同ANN架构的DPU集群神经网络（衍射计算单元） 并提出了一种自适应的训练方法（类似退火 在第k次训练中更新第一层到第k层的权重 随着k增加到总层数 训练完成） 我以前读到过的这篇工作：</p>
+<blockquote>
+<p>ROD: Reception-aware Online Distillation for Sparse Graphs</p></blockquote>
+<p>其中的方法和这篇提出的训练方法非常相似 这是一篇知识蒸馏的工作 他的第k次teacher model是前k个model的汇集</p>
+<p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-1.png"
+	width="1645"
+	height="950"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-1_hu_e2b9caff86fc831b.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-1_hu_c3c903d83a15dfa1.png 1024w"
+	loading="lazy"
+	
+		alt="Method"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="173"
+		data-flex-basis="415px"
+	
+></p>
+<p>a图意思应该是支持不同架构的DNN 可以直接更换模块化的输入输出单元 可编程以改变功能</p>
+<p>输入这边对应不同的diffractive module有对应的information coding 把输入进来的电信号转化成光信号</p>
+<p>输出这边有对应的光场求和（光学的线性计算）和非线性激活 他这里全部都是光学计算</p>
+<p>b图是光电元件实现 这里的电子计算只包括数据流的存储和缓存 全部的计算工作都是光学完成的</p>
+<p>权重由衍射调制来控制 求和直接用光场求和就可以</p>
+<p>后面三张图是基于DPU的不同神经网络架构 DMD是个数字透镜 SLM是光调制器 这两个可以实现输入（电信号-光信号） CMOS是个传感器 实现线性和非线性运算 所以一个DPU可以作为光学神经网络里的一个神经元</p>
+<p>c图是把DPU叠起来当神经网络用 网络中每一层都是一个DPU</p>
+<p>d图是更大型的 中间加入了一些feature map</p>
+<p>e图类似RNN</p>
+<p>实验是在c图那种架构的神经网络上做的MNIST和RNN架构上的人类动作识别 后者已经是相当可以的数据集了</p>
+<h3 id="parallel-convolutional-processing-using-an-integrated-photonic-tensor-core">Parallel convolutional processing using an integrated photonic tensor core
+</h3><p>光量子我之前有一点点了解</p>
+<p>致远的科研体验课程zirc中的物理方向金贤敏老师是做光量子的
+那门课抢的很激烈 我选老师的时候没选中他 后来在致远学者计划那边聊天的时候 听他讲过一个小时的光量子</p>
+<p>这篇是21年的工作 那个时候深度神经网络卷生卷死 模型越来越杂 这里认为瓶颈在卷积上也很合理</p>
+<p>他使用光学硬件来支持神经网络的初衷并不是加速经典神经网络的那些线性运算和非线性激活，而是加速卷积</p>
+<p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-3.png"
+	width="1686"
+	height="1135"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-3_hu_c6a7b12b73f6b5b4.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-3_hu_636329dd1ce865a9.png 1024w"
+	loading="lazy"
+	
+		alt="Method"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="356px"
+	
+></p>
+<p>光源能够提供不同精确频率的光波作为输入 用WDM保证不同的光信号可以集成到一个光纤上 并且可以用DEMUX无损的分离 这样才能计算和储存结果</p>
+<p>其实也不一定多快，但是它是并行运算的 每一个source vector可以映射成光梳上的一个波段 波段的自由度很高 这样可以一次让非常非常多的source vector和卷积核做运算 并一次存储非常非常多的结果</p>
+<p>CNN中的source vector可以来自于图片的不同区域 因此这种并行运算很方便的可以提升卷积这一步的运算速度 而且在参数量很高的时候这个提升是巨大的</p>
+<p>这个硬件部分只做卷积 其它的东西还是电子计算 所以要先实验卷积的情况 再实验模型的效果</p>
+<p>只改变卷积的计算方式，在MNIST上，这种光学卷积的CNN和传统CNN达到了相差无几的效果 卷积本身的正确性也很OK</p>
+<p>但是为什么没有看到关于提速情况的实验呢 这个矩阵也只是个9*4的，完全体现不出并行的效果</p>
+<p>后面附录里看到作者说矩阵大了之后精度会下降，而且下降程度和矩阵大小成正比</p>
+<h3 id="an-on-chip-photonic-deep-neural-network-for-image-classification">An on-chip photonic deep neural network for image classification
+</h3><p>做图像识别的神经网络</p>
+<p>线性计算部分由光学来做 非线性激活部分还是光电的</p>
+<p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image.png"
+	width="1618"
+	height="1021"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image_hu_33aaea80a2242f3c.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image_hu_4e9b10e190723b9d.png 1024w"
+	loading="lazy"
+	
+		alt="Method"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="158"
+		data-flex-basis="380px"
+	
+></p>
+<p>a b: 没有对神经网络的工作原理做任何修改</p>
+<p>c d: 但是硬件支持整个换了一套 这边展开看看：</p>
+<p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-2.png"
+	width="1584"
+	height="924"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-2_hu_26411b279af90d8d.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-2_hu_71c5775b45fc6729.png 1024w"
+	loading="lazy"
+	
+		alt="hardware implementation"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="171"
+		data-flex-basis="411px"
+	
+></p>
+<p>引脚衰减器 高中自己研究半导体导电的时候找到过类似PN结的说法 好像是说晶胞里的电子缺位可以视为正电荷 多余电子可以视为负电荷 通过PN结来传递电信号 由于一边是P另一边是N 所以这种导电是单向的</p>
+<p>不知道和这里的PN有什么联系 感觉半导体原理应该都大差不差吧</p>
+<p>电流越大衰减越强 基本成正比</p>
+<p>衰减后的信号交给硅锗二极管 做线性运算（其实就是加权的加法）后交给非线性激活元件 这里是个RELU 实现原理在f g图里 事实上是为了保证速度不要在这里出现瓶颈，用光电硬件的物理特性凑出了RELU的效果</p>
+<p>芯片本身怎么烧的没看 实在是看不懂一点（笑）</p>
+<p>可扩展性比较差（模型是物理上焊死的）</p>
+<p>效果跟传统的神经网络差不太多（手写字母二分类四分类识别实验） 但是速度快（0.57ns 和电子计算方式已经不在一个数量级了）</p>
+<h3 id="photonic-unsupervised-learning-variational-autoencoder-for-high-throughput-and-low-latency-image-transmission">Photonic unsupervised learning variational autoencoder for high-throughput and low-latency image transmission
+</h3><p>光电硬件实现的VAE 做image transmission又快又准 真没想过VAE还能干这个</p>
+<p>图片传输的瓶颈在电信号和光信号的转换上</p>
+<p>说的有点对 我们是不是把科技树点歪了，为什么数据用光纤传输，但是输入输出非要用电子元件处理呢（笑</p>
+<p>当前的全光学神经网络都是做分类任务的 图片传输还需要模型有重建能力 所以像VAE GAN这种网络才能做光纤这里的图像传输</p>
+<p>这事儿倒也有人在做 但延迟非常高 而且做不到全光端到端</p>
+<p>全光版本的VAE</p>
+<ul>
+<li>输入光信号</li>
+<li>latent space光信号</li>
+<li>输出图像</li>
+</ul>
+<p>比CPU快四个数量级，传输错误率同比下降57%</p>
+<p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-4.png"
+	width="945"
+	height="1071"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-4_hu_82a50034ed501c4f.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-4_hu_d6b33d76dcaf15dc.png 1024w"
+	loading="lazy"
+	
+		alt="实在是好图 一眼就懂了"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="88"
+		data-flex-basis="211px"
+	
+></p>
+<p>A：光纤传输latent space的光学VAE</p>
+<p>B：真正的光纤</p>
+<p>C：General mode下，输入数字信号（把图片转化成二进制）时的encode-decode是无偏的 因为是光学信号 已经可以进行图片传输</p>
+<p>D：Data-specific mode下，输入灰度图片信号时效果也还OK 专门用来进行高通量图片传输</p>
+<h2 id="大模型强化学习proposal">大模型强化学习proposal
+</h2><p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5.png"
+	width="890"
+	height="1151"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5_hu_4554b7459de59973.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5_hu_f919ac8b534a90fe.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="77"
+		data-flex-basis="185px"
+	
+></p>
+<p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-6.png"
+	width="888"
+	height="1143"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-6_hu_68f7a9a75e639810.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-6_hu_bf2a3b7973292e69.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="77"
+		data-flex-basis="186px"
+	
+></p>
+<p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-7.png"
+	width="885"
+	height="1146"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-7_hu_c50448645896e088.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-7_hu_65c90f52730e28.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="77"
+		data-flex-basis="185px"
+	
+></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E4%BC%98%E7%BB%A9%E4%B8%BB%E4%B9%89%E7%A6%BB%E5%BC%80%E5%B0%8F%E9%95%87%E7%9A%84%E8%88%B9%E7%A5%A8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">优绩主义——离开小镇的船票</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E6%9C%89%E6%9C%9F%E5%BE%92%E5%88%9190%E5%A4%A9/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">有期徒刑90天</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E6%98%9F%E7%81%AB%E8%90%A5%E5%B9%B2%E8%B4%A7%E5%8F%8A%E8%BF%91%E6%97%A5%E8%BF%9B%E5%B1%95/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">星火营干货及近日进展</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/reinforcement-learning-from-passive-data-via-latent-intentions/">
+        
+        
+            <div class="article-image">
+                <img src="/p/reinforcement-learning-from-passive-data-via-latent-intentions/bookface.3fe84d02018a4a1977e188fbf3227a29_hu_e98356e0e7e01eb4.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Reinforcement Learning from Passive Data via Latent Intentions "
+                        
+                        data-hash="md5-P&#43;hNAgGKShl34Yj78yJ6KQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Reinforcement Learning from Passive Data via Latent Intentions </h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E6%B8%B8%E6%88%8F%E6%8E%A8%E8%8D%90-her-story/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">游戏推荐-Her story</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2025 Sikongdddl的博客
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.52e48fe79d3f83777e4d9c80ec7bbf9df43e5a9c623a97119af70c063937550c.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
