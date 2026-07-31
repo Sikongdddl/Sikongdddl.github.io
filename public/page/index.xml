@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on Sikongdddl的博客</title>
-        <link>http://localhost:1313/page/</link>
+        <link>http://127.0.0.1:1313/page/</link>
         <description>Recent content in Pages on Sikongdddl的博客</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <lastBuildDate>Sat, 31 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 31 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://127.0.0.1:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>关于作者和博客</title>
-        <link>http://localhost:1313/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85%E5%92%8C%E5%8D%9A%E5%AE%A2/</link>
+        <link>http://127.0.0.1:1313/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85%E5%92%8C%E5%8D%9A%E5%AE%A2/</link>
         <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85%E5%92%8C%E5%8D%9A%E5%AE%A2/</guid>
+        <guid>http://127.0.0.1:1313/%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85%E5%92%8C%E5%8D%9A%E5%AE%A2/</guid>
         <description>&lt;p&gt;&lt;strong&gt;关于作者：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;2020-2024 SJTU SE 系统软件方向
 2024-2029 上海交通大学人工智能研究院 直博&lt;/p&gt;
@@ -34,26 +34,26 @@
         </item>
         <item>
         <title>文件夹</title>
-        <link>http://localhost:1313/archives/</link>
+        <link>http://127.0.0.1:1313/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/archives/</guid>
+        <guid>http://127.0.0.1:1313/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>搜索</title>
-        <link>http://localhost:1313/search/</link>
+        <link>http://127.0.0.1:1313/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/search/</guid>
+        <guid>http://127.0.0.1:1313/search/</guid>
         <description></description>
         </item>
         <item>
         <title>相关链接</title>
-        <link>http://localhost:1313/%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5/</link>
+        <link>http://127.0.0.1:1313/%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5/</guid>
+        <guid>http://127.0.0.1:1313/%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5/</guid>
         <description>&lt;p&gt;程序员是很难孤单的，这里是我的一些朋友~&lt;/p&gt;
 &lt;h4 id=&#34;electronic-waste&#34;&gt;electronic-waste
 &lt;/h4&gt;&lt;p&gt;他很谦虚（笑），博客的技术栈是他推荐的，我按照他的技术分享帖一步步操作，基本没有遇到什么问题。&lt;/p&gt;

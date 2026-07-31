@@ -1,6 +1,6 @@
 ---
 title: 1+1+1+1游戏
-description: 交大程序员无聊了会做什么
+description: 程序员无聊了会做什么
 date: 2023-08-03
 
 categories:

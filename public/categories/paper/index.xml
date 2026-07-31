@@ -2,23 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>paper on Sikongdddl的博客</title>
-        <link>http://localhost:1313/categories/paper/</link>
+        <link>http://127.0.0.1:1313/categories/paper/</link>
         <description>Recent content in paper on Sikongdddl的博客</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <lastBuildDate>Fri, 01 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/paper/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 01 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://127.0.0.1:1313/categories/paper/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>光电计算读书笔记</title>
-        <link>http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+        <link>http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+        <guid>http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
         <description>&lt;h2 id=&#34;对光电计算领域的认识&#34;&gt;对光电计算领域的认识
 &lt;/h2&gt;&lt;p&gt;读到的这四篇工作各有千秋 实验部分没有仔细看 因为一方面这已经是很顶级的工作了，另一方面只要效果出来不输给传统方法，就是行得通的&lt;/p&gt;
 &lt;p&gt;其中三篇是用光电的手段实现了一些传统方式的模型结构或算法：经典深度神经网络，卷积和VAE。另一篇是在光电的可扩展性方面做出了一些尝试，用基础元件的堆叠来实现“可编程”的光电模型。&lt;/p&gt;
 &lt;p&gt;光电计算要做的事情是在硬件层面使用光学技术（衍射等）来实现电子元件支持的算符和操作，从而让依赖电子元件的算法摆脱电子元件性能瓶颈。例如宾夕法尼亚大学的那篇工作，用部分光学元件实现了一个做图片分类的神经网络，处理一张图片的速度竟然是0.57ns，这是任何运行在计算机上的程序都无法做到的，因为0.57ns只相当于一个2GHZ的CPU的一个时钟周期。&lt;/p&gt;
 &lt;p&gt;paper里看到一段话很贴切：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Optical computing uses photons instead of electrons for computation, and this process can overcome the inherent limitations of electronics and improve the energy efficiency, processing speed and computational throughput by orders of magnitude.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Optical computing uses photons instead of electrons for computation, and this process can overcome the inherent limitations of electronics and improve the energy efficiency, processing speed and computational throughput by orders of magnitude.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;这是一个技术上已经比较成熟的领域，和纯电子计算相比，光电计算有一些非常显著的优势：（当然这完全是两个领域，对比没有太大意义，但也因为完全是两个领域，才能取得难以想象的突破）&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;速度极快 这是由于传输信息的底层方式不同&lt;/li&gt;
@@ -53,12 +54,14 @@
 &lt;h2 id=&#34;相关知识储备&#34;&gt;相关知识储备
 &lt;/h2&gt;&lt;p&gt;硬件也分传统的电子硬件和光学硬件，我对电子硬件多少还有些了解，对光学硬件就基本没有接触过了。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;软件方面&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;软件方面&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;在交大软工这边造了三年轮子，让我有足够的对新技术的热情和学习能力，支持我在较短时间内学会一门新的开发语言或技术。很多课程需要的知识都是以前没有接触过，但在同时忙很多事的情况下，一个学期内掌握并出活的。&lt;/p&gt;
 &lt;p&gt;做过一些大模型结合强化学习的工作，相关proposal会贴在最后。在科大讯飞出差期间写过面向大模型的插件，比较了解GPT系的大模型：包括发展历史，原理和调用方法。&lt;/p&gt;
 &lt;p&gt;玩过的东西很杂很乱，像hugo stack，普罗米修斯等等， 一些诸如服务器管理、实验室博客这种杂七杂八的事情我应该上手都会比较快。另外我可以完整的写一套包括前端 后端 消息中间件和数据库的网站，并发数100以下没有问题，可以帮忙造一些轮子提高大家的工作效率（笑）。也许一些仿真工作（如果有的话）也可以我来做 我用过multisim、simulink这种东西，虽然不知道光学的硬件要怎么仿真，但应该学起来也比较快。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;硬件方面&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;硬件方面&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;我的理论知识就停留在致远的数理方法了，学过一些简单的复变函数，积分变换和数学物理方程，但我并不了解信号与系统 数字信号处理等等知识。&lt;/p&gt;
 &lt;p&gt;ipads实验室过硬的操作系统课程让我对电子计算硬件有一些了解。我们面向一个运行在qemu中的，微内核的chcore操作系统写过lab，实现了诸如系统启动，内存分配，IPC，线程调度，文件系统等等功能，算是初步接触过面向电子计算硬件的开发工作。&lt;/p&gt;
 &lt;h2 id=&#34;要学习的技能&#34;&gt;要学习的技能
@@ -69,12 +72,13 @@
 &lt;h3 id=&#34;large-scale-neuromorphic-optoelectronic-computing-with-a-reconfigurable-diffractive-processing-unit&#34;&gt;Large-scale neuromorphic optoelectronic computing with a reconfigurable diffractive processing unit
 &lt;/h3&gt;&lt;p&gt;这篇主要关注可扩展性 提出了实现不同ANN架构的DPU集群神经网络（衍射计算单元） 并提出了一种自适应的训练方法（类似退火 在第k次训练中更新第一层到第k层的权重 随着k增加到总层数 训练完成） 我以前读到过的这篇工作：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;ROD: Reception-aware Online Distillation for Sparse Graphs&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;ROD: Reception-aware Online Distillation for Sparse Graphs&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;其中的方法和这篇提出的训练方法非常相似 这是一篇知识蒸馏的工作 他的第k次teacher model是前k个model的汇集&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-1.png&#34;
 	width=&#34;1645&#34;
 	height=&#34;950&#34;
-	srcset=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-1_hu_e2b9caff86fc831b.png 480w, http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-1_hu_c3c903d83a15dfa1.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-1_hu_5a6d01d6cf796454.png 480w, http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-1_hu_f909c9e753d6a070.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Method&#34;
@@ -101,10 +105,10 @@
 那门课抢的很激烈 我选老师的时候没选中他 后来在致远学者计划那边聊天的时候 听他讲过一个小时的光量子&lt;/p&gt;
 &lt;p&gt;这篇是21年的工作 那个时候深度神经网络卷生卷死 模型越来越杂 这里认为瓶颈在卷积上也很合理&lt;/p&gt;
 &lt;p&gt;他使用光学硬件来支持神经网络的初衷并不是加速经典神经网络的那些线性运算和非线性激活，而是加速卷积&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-3.png&#34;
 	width=&#34;1686&#34;
 	height=&#34;1135&#34;
-	srcset=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-3_hu_c6a7b12b73f6b5b4.png 480w, http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-3_hu_636329dd1ce865a9.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-3_hu_bf0c82a4de95641d.png 480w, http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-3_hu_3cb980a1b41209e5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Method&#34;
@@ -125,10 +129,10 @@
 &lt;h3 id=&#34;an-on-chip-photonic-deep-neural-network-for-image-classification&#34;&gt;An on-chip photonic deep neural network for image classification
 &lt;/h3&gt;&lt;p&gt;做图像识别的神经网络&lt;/p&gt;
 &lt;p&gt;线性计算部分由光学来做 非线性激活部分还是光电的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image.png&#34;
 	width=&#34;1618&#34;
 	height=&#34;1021&#34;
-	srcset=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image_hu_33aaea80a2242f3c.png 480w, http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image_hu_4e9b10e190723b9d.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image_hu_b608b67e2e17d343.png 480w, http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image_hu_4e38853b9a977fbc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Method&#34;
@@ -141,10 +145,10 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;a b: 没有对神经网络的工作原理做任何修改&lt;/p&gt;
 &lt;p&gt;c d: 但是硬件支持整个换了一套 这边展开看看：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-2.png&#34;
 	width=&#34;1584&#34;
 	height=&#34;924&#34;
-	srcset=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-2_hu_26411b279af90d8d.png 480w, http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-2_hu_71c5775b45fc6729.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-2_hu_e0229d84a1079635.png 480w, http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-2_hu_cea0442b5a5aeff8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;hardware implementation&#34;
@@ -175,10 +179,10 @@
 &lt;li&gt;输出图像&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;比CPU快四个数量级，传输错误率同比下降57%&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-4.png&#34;
 	width=&#34;945&#34;
 	height=&#34;1071&#34;
-	srcset=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-4_hu_82a50034ed501c4f.png 480w, http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-4_hu_d6b33d76dcaf15dc.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-4_hu_33ac616d232f0968.png 480w, http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-4_hu_f781ceb238e6c3ab.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;实在是好图 一眼就懂了&#34;
@@ -194,10 +198,10 @@
 &lt;p&gt;C：General mode下，输入数字信号（把图片转化成二进制）时的encode-decode是无偏的 因为是光学信号 已经可以进行图片传输&lt;/p&gt;
 &lt;p&gt;D：Data-specific mode下，输入灰度图片信号时效果也还OK 专门用来进行高通量图片传输&lt;/p&gt;
 &lt;h2 id=&#34;大模型强化学习proposal&#34;&gt;大模型强化学习proposal
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5.png&#34;
 	width=&#34;890&#34;
 	height=&#34;1151&#34;
-	srcset=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5_hu_4554b7459de59973.png 480w, http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5_hu_f919ac8b534a90fe.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5_hu_3d88631a7b952af0.png 480w, http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5_hu_7036b2ead51c8b16.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -206,10 +210,10 @@
 		data-flex-basis=&#34;185px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-6.png&#34;
 	width=&#34;888&#34;
 	height=&#34;1143&#34;
-	srcset=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-6_hu_68f7a9a75e639810.png 480w, http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-6_hu_bf2a3b7973292e69.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-6_hu_c86dbfb05fce0a0f.png 480w, http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-6_hu_bcda00a7551ffe5e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -218,10 +222,10 @@
 		data-flex-basis=&#34;186px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-7.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-7.png&#34;
 	width=&#34;885&#34;
 	height=&#34;1146&#34;
-	srcset=&#34;http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-7_hu_c50448645896e088.png 480w, http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-7_hu_65c90f52730e28.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-7_hu_bf13d5eeadc4aaed.png 480w, http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-7_hu_48ca69f5174a8e81.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -234,16 +238,17 @@
         </item>
         <item>
         <title>Reinforcement Learning from Passive Data via Latent Intentions </title>
-        <link>http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/</link>
+        <link>http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/</link>
         <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/</guid>
-        <description>&lt;img src="http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/bookface.jpg" alt="Featured image of post Reinforcement Learning from Passive Data via Latent Intentions " /&gt;&lt;h2 id=&#34;abstract&#34;&gt;Abstract
+        <guid>http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/</guid>
+        <description>&lt;img src="http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/bookface.jpg" alt="Featured image of post Reinforcement Learning from Passive Data via Latent Intentions " /&gt;&lt;h2 id=&#34;abstract&#34;&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;大多数真实视频对RL来说都比较难办 因为不知道怎么定义value function和action label&lt;/p&gt;
 &lt;p&gt;这些被称为passive data 被动可能被动在无法落入现成的评价体系里&lt;/p&gt;
 &lt;p&gt;这里提出model intentions：猜下一步action后变化情况的概率分布。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;How likely am I to see __ if I act to do __ from this state&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&amp;ldquo;How likely am I to see __ if I act to do __ from this state&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;和dreamer有点像属于是&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dibyaghosh/icvf_release&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -257,10 +262,10 @@
 &lt;li&gt;预测&lt;/li&gt;
 &lt;li&gt;完成latent space训练后，这些intension数据在action中的使用情况&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image.png&#34;
 	width=&#34;826&#34;
 	height=&#34;194&#34;
-	srcset=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image_hu_233a564bdd78e028.png 480w, http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image_hu_a1cc6f174966f90d.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image_hu_311b3626f0756b2a.png 480w, http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image_hu_5f210ea066e1003.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;示意图&#34;
@@ -281,10 +286,10 @@
 我们学一个Z function，用intension代替state,用outcome代替action&lt;/p&gt;
 &lt;p&gt;以前是状态随着action改变 现在是猜一个intension，拿一个outcome检验，再猜下一个&lt;/p&gt;
 &lt;p&gt;那这个和dreamer相差非常大了（笑）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-1.png&#34;
 	width=&#34;549&#34;
 	height=&#34;89&#34;
-	srcset=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-1_hu_908cd8793085826f.png 480w, http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-1_hu_69d75c29b32118aa.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-1_hu_ba4a8d450f270d34.png 480w, http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-1_hu_13e66a15f9c399d3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Alt text&#34;
@@ -296,10 +301,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;他这里可以把各种任务的reward做个期望分布&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-2.png&#34;
 	width=&#34;384&#34;
 	height=&#34;104&#34;
-	srcset=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-2_hu_215c53b452351b34.png 480w, http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-2_hu_e4319b2b4ad472f4.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-2_hu_e9885c22ab58d447.png 480w, http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-2_hu_664304dd9f9cae31.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Alt text&#34;
@@ -317,10 +322,10 @@
 &lt;li&gt;转化成的state representation必须能比较容易的从model里得到&lt;/li&gt;
 &lt;li&gt;面对一个具体的task，这个state representation必须对具体的reward有用&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-3.png&#34;
 	width=&#34;529&#34;
 	height=&#34;81&#34;
-	srcset=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-3_hu_36ef8173956c8538.png 480w, http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-3_hu_27ae0d3b3c0ad98c.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-3_hu_da3b9b02f7aa45d2.png 480w, http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-3_hu_b9e79be61a581447.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Alt text&#34;
@@ -334,10 +339,10 @@
 &lt;p&gt;先做个数学处理 把value function改成向量形式&lt;/p&gt;
 &lt;p&gt;这是个线性无关的 三个向量分别代表着state（es） ，过了一层intension后的state（中间那一坨 这是1993年一个工作的表示方式）以及实际的最后的state（es+）&lt;/p&gt;
 &lt;p&gt;所以我们学三个网络来表征value function&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-4.png&#34;
 	width=&#34;554&#34;
 	height=&#34;79&#34;
-	srcset=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-4_hu_95b2a36c1034a1dc.png 480w, http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-4_hu_ba5b5e7c446a1e8.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-4_hu_622cc7816f286830.png 480w, http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-4_hu_aff46b93d47f14a3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Alt text&#34;
@@ -353,10 +358,10 @@
 &lt;li&gt;好表示 这都解耦了当然好表示&lt;/li&gt;
 &lt;li&gt;有用 他说他们证明了当任务确定下来的时候，他们的representation线性接近任何一个具体的task&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-5.png&#34;
 	width=&#34;829&#34;
 	height=&#34;436&#34;
-	srcset=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-5_hu_5a3354e1aabc3c9b.png 480w, http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-5_hu_96ff7f63d2d84b7a.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-5_hu_ee64f569e358504f.png 480w, http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-5_hu_dce5c45f5797f70.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;一个奇怪的放缩&#34;
@@ -367,10 +372,10 @@
 		data-flex-basis=&#34;456px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-6.png&#34;
 	width=&#34;698&#34;
 	height=&#34;545&#34;
-	srcset=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-6_hu_5d890d260e00b38b.png 480w, http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-6_hu_980d49596879a03a.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-6_hu_91a5e8e6659a7eb7.png 480w, http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-6_hu_e51c05f2b46a7a73.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Alt text&#34;
@@ -386,10 +391,10 @@
 &lt;/h3&gt;&lt;p&gt;最后一块拼图&lt;/p&gt;
 &lt;p&gt;证明了ICVF有用和怎么用之后 问题就是ICVF怎么来了&lt;/p&gt;
 &lt;p&gt;这里只是提出了一种task情境下的passive data-ICVF 是一个multi-linear 多重线性&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-7.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-7.png&#34;
 	width=&#34;630&#34;
 	height=&#34;168&#34;
-	srcset=&#34;http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-7_hu_68b2775c7657e56a.png 480w, http://localhost:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-7_hu_51c3ea09df0d573c.png 1024w&#34;
+	srcset=&#34;http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-7_hu_4b273309396c91a7.png 480w, http://127.0.0.1:1313/p/reinforcement-learning-from-passive-data-via-latent-intentions/image-7_hu_592ebaf199be7095.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Alt text&#34;

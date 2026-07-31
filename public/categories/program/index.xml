@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>program on Sikongdddl的博客</title>
-        <link>http://localhost:1313/categories/program/</link>
+        <link>http://127.0.0.1:1313/categories/program/</link>
         <description>Recent content in program on Sikongdddl的博客</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <lastBuildDate>Thu, 17 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/program/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 17 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://127.0.0.1:1313/categories/program/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>全栈部署技术整理</title>
-        <link>http://localhost:1313/p/%E5%85%A8%E6%A0%88%E9%83%A8%E7%BD%B2%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86/</link>
+        <link>http://127.0.0.1:1313/p/%E5%85%A8%E6%A0%88%E9%83%A8%E7%BD%B2%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86/</link>
         <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%85%A8%E6%A0%88%E9%83%A8%E7%BD%B2%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86/</guid>
+        <guid>http://127.0.0.1:1313/p/%E5%85%A8%E6%A0%88%E9%83%A8%E7%BD%B2%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;2022年的暑假项目里，摆了全程没有帮到忙的我接下了最后一个部分的工作：部署。那次花了我三周的时间，最后在我的两位dalao朋友的帮助下顺利完成。&lt;/p&gt;
 &lt;p&gt;2024年的某个下午，我被赶鸭子上架，需要重新部署一遍自己的某个项目，从买服务器开始算起一共花了三个小时。&lt;/p&gt;
@@ -29,17 +29,20 @@
 &lt;blockquote&gt;
 &lt;p&gt;负责渲染、展示数据&lt;/p&gt;
 &lt;p&gt;由于更像美工，所以处在开发技术的鄙视链底端（雾）&lt;/p&gt;
-&lt;p&gt;常用的开发语言与框架：html+css+javascript/react/vue&amp;hellip;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;常用的开发语言与框架：html+css+javascript/react/vue&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;后端：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;负责实现业务逻辑&lt;/p&gt;
 &lt;p&gt;任重而道远，完成前端甲方的要求，并与数据库交互&lt;/p&gt;
-&lt;p&gt;常用的开发语言与框架：java/c#/golang，以及世界上最好的语言：PHP&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;常用的开发语言与框架：java/c#/golang，以及世界上最好的语言：PHP&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;数据库：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;负责存数据&lt;/p&gt;
 &lt;p&gt;有人就要爆笑如雷，说为什么我不能用excel存数据非要用数据库呢&lt;/p&gt;
-&lt;p&gt;常用的开发语言与框架：excel（不是）/mysql/redis/innoDB/mangoDB&amp;hellip;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;常用的开发语言与框架：excel（不是）/mysql/redis/innoDB/mangoDB&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;形象地说，当你按下“登录微信”时，前端/后端/数据库是这样工作的：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;前端：向后端发送登录请求，将用户名和密码交给后端&lt;/li&gt;
@@ -112,143 +115,11 @@ java在这件事上得天独厚，jar包内包括了完整的java运行环境，
 </description>
         </item>
         <item>
-        <title>16组星火营项目文档</title>
-        <link>http://localhost:1313/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/</link>
-        <pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/</guid>
-        <description>&lt;h1 id=&#34;sikongdddl的文档&#34;&gt;Sikongdddl的文档
-&lt;/h1&gt;&lt;h2 id=&#34;环境相关&#34;&gt;环境相关
-&lt;/h2&gt;&lt;h3 id=&#34;python&#34;&gt;python
-&lt;/h3&gt;&lt;h3 id=&#34;go&#34;&gt;go
-&lt;/h3&gt;&lt;h2 id=&#34;项目相关&#34;&gt;项目相关
-&lt;/h2&gt;&lt;p&gt;github repo地址：&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Sikongdddl/SparkPlugin16&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/Sikongdddl/SparkPlugin16&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;架构&#34;&gt;架构
-&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;前端：&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;输入：用户纯文本输入 原始问题input&lt;/p&gt;
-&lt;p&gt;输出：经过整个系统后最终的输出 response+prompt&lt;/p&gt;
-&lt;p&gt;工作内容:把input送给一级后端&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一级后端：&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;输入：来自前端的用户原始问题input&lt;/p&gt;
-&lt;p&gt;输出：经过代码润色过的input+prompt&lt;/p&gt;
-&lt;p&gt;工作内容：&lt;/p&gt;
-&lt;p&gt;任务一：&lt;/p&gt;
-&lt;p&gt;简易版：&lt;/p&gt;
-&lt;p&gt;二级后端只有一个插件API，把润色过的input+prompt直接发给二级后端；&lt;/p&gt;
-&lt;p&gt;复杂版：做分词提取+选择插件API工作 并把input+prompt发送给二级后端中对应的插件API&lt;/p&gt;
-&lt;p&gt;任务二：&lt;/p&gt;
-&lt;p&gt;从二级后端收到response后 润色生成response+prompt 输入给星火大模型生成回答&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;二级后端：&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;输入：来自一级后端的input+prompt&lt;/p&gt;
-&lt;p&gt;输出：根据输入信息进行对应内容输出 生成response（json格式）&lt;/p&gt;
-&lt;p&gt;工作内容：&lt;/p&gt;
-&lt;p&gt;把生成的json丢给一级后端&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image-1.png&#34;
-	width=&#34;1186&#34;
-	height=&#34;738&#34;
-	srcset=&#34;http://localhost:1313/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image-1_hu_e7e62200dae76026.png 480w, http://localhost:1313/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image-1_hu_85a8edda9772e0aa.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;架构&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;160&#34;
-		data-flex-basis=&#34;385px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h3 id=&#34;项目管理风格加分点&#34;&gt;“项目管理风格”加分点：
-&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;晨会&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;每天开个15min小会 每个人介绍一下以下内容：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;昨天做了什么&lt;/li&gt;
-&lt;li&gt;今天要做什么&lt;/li&gt;
-&lt;li&gt;昨天遇到了什么问题自己有点难解决&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;做好会议记录 其实一共也就五天的时间 五场会&lt;/p&gt;
-&lt;h4 id=&#34;20230820开发记录&#34;&gt;20230820开发记录
-&lt;/h4&gt;&lt;p&gt;雷逸 陆朋朋：前端Vue页面搭建完成&lt;/p&gt;
-&lt;p&gt;董雨康 宋奕辰 刘非凡：第一后端打通天气API中 从命令行输入问题，根据关键词选择API 生成可以提问的json问星火大模型 已经调通&lt;/p&gt;
-&lt;p&gt;宋：从高德API获得json&lt;/p&gt;
-&lt;p&gt;刘非凡：把json润色后返回星火大模型 让大模型返回文本语言&lt;/p&gt;
-&lt;p&gt;董：整合代码 插件落槽部分&lt;/p&gt;
-&lt;p&gt;宫俊儒：第二后端完成天气API和星火大模型API需要的json格式化工作和相关接口准备&lt;/p&gt;
-&lt;h4 id=&#34;20230821开发记录&#34;&gt;20230821开发记录
-&lt;/h4&gt;&lt;p&gt;宫俊儒：“藏头诗”prompt调试 准备去开发前端&lt;/p&gt;
-&lt;p&gt;刘非凡：食谱API后端独立单元开发完成 正在往框架里整合&lt;/p&gt;
-&lt;p&gt;董雨康：LAVIS图片-&amp;gt;文字描述-&amp;gt;星火-&amp;gt;得到菜名和制作步骤&lt;/p&gt;
-&lt;p&gt;宋奕辰：rebuttal很快就能搞定 写诗的&lt;/p&gt;
-&lt;p&gt;雷逸 陆朋朋：页面事件基本完成 渲染还没做&lt;/p&gt;
-&lt;h4 id=&#34;20230822开发记录&#34;&gt;20230822开发记录
-&lt;/h4&gt;&lt;p&gt;宫俊儒：前端+前后端通信 明天预计做一下部署&lt;/p&gt;
-&lt;p&gt;宋奕辰：后端整合完善 图片接口功能完备 角色扮演prompt翻译导游讲故事&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;github repo&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;每个feature开一个branch&lt;/p&gt;
-&lt;p&gt;具体来说：前端单独一个branch；后端单独一个branch；调prompt的json和yaml单独一个branch
-自己负责的任务基本完成可以提交后，向我们的主分支发送一个pull request 审批后并入主分支
-这样我们的开发过程就会有一个类似这样的图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image.png&#34;
-	width=&#34;840&#34;
-	height=&#34;791&#34;
-	srcset=&#34;http://localhost:1313/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image_hu_4b0c8c0cf227531.png 480w, http://localhost:1313/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/image_hu_35f5d3908897d462.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;仓库网络图&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;106&#34;
-		data-flex-basis=&#34;254px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;十分滴好看&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;文档&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;我们这个文档本身就是个很大的加分点
-后面最好还是大家都来参与一些编写工作 记录一下自己的开发日志之类的&lt;/p&gt;
-&lt;h3 id=&#34;分工&#34;&gt;分工
-&lt;/h3&gt;&lt;p&gt;陆朋朋 雷逸 前端网站开发&lt;/p&gt;
-&lt;p&gt;宫俊儒 二级后端开发 架构&lt;/p&gt;
-&lt;p&gt;宋奕辰 刘非凡 董雨康 一级后端开发（天气插件开发）&lt;/p&gt;
-&lt;p&gt;宋奕辰 宫俊儒 Rebuttal插件开发&lt;/p&gt;
-&lt;p&gt;刘非凡 董雨康 食谱插件开发&lt;/p&gt;
-&lt;h3 id=&#34;推荐技术&#34;&gt;推荐技术
-&lt;/h3&gt;&lt;h3 id=&#34;其他一些有的没的&#34;&gt;其他一些有的没的
-&lt;/h3&gt;&lt;h3 id=&#34;airport-list&#34;&gt;airport list
-&lt;/h3&gt;&lt;p&gt;这个事儿要冒着被墙或者喝茶的风险&lt;/p&gt;
-&lt;p&gt;因为自己翻墙是违法行为，但是不违反刑法。但传播扩散机场的性质和自己翻墙不一样，可以判煽动颠覆，3-7年。&lt;/p&gt;
-&lt;p&gt;大家觉得自己机场不太稳定/有点贵可以来问我要一个两年90块的机场地址（笑）&lt;/p&gt;
-&lt;p&gt;1-&amp;gt;第三组	86.75&lt;/p&gt;
-&lt;p&gt;2-&amp;gt;十五组	86.25&lt;/p&gt;
-&lt;p&gt;3-&amp;gt;十二组	85.75&lt;/p&gt;
-&lt;p&gt;4-&amp;gt;第二组	84.5&lt;/p&gt;
-&lt;p&gt;5-&amp;gt;第八组	83.5&lt;/p&gt;
-&lt;p&gt;6-&amp;gt;第十组	82.5&lt;/p&gt;
-&lt;p&gt;7-&amp;gt;十三组	81.75&lt;/p&gt;
-&lt;p&gt;8-&amp;gt;第五组	81.5&lt;/p&gt;
-&lt;p&gt;9-&amp;gt;第四组	81&lt;/p&gt;
-&lt;p&gt;10-&amp;gt;十一组	81&lt;/p&gt;
-&lt;p&gt;11-&amp;gt;十六组	80.5&lt;/p&gt;
-&lt;p&gt;12-&amp;gt;第七组	80.25&lt;/p&gt;
-&lt;p&gt;13-&amp;gt;第六组	78.75&lt;/p&gt;
-&lt;p&gt;14-&amp;gt;第一组	75.5&lt;/p&gt;
-&lt;p&gt;15-&amp;gt;十四组	75.25&lt;/p&gt;
-&lt;p&gt;16-&amp;gt;第九组	75&lt;/p&gt;
-</description>
-        </item>
-        <item>
         <title>1&#43;1&#43;1&#43;1游戏</title>
-        <link>http://localhost:1313/p/1-1-1-1%E6%B8%B8%E6%88%8F/</link>
+        <link>http://127.0.0.1:1313/p/1-1-1-1%E6%B8%B8%E6%88%8F/</link>
         <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/1-1-1-1%E6%B8%B8%E6%88%8F/</guid>
+        <guid>http://127.0.0.1:1313/p/1-1-1-1%E6%B8%B8%E6%88%8F/</guid>
         <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction
 &lt;/h2&gt;&lt;p&gt;我小的时候玩过这样的一个游戏：&lt;/p&gt;
 &lt;p&gt;两个人面对面，伸出双手做“1”的手势，然后依次行动&lt;/p&gt;
@@ -261,7 +132,8 @@ java在这件事上得天独厚，jar包内包括了完整的java运行环境，
 &lt;/h2&gt;&lt;p&gt;由于数学太烂，我的代码水平显著强于数学水平，想不明白就先用代码多玩几次，规律可能自己就出来了。&lt;/p&gt;
 &lt;p&gt;所以我首先完成了这个游戏的一个简单的模拟器和日志输出&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;强烈建议没玩过这个游戏的来和我玩一次 不然下面的东西可能会把人看晕&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;强烈建议没玩过这个游戏的来和我玩一次 不然下面的东西可能会把人看晕&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;下面为随机一次游戏的日志：其中，开始的四个数字代表两个人四只手的当前状态。&lt;/p&gt;
 &lt;p&gt;顺序为：p1左手，p1右手，p2左手，p2右手&lt;/p&gt;
 &lt;blockquote&gt;
@@ -331,7 +203,8 @@ p2行动
 p1行动
 行动者只有左手
 对方只有左手&lt;/p&gt;
-&lt;p&gt;game over!&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;game over!&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;实验&#34;&gt;实验
 &lt;/h2&gt;&lt;p&gt;既然有了这样一个模拟器，让它帮我跑一些实验也就十分自然了。&lt;/p&gt;
 &lt;h3 id=&#34;统计模拟&#34;&gt;统计模拟
@@ -340,7 +213,8 @@ p1行动
 &lt;p&gt;显而易见的是，我们在进行大批量的实验前应该担心这个游戏是否存在”死局“，即两位游戏者陷入无论使用什么策略都无法结束的局面。&lt;/p&gt;
 &lt;p&gt;直接说结论，在其中一人剩余两只手时，游戏最终一定会进入每人只剩一只手的局面，或者直接结束。&lt;/p&gt;
 &lt;p&gt;在每人只剩一只手时，根据我过往的经验，这个游戏在某些时候会陷入无尽的循环。例如2遇到1，2先手时。有兴趣的朋友可以自己试一下。&lt;/p&gt;
-&lt;p&gt;由于后续测得平均一局游戏的步数是27步左右，因此在这里我粗暴地认为，当一局游戏进行了200步还没有结束时，就视作已经陷入无尽循环流局，直接开始下一局。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;由于后续测得平均一局游戏的步数是27步左右，因此在这里我粗暴地认为，当一局游戏进行了200步还没有结束时，就视作已经陷入无尽循环流局，直接开始下一局。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;以下是实验结果：当我们认为超过200个episode为流局时数据如下：&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -390,7 +264,8 @@ p1行动
 &lt;p&gt;这个结果非常的amazing啊！（毕导脸）&lt;/p&gt;
 &lt;p&gt;平均来看，不流局的比赛中，平均每一局进行了27.5轮，这个游戏的节奏还是很快的，哪怕策略是随机的。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;因此跑这些实验消耗的时间还不及debug的一半（划掉&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;因此跑这些实验消耗的时间还不及debug的一半（划掉&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;除此之外，我们发现了两件奇怪的事：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;在完全随机决策的情况下，先手胜率明显低于后手。而当对随机的容忍足够高时，先手胜率又略高于后手。但流局概率基本稳定。&lt;/li&gt;
@@ -410,10 +285,12 @@ p1行动
 这是显然的，例如：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;(2 1)表示当前我的手比了个2，你的手比了个1，轮到我先动。&lt;/p&gt;
-&lt;p&gt;[1 2]表示当前我的手比了个1，你的手比了个2，轮到你先动。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;[1 2]表示当前我的手比了个1，你的手比了个2，轮到你先动。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;变换后我们得到：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;2 1-&amp;gt;1 3-&amp;gt;3 4-&amp;gt;4 7-&amp;gt;7 1-&amp;gt;1 8-&amp;gt;8 9-&amp;gt;9 7-&amp;gt;7 6-&amp;gt;6 3-&amp;gt;3 9-&amp;gt;9 2-&amp;gt;2 1&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;2 1-&amp;gt;1 3-&amp;gt;3 4-&amp;gt;4 7-&amp;gt;7 1-&amp;gt;1 8-&amp;gt;8 9-&amp;gt;9 7-&amp;gt;7 6-&amp;gt;6 3-&amp;gt;3 9-&amp;gt;9 2-&amp;gt;2 1&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;流局中的数学&#34;&gt;流局中的数学
 &lt;/h3&gt;&lt;p&gt;前面我们已经讨论过，流局只发生在双方都只剩一只手的情况下。&lt;/p&gt;
 &lt;p&gt;这是一个相对平凡的情况，比较适合进行一个数学建模。
@@ -430,7 +307,8 @@ p1行动
 &lt;p&gt;[0 1 2 3 4 5 6 7 8]&lt;/p&gt;
 &lt;p&gt;其中：Eij表示p1为i p2为j时 p1先手相加后p1的结果&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;比如说，E11=2，意思就是，当我手上是1，你手上也是1的时候，我一碰你我就变成2了&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;比如说，E11=2，意思就是，当我手上是1，你手上也是1的时候，我一碰你我就变成2了&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;这是一个满秩的矩阵（雾）&lt;/p&gt;
 &lt;p&gt;每一次加法的本质是一次行变换/列变换，具体来说，比如i从1变成了2，本质上就是第一行与第二行交换 而这是不改变矩阵的秩的&lt;/p&gt;
 &lt;p&gt;游戏的结束条件是当E（1，1）变成0时，自己是后手&lt;/p&gt;
@@ -453,7 +331,8 @@ p1行动
 那么在全部的9*9=81这么大的概率空间内，有足足12个点会导致进入流局循环。这也就意味着，我们假设在游戏变成一只手对一只手的时候，出现这81种局面的概率相同，那么游戏就有12/81的概率进入流局循环，最终流局。
 这个概率约等于14.8%，比我们测出来的还要高。
 不匹配的原因显然是出现这81种局面的概率并不相同。&lt;/p&gt;
-&lt;p&gt;具体从我们的1，1，1，1开局发展到这八十一种情况的概率怎么计算，我目前还没有想通。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;具体从我们的1，1，1，1开局发展到这八十一种情况的概率怎么计算，我目前还没有想通。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;然后自然而然的会提出以下几个问题：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;为什么中心对称：坐标和互补的两个坐标，如果一个坐标会流局，那么另一个坐标也会。如果一个不会，那么另一个也不会。这个问题我也没有解决。&lt;/li&gt;
@@ -469,7 +348,8 @@ p1行动
 &lt;p&gt;A21=A12&lt;/p&gt;
 &lt;p&gt;A22=A11+A12&lt;/p&gt;
 &lt;p&gt;An1 = A(n-1)2&lt;/p&gt;
-&lt;p&gt;An2=A(n-1)1+A(n-1)2&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;An2=A(n-1)1+A(n-1)2&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;把这些可恶的重复去掉之后，我们得到了这样的一个数列：&lt;/p&gt;
 &lt;p&gt;2，1，3，4，7，1，8，9，7，6，3，9，2，1&lt;/p&gt;
 &lt;p&gt;前面的数对形式来自于我们以步长为1，去拿相邻的两个数。&lt;/p&gt;
@@ -767,7 +647,7 @@ p1行动
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;time.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;vector&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
@@ -847,7 +727,7 @@ p1行动
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fromFlag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rand&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;toFlag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rand&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//行动者只剩左手
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lexist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rexist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lexist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rexist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;行动者只有左手&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lexist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rexist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -875,7 +755,7 @@ p1行动
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//行动者只剩右手
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lexist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rexist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lexist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rexist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;行动者只有右手&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lexist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rexist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -903,7 +783,7 @@ p1行动
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//行动者由fromFlag决定
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fromFlag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;

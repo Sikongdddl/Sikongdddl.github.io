@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="对光电计算领域的认识 读到的这四篇工作各有千秋 实验部分没有仔细看 因为一方面这已经是很顶级的工作了，另一方面只要效果出来不输给传统方法，就是行得通的\n其中三篇是用光电的手段实现了一些传统方式的模型结构或算法：经典深度神经网络，卷积和VAE。另一篇是在光电的可扩展性方面做出了一些尝试，用基础元件的堆叠来实现“可编程”的光电模型。\n">
 <title>光电计算读书笔记</title>
 
-<link rel='canonical' href='http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/'>
+<link rel='canonical' href='http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="光电计算读书笔记">
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="光电计算读书笔记">
 <meta property='og:description' content="对光电计算领域的认识 读到的这四篇工作各有千秋 实验部分没有仔细看 因为一方面这已经是很顶级的工作了，另一方面只要效果出来不输给传统方法，就是行得通的\n其中三篇是用光电的手段实现了一些传统方式的模型结构或算法：经典深度神经网络，卷积和VAE。另一篇是在光电的可扩展性方面做出了一些尝试，用基础元件的堆叠来实现“可编程”的光电模型。\n">
-<meta property='og:url' content='http://localhost:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/'>
+<meta property='og:url' content='http://127.0.0.1:1313/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/'>
 <meta property='og:site_name' content='Sikongdddl的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-09-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-09-01T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="光电计算读书笔记">
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_5e6239f92fa70402.png" width="300"
+                        <img src="/img/avatar_hu_f5243906f8449afe.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -352,7 +352,8 @@
 <p>光电计算要做的事情是在硬件层面使用光学技术（衍射等）来实现电子元件支持的算符和操作，从而让依赖电子元件的算法摆脱电子元件性能瓶颈。例如宾夕法尼亚大学的那篇工作，用部分光学元件实现了一个做图片分类的神经网络，处理一张图片的速度竟然是0.57ns，这是任何运行在计算机上的程序都无法做到的，因为0.57ns只相当于一个2GHZ的CPU的一个时钟周期。</p>
 <p>paper里看到一段话很贴切：</p>
 <blockquote>
-<p>Optical computing uses photons instead of electrons for computation, and this process can overcome the inherent limitations of electronics and improve the energy efficiency, processing speed and computational throughput by orders of magnitude.</p></blockquote>
+<p>Optical computing uses photons instead of electrons for computation, and this process can overcome the inherent limitations of electronics and improve the energy efficiency, processing speed and computational throughput by orders of magnitude.</p>
+</blockquote>
 <p>这是一个技术上已经比较成熟的领域，和纯电子计算相比，光电计算有一些非常显著的优势：（当然这完全是两个领域，对比没有太大意义，但也因为完全是两个领域，才能取得难以想象的突破）</p>
 <ul>
 <li>速度极快 这是由于传输信息的底层方式不同</li>
@@ -387,12 +388,14 @@
 <h2 id="相关知识储备">相关知识储备
 </h2><p>硬件也分传统的电子硬件和光学硬件，我对电子硬件多少还有些了解，对光学硬件就基本没有接触过了。</p>
 <blockquote>
-<p>软件方面</p></blockquote>
+<p>软件方面</p>
+</blockquote>
 <p>在交大软工这边造了三年轮子，让我有足够的对新技术的热情和学习能力，支持我在较短时间内学会一门新的开发语言或技术。很多课程需要的知识都是以前没有接触过，但在同时忙很多事的情况下，一个学期内掌握并出活的。</p>
 <p>做过一些大模型结合强化学习的工作，相关proposal会贴在最后。在科大讯飞出差期间写过面向大模型的插件，比较了解GPT系的大模型：包括发展历史，原理和调用方法。</p>
 <p>玩过的东西很杂很乱，像hugo stack，普罗米修斯等等， 一些诸如服务器管理、实验室博客这种杂七杂八的事情我应该上手都会比较快。另外我可以完整的写一套包括前端 后端 消息中间件和数据库的网站，并发数100以下没有问题，可以帮忙造一些轮子提高大家的工作效率（笑）。也许一些仿真工作（如果有的话）也可以我来做 我用过multisim、simulink这种东西，虽然不知道光学的硬件要怎么仿真，但应该学起来也比较快。</p>
 <blockquote>
-<p>硬件方面</p></blockquote>
+<p>硬件方面</p>
+</blockquote>
 <p>我的理论知识就停留在致远的数理方法了，学过一些简单的复变函数，积分变换和数学物理方程，但我并不了解信号与系统 数字信号处理等等知识。</p>
 <p>ipads实验室过硬的操作系统课程让我对电子计算硬件有一些了解。我们面向一个运行在qemu中的，微内核的chcore操作系统写过lab，实现了诸如系统启动，内存分配，IPC，线程调度，文件系统等等功能，算是初步接触过面向电子计算硬件的开发工作。</p>
 <h2 id="要学习的技能">要学习的技能
@@ -403,12 +406,13 @@
 <h3 id="large-scale-neuromorphic-optoelectronic-computing-with-a-reconfigurable-diffractive-processing-unit">Large-scale neuromorphic optoelectronic computing with a reconfigurable diffractive processing unit
 </h3><p>这篇主要关注可扩展性 提出了实现不同ANN架构的DPU集群神经网络（衍射计算单元） 并提出了一种自适应的训练方法（类似退火 在第k次训练中更新第一层到第k层的权重 随着k增加到总层数 训练完成） 我以前读到过的这篇工作：</p>
 <blockquote>
-<p>ROD: Reception-aware Online Distillation for Sparse Graphs</p></blockquote>
+<p>ROD: Reception-aware Online Distillation for Sparse Graphs</p>
+</blockquote>
 <p>其中的方法和这篇提出的训练方法非常相似 这是一篇知识蒸馏的工作 他的第k次teacher model是前k个model的汇集</p>
 <p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-1.png"
 	width="1645"
 	height="950"
-	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-1_hu_e2b9caff86fc831b.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-1_hu_c3c903d83a15dfa1.png 1024w"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-1_hu_5a6d01d6cf796454.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-1_hu_f909c9e753d6a070.png 1024w"
 	loading="lazy"
 	
 		alt="Method"
@@ -438,7 +442,7 @@
 <p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-3.png"
 	width="1686"
 	height="1135"
-	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-3_hu_c6a7b12b73f6b5b4.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-3_hu_636329dd1ce865a9.png 1024w"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-3_hu_bf0c82a4de95641d.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-3_hu_3cb980a1b41209e5.png 1024w"
 	loading="lazy"
 	
 		alt="Method"
@@ -462,7 +466,7 @@
 <p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image.png"
 	width="1618"
 	height="1021"
-	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image_hu_33aaea80a2242f3c.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image_hu_4e9b10e190723b9d.png 1024w"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image_hu_b608b67e2e17d343.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image_hu_4e38853b9a977fbc.png 1024w"
 	loading="lazy"
 	
 		alt="Method"
@@ -478,7 +482,7 @@
 <p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-2.png"
 	width="1584"
 	height="924"
-	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-2_hu_26411b279af90d8d.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-2_hu_71c5775b45fc6729.png 1024w"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-2_hu_e0229d84a1079635.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-2_hu_cea0442b5a5aeff8.png 1024w"
 	loading="lazy"
 	
 		alt="hardware implementation"
@@ -512,7 +516,7 @@
 <p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-4.png"
 	width="945"
 	height="1071"
-	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-4_hu_82a50034ed501c4f.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-4_hu_d6b33d76dcaf15dc.png 1024w"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-4_hu_33ac616d232f0968.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-4_hu_f781ceb238e6c3ab.png 1024w"
 	loading="lazy"
 	
 		alt="实在是好图 一眼就懂了"
@@ -531,7 +535,7 @@
 </h2><p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5.png"
 	width="890"
 	height="1151"
-	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5_hu_4554b7459de59973.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5_hu_f919ac8b534a90fe.png 1024w"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5_hu_3d88631a7b952af0.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-5_hu_7036b2ead51c8b16.png 1024w"
 	loading="lazy"
 	
 	
@@ -543,7 +547,7 @@
 <p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-6.png"
 	width="888"
 	height="1143"
-	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-6_hu_68f7a9a75e639810.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-6_hu_bf2a3b7973292e69.png 1024w"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-6_hu_c86dbfb05fce0a0f.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-6_hu_bcda00a7551ffe5e.png 1024w"
 	loading="lazy"
 	
 	
@@ -555,7 +559,7 @@
 <p><img src="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-7.png"
 	width="885"
 	height="1146"
-	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-7_hu_c50448645896e088.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-7_hu_65c90f52730e28.png 1024w"
+	srcset="/p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-7_hu_bf13d5eeadc4aaed.png 480w, /p/%E5%85%89%E7%94%B5%E8%AE%A1%E7%AE%97%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/image-7_hu_48ca69f5174a8e81.png 1024w"
 	loading="lazy"
 	
 	
@@ -600,12 +604,25 @@
             
                 
 <article class="">
-    <a href="/p/2025/">
+    <a href="/p/2023-2026-1/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">2025</h2>
+            <h2 class="article-title">2023-2026-1</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/2023-2026-1/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">2023-2026-1</h2>
         </div>
     </a>
 </article>
@@ -643,7 +660,7 @@
         
         
             <div class="article-image">
-                <img src="/p/reinforcement-learning-from-passive-data-via-latent-intentions/bookface.3fe84d02018a4a1977e188fbf3227a29_hu_e98356e0e7e01eb4.jpg" 
+                <img src="/p/reinforcement-learning-from-passive-data-via-latent-intentions/bookface.3fe84d02018a4a1977e188fbf3227a29_hu_ab10f5b9cfe74de8.jpg" 
                         width="250" 
                         height="150" 
                         loading="lazy"
@@ -656,19 +673,6 @@
 
         <div class="article-details">
             <h2 class="article-title">Reinforcement Learning from Passive Data via Latent Intentions </h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/%E6%B8%B8%E6%88%8F%E6%8E%A8%E8%8D%90-her-story/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">游戏推荐-Her story</h2>
         </div>
     </a>
 </article>
@@ -783,7 +787,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.f493f7002e5d6408b90e7ca299608fbc562034f0f536395a497d9fbabe9b556a.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.52e48fe79d3f83777e4d9c80ec7bbf9df43e5a9c623a97119af70c063937550c.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

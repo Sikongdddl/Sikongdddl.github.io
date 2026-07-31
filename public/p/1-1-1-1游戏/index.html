@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="交大程序员无聊了会做什么">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="程序员无聊了会做什么">
 <title>1&#43;1&#43;1&#43;1游戏</title>
 
-<link rel='canonical' href='http://localhost:1313/p/1-1-1-1%E6%B8%B8%E6%88%8F/'>
+<link rel='canonical' href='http://127.0.0.1:1313/p/1-1-1-1%E6%B8%B8%E6%88%8F/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="1+1+1+1游戏">
-<meta property='og:description' content="交大程序员无聊了会做什么">
-<meta property='og:url' content='http://localhost:1313/p/1-1-1-1%E6%B8%B8%E6%88%8F/'>
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="1+1+1+1游戏">
+<meta property='og:description' content="程序员无聊了会做什么">
+<meta property='og:url' content='http://127.0.0.1:1313/p/1-1-1-1%E6%B8%B8%E6%88%8F/'>
 <meta property='og:site_name' content='Sikongdddl的博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-08-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-08-03T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="1+1+1+1游戏">
-<meta name="twitter:description" content="交大程序员无聊了会做什么">
+<meta name="twitter:description" content="程序员无聊了会做什么">
     <link rel="shortcut icon" href="/favicon/favicon.ico" />
 
     </head>
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_5e6239f92fa70402.png" width="300"
+                        <img src="/img/avatar_hu_f5243906f8449afe.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -289,7 +289,7 @@
     
         
         <h3 class="article-subtitle">
-            交大程序员无聊了会做什么
+            程序员无聊了会做什么
         </h3>
         
     </div>
@@ -352,7 +352,8 @@
 </h2><p>由于数学太烂，我的代码水平显著强于数学水平，想不明白就先用代码多玩几次，规律可能自己就出来了。</p>
 <p>所以我首先完成了这个游戏的一个简单的模拟器和日志输出</p>
 <blockquote>
-<p>强烈建议没玩过这个游戏的来和我玩一次 不然下面的东西可能会把人看晕</p></blockquote>
+<p>强烈建议没玩过这个游戏的来和我玩一次 不然下面的东西可能会把人看晕</p>
+</blockquote>
 <p>下面为随机一次游戏的日志：其中，开始的四个数字代表两个人四只手的当前状态。</p>
 <p>顺序为：p1左手，p1右手，p2左手，p2右手</p>
 <blockquote>
@@ -422,7 +423,8 @@ p2行动
 p1行动
 行动者只有左手
 对方只有左手</p>
-<p>game over!</p></blockquote>
+<p>game over!</p>
+</blockquote>
 <h2 id="实验">实验
 </h2><p>既然有了这样一个模拟器，让它帮我跑一些实验也就十分自然了。</p>
 <h3 id="统计模拟">统计模拟
@@ -431,7 +433,8 @@ p1行动
 <p>显而易见的是，我们在进行大批量的实验前应该担心这个游戏是否存在”死局“，即两位游戏者陷入无论使用什么策略都无法结束的局面。</p>
 <p>直接说结论，在其中一人剩余两只手时，游戏最终一定会进入每人只剩一只手的局面，或者直接结束。</p>
 <p>在每人只剩一只手时，根据我过往的经验，这个游戏在某些时候会陷入无尽的循环。例如2遇到1，2先手时。有兴趣的朋友可以自己试一下。</p>
-<p>由于后续测得平均一局游戏的步数是27步左右，因此在这里我粗暴地认为，当一局游戏进行了200步还没有结束时，就视作已经陷入无尽循环流局，直接开始下一局。</p></blockquote>
+<p>由于后续测得平均一局游戏的步数是27步左右，因此在这里我粗暴地认为，当一局游戏进行了200步还没有结束时，就视作已经陷入无尽循环流局，直接开始下一局。</p>
+</blockquote>
 <p>以下是实验结果：当我们认为超过200个episode为流局时数据如下：</p>
 <div class="table-wrapper"><table>
   <thead>
@@ -481,7 +484,8 @@ p1行动
 <p>这个结果非常的amazing啊！（毕导脸）</p>
 <p>平均来看，不流局的比赛中，平均每一局进行了27.5轮，这个游戏的节奏还是很快的，哪怕策略是随机的。</p>
 <blockquote>
-<p>因此跑这些实验消耗的时间还不及debug的一半（划掉</p></blockquote>
+<p>因此跑这些实验消耗的时间还不及debug的一半（划掉</p>
+</blockquote>
 <p>除此之外，我们发现了两件奇怪的事：</p>
 <ul>
 <li>在完全随机决策的情况下，先手胜率明显低于后手。而当对随机的容忍足够高时，先手胜率又略高于后手。但流局概率基本稳定。</li>
@@ -501,10 +505,12 @@ p1行动
 这是显然的，例如：</p>
 <blockquote>
 <p>(2 1)表示当前我的手比了个2，你的手比了个1，轮到我先动。</p>
-<p>[1 2]表示当前我的手比了个1，你的手比了个2，轮到你先动。</p></blockquote>
+<p>[1 2]表示当前我的手比了个1，你的手比了个2，轮到你先动。</p>
+</blockquote>
 <p>变换后我们得到：</p>
 <blockquote>
-<p>2 1-&gt;1 3-&gt;3 4-&gt;4 7-&gt;7 1-&gt;1 8-&gt;8 9-&gt;9 7-&gt;7 6-&gt;6 3-&gt;3 9-&gt;9 2-&gt;2 1</p></blockquote>
+<p>2 1-&gt;1 3-&gt;3 4-&gt;4 7-&gt;7 1-&gt;1 8-&gt;8 9-&gt;9 7-&gt;7 6-&gt;6 3-&gt;3 9-&gt;9 2-&gt;2 1</p>
+</blockquote>
 <h3 id="流局中的数学">流局中的数学
 </h3><p>前面我们已经讨论过，流局只发生在双方都只剩一只手的情况下。</p>
 <p>这是一个相对平凡的情况，比较适合进行一个数学建模。
@@ -521,7 +527,8 @@ p1行动
 <p>[0 1 2 3 4 5 6 7 8]</p>
 <p>其中：Eij表示p1为i p2为j时 p1先手相加后p1的结果</p>
 <blockquote>
-<p>比如说，E11=2，意思就是，当我手上是1，你手上也是1的时候，我一碰你我就变成2了</p></blockquote>
+<p>比如说，E11=2，意思就是，当我手上是1，你手上也是1的时候，我一碰你我就变成2了</p>
+</blockquote>
 <p>这是一个满秩的矩阵（雾）</p>
 <p>每一次加法的本质是一次行变换/列变换，具体来说，比如i从1变成了2，本质上就是第一行与第二行交换 而这是不改变矩阵的秩的</p>
 <p>游戏的结束条件是当E（1，1）变成0时，自己是后手</p>
@@ -544,7 +551,8 @@ p1行动
 那么在全部的9*9=81这么大的概率空间内，有足足12个点会导致进入流局循环。这也就意味着，我们假设在游戏变成一只手对一只手的时候，出现这81种局面的概率相同，那么游戏就有12/81的概率进入流局循环，最终流局。
 这个概率约等于14.8%，比我们测出来的还要高。
 不匹配的原因显然是出现这81种局面的概率并不相同。</p>
-<p>具体从我们的1，1，1，1开局发展到这八十一种情况的概率怎么计算，我目前还没有想通。</p></blockquote>
+<p>具体从我们的1，1，1，1开局发展到这八十一种情况的概率怎么计算，我目前还没有想通。</p>
+</blockquote>
 <p>然后自然而然的会提出以下几个问题：</p>
 <ul>
 <li>为什么中心对称：坐标和互补的两个坐标，如果一个坐标会流局，那么另一个坐标也会。如果一个不会，那么另一个也不会。这个问题我也没有解决。</li>
@@ -560,7 +568,8 @@ p1行动
 <p>A21=A12</p>
 <p>A22=A11+A12</p>
 <p>An1 = A(n-1)2</p>
-<p>An2=A(n-1)1+A(n-1)2</p></blockquote>
+<p>An2=A(n-1)1+A(n-1)2</p>
+</blockquote>
 <p>把这些可恶的重复去掉之后，我们得到了这样的一个数列：</p>
 <p>2，1，3，4，7，1，8，9，7，6，3，9，2，1</p>
 <p>前面的数对形式来自于我们以步长为1，去拿相邻的两个数。</p>
@@ -858,7 +867,7 @@ p1行动
 <pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">log</span><span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
@@ -938,7 +947,7 @@ p1行动
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">fromFlag</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span><span class="o">%</span><span class="mi">2</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">toFlag</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span><span class="o">%</span><span class="mi">2</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//行动者只剩左手
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">lexist</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">p</span><span class="p">.</span><span class="n">rexist</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">lexist</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">p</span><span class="p">.</span><span class="n">rexist</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;行动者只有左手&#34;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">lexist</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">q</span><span class="p">.</span><span class="n">rexist</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
@@ -966,7 +975,7 @@ p1行动
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//行动者只剩右手
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">lexist</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">p</span><span class="p">.</span><span class="n">rexist</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">lexist</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">p</span><span class="p">.</span><span class="n">rexist</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;行动者只有右手&#34;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">lexist</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">q</span><span class="p">.</span><span class="n">rexist</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
@@ -994,7 +1003,7 @@ p1行动
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">//行动者由fromFlag决定
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">else</span>
+</span></span></span><span class="line"><span class="cl">    <span class="k">else</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">fromFlag</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">{</span>
@@ -1175,19 +1184,6 @@ p1行动
 </article>
 
             
-                
-<article class="">
-    <a href="/p/16%E7%BB%84%E6%98%9F%E7%81%AB%E8%90%A5%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">16组星火营项目文档</h2>
-        </div>
-    </a>
-</article>
-
-            
         </div>
     </div>
 </aside>
@@ -1297,7 +1293,7 @@ p1行动
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.f493f7002e5d6408b90e7ca299608fbc562034f0f536395a497d9fbabe9b556a.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.52e48fe79d3f83777e4d9c80ec7bbf9df43e5a9c623a97119af70c063937550c.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
